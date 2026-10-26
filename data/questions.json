@@ -2,9 +2,14 @@
   {
     "id": "d1-social-model",
     "domain": 1,
-    "topic": "Models of disability",
+    "topic": "d1a",
     "question": "Which model of disability holds that people are disabled mainly by barriers in society and the built environment, rather than by their impairments?",
-    "options": ["Medical model", "Social model", "Charity model", "Economic model"],
+    "options": [
+      "Medical model",
+      "Social model",
+      "Charity model",
+      "Economic model"
+    ],
     "answer": 1,
     "rationale": "The social model separates impairment (a condition of the body or mind) from disability (the exclusion that happens when environments, attitudes and systems are not designed for that person). A wheelchair user is disabled by a building with only stairs, not by their legs. This is the model accessibility work is built on: if barriers cause disability, then removing barriers is the fix.",
     "distractors": {
@@ -14,17 +19,71 @@
     },
     "tip": "The CPACC Body of Knowledge lists several models (medical, social, charity, economic, functional solutions, and others). Expect questions that describe a scenario and ask which model it reflects. Look for where the 'problem' is placed: in the person, or in the environment.",
     "sources": [
-      { "title": "CPACC Body of Knowledge (IAAP, Oct 2023)", "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf", "note": "Domain 1, Theoretical models of disability. Hosted by Funka, an IAAP prep provider." },
-      { "title": "UN Convention on the Rights of Persons with Disabilities", "url": "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html", "note": "The preamble defines disability as arising from the interaction between impairments and attitudinal and environmental barriers." },
-      { "title": "WHO International Classification of Functioning, Disability and Health (ICF)", "url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health", "note": "The biopsychosocial framework that combines medical and social views." }
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1, Theoretical models of disability. Hosted by Funka, an IAAP prep provider."
+      },
+      {
+        "title": "UN Convention on the Rights of Persons with Disabilities",
+        "url": "https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities.html",
+        "note": "The preamble defines disability as arising from the interaction between impairments and attitudinal and environmental barriers."
+      },
+      {
+        "title": "WHO International Classification of Functioning, Disability and Health (ICF)",
+        "url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+        "note": "The biopsychosocial framework that combines medical and social views."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-perceivable",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "Providing captions for prerecorded video falls under which of the four WCAG principles?",
+    "options": [
+      "Perceivable",
+      "Operable",
+      "Understandable",
+      "Robust"
+    ],
+    "answer": 0,
+    "rationale": "WCAG groups every success criterion under four principles, known as POUR. Perceivable means information must be presented in ways people can sense. A deaf or hard of hearing person cannot perceive spoken audio, so captions turn it into text they can see. Captions (Prerecorded) is success criterion 1.2.2, Level A, under Guideline 1.2 Time-based Media.",
+    "distractors": {
+      "1": "Operable is about using the interface: keyboard access, enough time, avoiding seizures, and navigation. Captions do not change how a user operates anything.",
+      "2": "Understandable covers readable text, predictable behavior and input assistance. Captions make audio available, but whether the content is easy to understand is a separate concern.",
+      "3": "Robust means content works reliably with current and future user agents, including assistive technologies. It mostly concerns valid code and correct names, roles and values."
+    },
+    "tip": "A quick trick: the first digit of a WCAG success criterion tells you its principle. 1.x is Perceivable, 2.x Operable, 3.x Understandable, 4.x Robust. CPACC tests WCAG at a conceptual level (Domain 2C of the Body of Knowledge), not the code details tested on the WAS exam.",
+    "sources": [
+      {
+        "title": "Understanding WCAG 2.2: the four principles",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility",
+        "note": "W3C explanation of Perceivable, Operable, Understandable and Robust."
+      },
+      {
+        "title": "Understanding SC 1.2.2 Captions (Prerecorded)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html",
+        "note": "Intent, benefits and examples for the captions requirement."
+      },
+      {
+        "title": "How to Meet WCAG 2.2 (Quick Reference)",
+        "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+        "note": "Every success criterion, grouped by principle."
+      }
     ]
   },
   {
     "id": "d2-situational-limitation",
     "domain": 2,
-    "topic": "Permanent, temporary & situational",
+    "topic": "d2e",
     "question": "A parent holding a baby in one arm is trying to use a phone app with the other hand. In inclusive design terms, what kind of limitation is this?",
-    "options": ["Permanent disability", "Temporary impairment", "Situational limitation", "Cognitive impairment"],
+    "options": [
+      "Permanent disability",
+      "Temporary impairment",
+      "Situational limitation",
+      "Cognitive impairment"
+    ],
     "answer": 2,
     "rationale": "A situational limitation comes from the context a person is in, not from their body. The parent has full use of both arms, but the situation leaves them using one hand. Microsoft's Persona Spectrum pairs this with a person who has one arm (permanent) and a person with an arm injury (temporary). The point: designing for the permanent case helps far more people than it first seems.",
     "distractors": {
@@ -34,29 +93,53 @@
     },
     "tip": "This links to the curb-cut effect: features built for disabled people, like curb cuts or captions, end up helping everyone. Expect CPACC questions that ask you to classify a scenario as permanent, temporary or situational.",
     "sources": [
-      { "title": "Microsoft Inclusive Design toolkit", "url": "https://inclusive.microsoft.design/", "note": "Source of the Persona Spectrum: permanent, temporary, situational." },
-      { "title": "W3C WAI: Diverse Abilities and Barriers", "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/", "note": "Describes temporary and situational limitations alongside permanent disabilities." },
-      { "title": "CPACC Body of Knowledge (IAAP, Oct 2023)", "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf", "note": "Domain 2, Accessibility and universal design." }
+      {
+        "title": "Microsoft Inclusive Design toolkit",
+        "url": "https://inclusive.microsoft.design/",
+        "note": "Source of the Persona Spectrum: permanent, temporary, situational."
+      },
+      {
+        "title": "W3C WAI: Diverse Abilities and Barriers",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/",
+        "note": "Describes temporary and situational limitations alongside permanent disabilities."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 2, Accessibility and universal design."
+      }
     ]
   },
   {
-    "id": "d3-wcag-perceivable",
+    "id": "d3-marrakesh-treaty",
     "domain": 3,
-    "topic": "WCAG principles",
-    "question": "Providing captions for prerecorded video falls under which of the four WCAG principles?",
-    "options": ["Perceivable", "Operable", "Understandable", "Robust"],
-    "answer": 0,
-    "rationale": "WCAG groups every success criterion under four principles, known as POUR. Perceivable means information must be presented in ways people can sense. A deaf or hard of hearing person cannot perceive spoken audio, so captions turn it into text they can see. Captions (Prerecorded) is success criterion 1.2.2, Level A, under Guideline 1.2 Time-based Media.",
+    "topic": "d3a",
+    "question": "What is the main purpose of the Marrakesh Treaty?",
+    "options": [
+      "To require all public websites to conform to WCAG 2.1 Level AA",
+      "To make published works easier to get in accessible formats for people who are blind, visually impaired or otherwise print disabled",
+      "To set physical accessibility standards for public buildings",
+      "To guarantee equal employment rights for people with disabilities"
+    ],
+    "answer": 1,
+    "rationale": "The Marrakesh Treaty, administered by the World Intellectual Property Organization (WIPO) and adopted in 2013, creates copyright exceptions so that authorized organizations can make accessible copies of books and other published works, such as braille, large print, audio or digital accessible formats, without asking permission from the copyright holder. It also lets those copies be shared across borders between countries that have joined. It targets the 'book famine', where only a small share of published works ever become available in accessible formats.",
     "distractors": {
-      "1": "Operable is about using the interface: keyboard access, enough time, avoiding seizures, and navigation. Captions do not change how a user operates anything.",
-      "2": "Understandable covers readable text, predictable behavior and input assistance. Captions make audio available, but whether the content is easy to understand is a separate concern.",
-      "3": "Robust means content works reliably with current and future user agents, including assistive technologies. It mostly concerns valid code and correct names, roles and values."
+      "0": "No international treaty requires WCAG conformance. Requirements like that come from national or regional law, such as the EU Web Accessibility Directive or Section 508 in the United States.",
+      "2": "Building standards come from national building codes and laws, such as the ADA Standards for Accessible Design. The Marrakesh Treaty is a copyright treaty and does not cover the built environment.",
+      "3": "Employment rights for disabled people appear in instruments such as the CRPD (Article 27) and national laws like the ADA (Title I). The Marrakesh Treaty does not address employment."
     },
-    "tip": "A quick trick: the first digit of a WCAG success criterion tells you its principle. 1.x is Perceivable, 2.x Operable, 3.x Understandable, 4.x Robust. CPACC tests WCAG at a conceptual level, not the code details tested on the WAS exam.",
+    "tip": "Remember the treaty by its owner: WIPO is the intellectual property agency of the UN, so the Marrakesh Treaty is about copyright and access to books. The CRPD is the broad human rights convention. Both appear in Domain 3A.",
     "sources": [
-      { "title": "Understanding WCAG 2.2: the four principles", "url": "https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility", "note": "W3C explanation of Perceivable, Operable, Understandable and Robust." },
-      { "title": "Understanding SC 1.2.2 Captions (Prerecorded)", "url": "https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html", "note": "Intent, benefits and examples for the captions requirement." },
-      { "title": "How to Meet WCAG 2.2 (Quick Reference)", "url": "https://www.w3.org/WAI/WCAG22/quickref/", "note": "Every success criterion, grouped by principle." }
+      {
+        "title": "WIPO: Marrakesh Treaty",
+        "url": "https://www.wipo.int/treaties/en/ip/marrakesh/",
+        "note": "Official treaty page from the World Intellectual Property Organization, with the full text and member list."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 3A, International declarations and conventions."
+      }
     ]
   }
 ]

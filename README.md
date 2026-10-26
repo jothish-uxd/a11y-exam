@@ -7,15 +7,35 @@ No build step, no dependencies. Plain HTML, CSS and JavaScript, with all content
 ## Project layout
 
 ```
-index.html              Page shell
-css/styles.css          All styles; light and dark themes via CSS custom properties
-js/app.js               Rendering, navigation, progress (localStorage)
-data/domains.json       Exam facts and the three CPACC domains with weights
-data/questions.json     The question bank
-scripts/validate.mjs    Schema check for the question bank (Node, no deps)
-.github/workflows/      Runs the validator on every push and PR that touches data/
-CLAUDE.md               Conventions for Claude Code sessions in this repo
+index.html                 Page shell (header, dialog, live region)
+css/styles.css             All styles; light and dark themes via CSS custom properties
+js/app.js                  Routing, rendering, saved progress (localStorage)
+data/domains.json          Exam facts, the three domains, weights, and Body of Knowledge topics
+data/questions.json        The question bank
+scripts/validate.mjs       Schema check for the data (Node, no deps)
+scripts/build-preview.mjs  Builds the Claude artifact preview shell from index.html
+.github/workflows/         Runs the validator on every push and PR that touches data/
+CLAUDE.md                  Conventions for Claude Code sessions in this repo
 ```
+
+## Information architecture
+
+Two modes, both reachable from the header on every page.
+
+**Study** — pick Domain 1, 2, 3 or All. Each domain page lists the Body of Knowledge topics (1A, 1B, …) with every question and its status: not answered, correct or missed. On a question page the same list sits in a side panel on wide screens and in a bottom sheet on phones (open it from the "Question 2 of 4" button). Previous and Next stay inside the chosen domain; the last question offers the next domain. Feedback appears after each answer.
+
+**Mock exam** — up to 100 questions drawn by exam weight (40 / 40 / 20), a 2-hour timer with spoken reminders at 30, 10, 5 and 1 minutes, mark for review, and a review screen before submitting. Results break down by domain and link each missed question back into Study.
+
+Every view has its own link:
+
+| Link | View |
+|---|---|
+| `#start` | Landing page |
+| `#d1` `#d2` `#d3` `#all` | Study overview for a domain, or all |
+| `#d1a` … `#d3f` | A Body of Knowledge topic inside its domain |
+| `#d1-social-model` | A single question (its `id`) |
+| `#mock` | Mock exam |
+| `#mock-results` | Last mock exam results |
 
 ## Run it locally (Mac)
 
@@ -36,7 +56,7 @@ Append an object to `data/questions.json`, then run `node scripts/validate.mjs`.
 |---------------|---------------------|-------|
 | `id`          | string              | Stable, lowercase, hyphenated, prefixed with domain: `d1-social-model`. Used for deep links (`#d1-social-model`) and saved progress. Never rename a published id. |
 | `domain`      | 1 \| 2 \| 3         | Must match an id in `data/domains.json`. |
-| `topic`       | string              | Short label shown in the domain chip. |
+| `topic`       | string              | Topic id from `data/domains.json`, e.g. `d1a` (Body of Knowledge section 1A). Must belong to the same domain. |
 | `question`    | string              | The stem. |
 | `options`     | string[]            | Usually 4 (the CPACC format). |
 | `answer`      | number              | Zero-based index into `options`. |
@@ -54,5 +74,5 @@ Append an object to `data/questions.json`, then run `node scripts/validate.mjs`.
 ## Content notes
 
 - These are original practice questions, not official IAAP exam items.
-- Exam facts (100 questions, 2 hours, 40/20/40 domain weights) come from the IAAP CPACC Body of Knowledge. Check the current version before each exam cycle.
+- Exam facts (100 questions, 2 hours) and domain weights (40 / 40 / 20) and topics come from the IAAP CPACC Body of Knowledge, October 2023. Check for a newer version before each exam cycle and update `data/domains.json`.
 - Write rationales in your own words. Do not paste text from sources.

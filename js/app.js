@@ -1,100 +1,216 @@
-// CPACC Practice Sheets — renders the landing page and question views.
-// Content lives in data/*.json; this file only handles rendering, state and navigation.
+// CPACC Practice Sheets
+// Content lives in data/*.json. This file handles routing, rendering and saved progress.
+//
+// Routes (URL hash, bare tokens only):
+//   #start               landing page
+//   #d1 #d2 #d3 #all     study overview for a domain, or every domain
+//   #d1a … #d3f          a Body of Knowledge topic (opens its domain overview at that topic)
+//   #<question-id>       a study question, e.g. #d1-social-model
+//   #mock                mock exam (intro, in progress, or review)
+//   #mock-results        results of the last submitted mock exam
 (function () {
   "use strict";
 
   const LETTERS = ["A", "B", "C", "D", "E", "F"];
-  const STORAGE_KEY = "cpacc-prep:v1";
+  const STORAGE_KEY = "cpacc-prep:v2";
+  const MOCK_MS = 120 * 60 * 1000;
 
   const main = document.getElementById("main");
-  const meta = document.getElementById("meta");
+  const topnav = document.getElementById("topnav");
+  const sheet = document.getElementById("sheet");
+  const sheetBody = document.getElementById("sheet-body");
+  const sheetTitle = document.getElementById("sheet-title");
+  const announcer = document.getElementById("announcer");
 
-  let EXAM = null;
-  let DOMAINS = {};
-  let QUESTIONS = [];
-  const state = { picks: {}, checked: {} }; // keyed by question id
+  let EXAM, DOMAINS = [], DOMAIN = {}, TOPIC = {}, QUESTIONS = [], QBYID = {};
+  let scope = null;           // study scope: "d1" | "d2" | "d3" | "all"; a direct link to a question uses its domain
+  let timerId = null;
 
-  // ---------- storage (best effort; page works without it) ----------
+  const store = { picks: {}, checked: {}, mock: null, lastMock: null };
+
+  // ---------- storage (best effort; the page works without it) ----------
   function load() {
     try {
       const s = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
-      if (s) { state.picks = s.picks || {}; state.checked = s.checked || {}; }
+      if (s) Object.assign(store, s);
     } catch (e) { /* storage unavailable */ }
   }
   function save() {
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (e) { /* ignore */ }
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(store)); } catch (e) { /* ignore */ }
   }
 
   // ---------- helpers ----------
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const color = (d) => `var(${d.colorToken})`;
-  const isRight = (q) => state.picks[q.id] === q.answer;
+  const topicLetter = (t) => t.id.slice(-1).toUpperCase();
+  const scopeLabel = (s) => (s === "all" ? "All domains" : `Domain ${s.slice(1)}`);
+  const isRight = (q) => store.picks[q.id] === q.answer;
+  const status = (q) => (!store.checked[q.id] ? "none" : isRight(q) ? "good" : "bad");
+  const STATUS_TEXT = { none: "Not answered", good: "Correct", bad: "Missed", answered: "Answered", flag: "Marked for review" };
 
-  function setHash(h) { try { history.replaceState(null, "", "#" + h); } catch (e) { /* ignore */ } }
+  function mark(st) {
+    const glyph = { none: "", good: "✓", bad: "✕", answered: "•", flag: "⚑" }[st];
+    return `<span class="st st-${st}" aria-hidden="true">${glyph}</span><span class="vh">${STATUS_TEXT[st]}: </span>`;
+  }
 
-  function scoreLine() {
-    const done = QUESTIONS.filter((q) => state.checked[q.id]);
-    const right = done.filter(isRight).length;
-    return done.length ? `${right} of ${done.length} answered correctly so far` : "";
+  function inScope(s) {
+    return s === "all" ? QUESTIONS : QUESTIONS.filter((q) => q.domain === +s.slice(1));
+  }
+  function counts(list) {
+    const done = list.filter((q) => store.checked[q.id]);
+    return { total: list.length, done: done.length, right: done.filter(isRight).length };
+  }
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+    return a;
+  }
+  function fmtTime(ms) {
+    const s = Math.max(0, Math.round(ms / 1000));
+    const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), r = s % 60;
+    return `${h}:${String(m).padStart(2, "0")}:${String(r).padStart(2, "0")}`;
+  }
+  function announce(msg) { announcer.textContent = ""; setTimeout(() => (announcer.textContent = msg), 50); }
+
+  function setNav(active) {
+    document.querySelectorAll(".bar [data-nav]").forEach((a) => {
+      if (a.dataset.nav === active) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+  }
+
+  function finish(focusEl) {
+    window.scrollTo(0, 0);
+    const el = focusEl || main.querySelector("h1");
+    if (el) { el.setAttribute("tabindex", "-1"); el.focus({ preventScroll: true }); }
+  }
+
+  // ---------- question list (overview page, side panel, mobile sheet) ----------
+  function questionList(s, currentId) {
+    const ds = s === "all" ? DOMAINS : [DOMAIN[+s.slice(1)]];
+    return ds.map((d) => `
+      <div class="ql-domain">
+        ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}" style="--c:${color(d)}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
+        ${d.topics.map((t) => {
+          const qs = QUESTIONS.filter((q) => q.topic === t.id);
+          return `<div class="ql-topic">
+            <h4 class="ql-th" id="list-${t.id}"><span class="ql-letter">${d.id}${topicLetter(t)}</span>${esc(t.name)}</h4>
+            ${qs.length ? `<ol class="ql">${qs.map((q) => `<li><a href="#${q.id}" ${q.id === currentId ? 'aria-current="page"' : ""}>${mark(status(q))}<span class="ql-q">${esc(q.question)}</span></a></li>`).join("")}</ol>`
+              : `<p class="ql-empty">No questions yet</p>`}
+          </div>`;
+        }).join("")}
+      </div>`).join("");
   }
 
   // ---------- landing ----------
-  function renderHome(focus) {
-    meta.textContent = "Domain-based practice";
-    const s = scoreLine();
-    const resumeAt = QUESTIONS.findIndex((q) => !state.checked[q.id]);
-    const doms = Object.values(DOMAINS);
-
+  function renderHome() {
+    setNav("start");
+    const all = counts(QUESTIONS);
+    const m = store.mock && !store.mock.submittedAt;
     main.innerHTML = `
-    <section class="hero" aria-labelledby="h1">
-      <div class="bubbles" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></div>
-      <p class="eyebrow">IAAP · ${esc(EXAM.name)}</p>
-      <h1 id="h1">Practice for the ${esc(EXAM.code)}, one question at a time</h1>
-      <p class="lede">Each question gives four choices, then explains why the right answer is right, why the others are wrong, and where to read more in the official sources.</p>
-    </section>
-    <section class="blueprint" aria-labelledby="bp">
-      <h2 id="bp" class="vh">Exam blueprint</h2>
-      <div class="facts">
-        <div class="fact"><b>${EXAM.questions}</b><span>Questions</span></div>
-        <div class="fact"><b>${EXAM.durationMinutes / 60} hr</b><span>Time limit</span></div>
-        <div class="fact"><b>${doms.length}</b><span>Domains</span></div>
-      </div>
-      <div class="weights">
-        <h2>How the exam is weighted</h2>
-        <div class="wbar" aria-hidden="true">${doms.map((d) => `<span style="flex:${d.weight};background:${color(d)}"></span>`).join("")}</div>
-        <ul class="wlist">${doms.map((d) => `<li><span class="sw" style="background:${color(d)}" aria-hidden="true"></span><span>Domain ${d.id}: ${esc(d.name)}</span><span class="pct">${d.weight}%</span></li>`).join("")}</ul>
-      </div>
-    </section>
-    <ul class="how">
-      <li>Pick an answer, then select Check answer.</li>
-      <li>Read the rationale for every option, including the wrong ones.</li>
-      <li>Use Previous and Next to move between questions. Your answers stay on this device.</li>
-    </ul>
-    ${s ? `<p class="score">${s}</p>` : ""}
-    <div class="actions">
-      <button class="btn" id="start" type="button">${s && resumeAt > -1 ? `Resume at question ${resumeAt + 1}` : "Start question 1"}</button>
-      ${s ? `<button class="btn ghost" id="reset" type="button">Clear my answers</button>` : ""}
-    </div>`;
+    <div class="page">
+      <section class="hero" aria-labelledby="h1">
+        <div class="bubbles" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></div>
+        <p class="eyebrow">IAAP · ${esc(EXAM.name)}</p>
+        <h1 id="h1">Practice for the ${esc(EXAM.code)}, one question at a time</h1>
+        <p class="lede">Study by domain with a full explanation after every answer, or sit a timed mock exam that works like the real one.</p>
+      </section>
 
-    document.getElementById("start").onclick = () => go(s && resumeAt > -1 ? resumeAt : 0);
+      <section class="blueprint" aria-labelledby="bp">
+        <h2 id="bp" class="vh">Exam blueprint</h2>
+        <div class="facts">
+          <div class="fact"><b>${EXAM.questions}</b><span>Questions</span></div>
+          <div class="fact"><b>${EXAM.durationMinutes / 60} hr</b><span>Time limit</span></div>
+          <div class="fact"><b>${DOMAINS.length}</b><span>Domains</span></div>
+        </div>
+        <div class="weights">
+          <h3>How the exam is weighted</h3>
+          <div class="wbar" aria-hidden="true">${DOMAINS.map((d) => `<span style="flex:${d.weight};background:${color(d)}"></span>`).join("")}</div>
+          <ul class="wlegend">${DOMAINS.map((d) => `<li><i style="background:${color(d)}" aria-hidden="true"></i>Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="study-h" class="block">
+        <h2 id="study-h" class="h2">Study by domain</h2>
+        <p class="sub">Pick a domain, work through its topics, and read why each answer is right or wrong.</p>
+        <ul class="domains">
+          ${DOMAINS.map((d) => {
+            const c = counts(inScope("d" + d.id));
+            return `<li><a class="drow" href="#d${d.id}" style="--c:${color(d)}">
+              <span class="drow-n">${d.id}</span>
+              <span class="drow-main"><b>${esc(d.name)}</b><span>${d.weight}% of the exam · ${d.topics.length} topics · ${c.total} question${c.total === 1 ? "" : "s"}</span></span>
+              <span class="drow-p">${c.done}/${c.total}<span class="vh"> answered</span></span>
+            </a></li>`;
+          }).join("")}
+          <li><a class="drow drow-all" href="#all">
+            <span class="drow-n" aria-hidden="true">∗</span>
+            <span class="drow-main"><b>All domains</b><span>Every question in Body of Knowledge order</span></span>
+            <span class="drow-p">${all.done}/${all.total}<span class="vh"> answered</span></span>
+          </a></li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="mock-h" class="block mockcard">
+        <h2 id="mock-h" class="h2">Mock exam</h2>
+        <p class="sub">Up to ${EXAM.questions} questions drawn across domains by exam weight, a ${EXAM.durationMinutes / 60}-hour timer, and no feedback until you submit. Results show how you did in each domain.</p>
+        <div class="actions"><a class="btn" href="#mock">${m ? "Resume mock exam" : "Set up a mock exam"}</a>
+        ${store.lastMock ? `<a class="btn ghost" href="#mock-results">Last results</a>` : ""}</div>
+      </section>
+
+      ${all.done ? `<div class="actions"><button class="btn ghost small" id="reset" type="button">Clear study progress</button></div>` : ""}
+    </div>`;
     const r = document.getElementById("reset");
-    if (r) r.onclick = () => { state.picks = {}; state.checked = {}; save(); renderHome(true); };
-    if (focus) main.focus();
+    if (r) r.onclick = () => { store.picks = {}; store.checked = {}; save(); renderHome(); finish(); };
   }
 
-  // ---------- question ----------
-  function renderQ(i, focus) {
-    const Q = QUESTIONS[i];
-    const D = DOMAINS[Q.domain];
-    const checked = !!state.checked[Q.id];
-    const pick = state.picks[Q.id];
-    const last = i === QUESTIONS.length - 1;
-    meta.textContent = `Question ${i + 1} of ${QUESTIONS.length}`;
+  // ---------- study overview: a domain or all ----------
+  function renderOverview(s, topicId) {
+    scope = s;
+    setNav(s);
+    const list = inScope(s);
+    const c = counts(list);
+    const d = s === "all" ? null : DOMAIN[+s.slice(1)];
+    const next = list.find((q) => !store.checked[q.id]) || list[0];
+    main.innerHTML = `
+    <div class="page">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#start">Home</a></li><li aria-current="page">${scopeLabel(s)}</li></ol></nav>
+      <header class="ohead" ${d ? `style="--c:${color(d)}"` : ""}>
+        <p class="eyebrow">${d ? `Domain ${d.id} · ${d.weight}% of the exam` : "Study"}</p>
+        <h1 id="h1">${d ? esc(d.name) : "All domains"}</h1>
+        <p class="sub">${c.total ? `${c.done} of ${c.total} answered${c.done ? `, ${c.right} correct` : ""}.` : "No questions in this domain yet."} Topics follow the IAAP Body of Knowledge.</p>
+        ${next ? `<div class="actions"><a class="btn" href="#${next.id}">${c.done && c.done < c.total ? "Continue" : c.done === c.total && c.total ? "Review from the start" : "Start"}</a></div>` : ""}
+      </header>
+      <div class="qlist">${questionList(s)}</div>
+    </div>`;
+    if (topicId) {
+      const h = document.getElementById("list-" + topicId);
+      window.scrollTo(0, 0);
+      if (h) { h.setAttribute("tabindex", "-1"); h.focus(); h.scrollIntoView({ block: "start" }); return; }
+    }
+    finish();
+  }
 
-    const opts = Q.options.map((o, k) => {
+  // ---------- study question ----------
+  function renderQuestion(q) {
+    if (!scope || (scope !== "all" && +scope.slice(1) !== q.domain)) scope = "d" + q.domain;
+    setNav(scope);
+    const list = inScope(scope);
+    const i = list.indexOf(q);
+    const d = DOMAIN[q.domain], t = TOPIC[q.topic];
+    const checked = !!store.checked[q.id], pick = store.picks[q.id];
+
+    // previous / next stay inside the scope; the end of a domain offers the next one
+    const prev = list[i - 1];
+    let next = list[i + 1], nextLabel = "Next →", nextHref = next && "#" + next.id;
+    if (!next) {
+      const nd = scope !== "all" && DOMAINS.find((x) => x.id > q.domain && inScope("d" + x.id).length);
+      if (nd) { nextHref = "#" + inScope("d" + nd.id)[0].id; nextLabel = `Domain ${nd.id} →`; }
+      else { nextHref = "#" + scope; nextLabel = "Finish →"; }
+    }
+
+    const opts = q.options.map((o, k) => {
       let cls = "", tag = "";
       if (checked) {
-        if (k === Q.answer) { cls = "is-correct"; tag = "Correct answer"; }
+        if (k === q.answer) { cls = "is-correct"; tag = "Correct answer"; }
         else if (k === pick) { cls = "is-wrong"; tag = "Your answer"; }
       }
       return `<label class="opt ${cls}">
@@ -104,87 +220,323 @@
       </label>`;
     }).join("");
 
-    const progress = QUESTIONS.map((q, k) => {
-      const done = state.checked[q.id];
-      const cls = done ? (isRight(q) ? "done-good" : "done-bad") : "";
-      const st = done ? (isRight(q) ? ", correct" : ", incorrect") : "";
-      return `<button type="button" class="${cls}" data-go="${k}" ${k === i ? 'aria-current="step"' : ""} aria-label="Question ${k + 1}${st}">${k + 1}</button>`;
-    }).join("");
-
     const rationale = checked ? `
       <section class="rationale" aria-labelledby="verdict">
-        <p class="verdict ${isRight(Q) ? "good" : "bad"}" id="verdict" tabindex="-1">${isRight(Q) ? "Correct." : "Not quite."} The answer is ${LETTERS[Q.answer]}, ${esc(Q.options[Q.answer])}.</p>
-        <div><h3>Why ${LETTERS[Q.answer]} is correct</h3><p>${esc(Q.rationale)}</p></div>
-        <div><h3>Why the others are wrong</h3><ul class="why-not">${Object.entries(Q.distractors).map(([k, t]) => `<li><span class="l">${LETTERS[k]}</span><span><b>${esc(Q.options[k])}.</b> ${esc(t)}</span></li>`).join("")}</ul></div>
-        ${Q.tip ? `<div class="tip"><h3>Exam tip</h3><p>${esc(Q.tip)}</p></div>` : ""}
-        <div><h3>Sources</h3><ul class="refs">${Q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul></div>
+        <p class="verdict ${isRight(q) ? "good" : "bad"}" id="verdict" tabindex="-1">${isRight(q) ? "Correct." : "Not quite."} The answer is ${LETTERS[q.answer]}, ${esc(q.options[q.answer])}.</p>
+        <div><h3>Why ${LETTERS[q.answer]} is correct</h3><p>${esc(q.rationale)}</p></div>
+        <div><h3>Why the others are wrong</h3><ul class="why-not">${Object.entries(q.distractors).map(([k, txt]) => `<li><span class="l">${LETTERS[k]}</span><span><b>${esc(q.options[k])}.</b> ${esc(txt)}</span></li>`).join("")}</ul></div>
+        ${q.tip ? `<div class="tip"><h3>Exam tip</h3><p>${esc(q.tip)}</p></div>` : ""}
+        <div><h3>Sources</h3><ul class="refs">${q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul></div>
       </section>` : "";
 
     main.innerHTML = `
-    <div class="qhead">
-      <span class="chip" style="color:${color(D)}">Domain ${Q.domain} · ${esc(Q.topic)}</span>
-      <nav class="progress" aria-label="Questions">${progress}</nav>
-    </div>
-    <form id="qform" class="${checked ? "locked" : ""}">
-      <fieldset>
-        <legend><span class="qnum">Question ${i + 1}</span><span class="qtext" id="qtext" tabindex="-1">${esc(Q.question)}</span></legend>
-        <div class="opts">${opts}</div>
-      </fieldset>
-      ${checked ? "" : `<div class="actions"><button class="btn" type="submit">Check answer</button></div><p class="hint" id="hint" aria-live="polite"></p>`}
-    </form>
-    <div id="result" aria-live="polite">${rationale}</div>
-    <nav class="nav" aria-label="Question navigation">
-      <button class="btn ghost" type="button" id="prev">${i === 0 ? "← Overview" : "← Previous"}</button>
-      <button class="btn next" type="button" id="next">${last ? "Finish →" : "Next →"}</button>
-    </nav>`;
+    <div class="split">
+      <aside class="side" aria-labelledby="side-h">
+        <h2 id="side-h" class="side-h">${scopeLabel(scope)}</h2>
+        <nav aria-labelledby="side-h" class="qlist compact">${questionList(scope, q.id)}</nav>
+      </aside>
+      <div class="col">
+        <nav class="crumbs" aria-label="Breadcrumb"><ol>
+          <li><a href="#d${d.id}">Domain ${d.id}</a></li>
+          <li><a href="#${t.id}">${d.id}${topicLetter(t)}. ${esc(t.name)}</a></li>
+        </ol></nav>
+        <div class="qhead">
+          <span class="chip" style="color:${color(d)}">Domain ${d.id} · ${d.weight}%</span>
+          <button type="button" class="counter" id="open-list" aria-haspopup="dialog">Question ${i + 1} of ${list.length}<span class="counter-more"> · All questions</span></button>
+          <span class="counter-static">Question ${i + 1} of ${list.length} in ${scopeLabel(scope)}</span>
+        </div>
+        <form id="qform" class="${checked ? "locked" : ""}">
+          <fieldset>
+            <legend><h1 class="qtext" id="h1">${esc(q.question)}</h1></legend>
+            <div class="opts">${opts}</div>
+          </fieldset>
+          ${checked ? "" : `<div class="actions"><button class="btn" type="submit">Check answer</button></div><p class="hint" id="hint" aria-live="polite"></p>`}
+        </form>
+        <div id="result">${rationale}</div>
+        <nav class="nav" aria-label="Previous and next question">
+          ${prev ? `<a class="btn ghost" href="#${prev.id}">← Previous</a>` : `<a class="btn ghost" href="#${scope}">← ${scopeLabel(scope)}</a>`}
+          <a class="btn next" href="${nextHref}">${nextLabel}</a>
+        </nav>
+      </div>
+    </div>`;
 
     const form = document.getElementById("qform");
     form.addEventListener("change", (e) => {
       if (e.target.name !== "opt") return;
-      state.picks[Q.id] = +e.target.value; save();
+      store.picks[q.id] = +e.target.value; save();
       const h = document.getElementById("hint"); if (h) h.textContent = "";
     });
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      if (state.picks[Q.id] === undefined) { document.getElementById("hint").textContent = "Choose an answer first."; return; }
-      state.checked[Q.id] = true; save();
-      renderQ(i);
+      if (store.picks[q.id] === undefined) { document.getElementById("hint").textContent = "Choose an answer first."; return; }
+      store.checked[q.id] = true; save();
+      renderQuestion(q);
       document.getElementById("verdict").focus();
     });
-    main.querySelectorAll("[data-go]").forEach((b) => (b.onclick = () => go(+b.dataset.go)));
-    document.getElementById("prev").onclick = () => (i === 0 ? home() : go(i - 1));
-    document.getElementById("next").onclick = () => (last ? home() : go(i + 1));
-    if (focus) document.getElementById("qtext").focus();
+    document.getElementById("open-list").onclick = () => openSheet(scopeLabel(scope), questionList(scope, q.id));
+    finish();
+  }
+
+  // ---------- mobile sheet ----------
+  function openSheet(title, html) {
+    sheetTitle.textContent = title;
+    sheetBody.innerHTML = html;
+    if (typeof sheet.showModal === "function") sheet.showModal(); else sheet.setAttribute("open", "");
+    const cur = sheetBody.querySelector('[aria-current="page"]');
+    if (cur) cur.scrollIntoView({ block: "center" });
+  }
+  function closeSheet() { if (sheet.open) sheet.close ? sheet.close() : sheet.removeAttribute("open"); }
+  document.getElementById("sheet-close").onclick = closeSheet;
+  sheet.addEventListener("click", (e) => {
+    if (e.target === sheet) closeSheet();               // backdrop
+    if (e.target.closest("a")) closeSheet();             // navigation inside the sheet
+  });
+
+  // ---------- mock exam ----------
+  function drawMock() {
+    const total = Math.min(EXAM.questions, QUESTIONS.length);
+    const picked = [];
+    DOMAINS.forEach((d) => {
+      const want = Math.round((total * d.weight) / 100);
+      picked.push(...shuffle(inScope("d" + d.id).slice()).slice(0, want));
+    });
+    const rest = shuffle(QUESTIONS.filter((q) => !picked.includes(q)));
+    while (picked.length < total && rest.length) picked.push(rest.pop());
+    return shuffle(picked.slice(0, total)).map((q) => q.id);
+  }
+
+  function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
+
+  function startTimer() {
+    stopTimer();
+    const el = document.getElementById("timer");
+    const warned = new Set(store.mock.warned || []);
+    const tick = () => {
+      const left = store.mock.startedAt + MOCK_MS - Date.now();
+      if (el) el.textContent = fmtTime(left);
+      for (const min of [30, 10, 5, 1]) {
+        if (left <= min * 60000 && !warned.has(min)) {
+          warned.add(min); store.mock.warned = [...warned]; save();
+          announce(`${min} minute${min === 1 ? "" : "s"} left in the mock exam.`);
+        }
+      }
+      if (left <= 0) { submitMock(true); }
+    };
+    tick();
+    timerId = setInterval(tick, 1000);
+  }
+
+  function renderMock() {
+    setNav("mock");
+    const m = store.mock;
+    if (!m || m.submittedAt) return renderMockIntro();
+    if (m.view === "review") return renderMockReview();
+    renderMockQuestion();
+  }
+
+  function renderMockIntro() {
+    stopTimer();
+    const total = Math.min(EXAM.questions, QUESTIONS.length);
+    main.innerHTML = `
+    <div class="page">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#start">Home</a></li><li aria-current="page">Mock exam</li></ol></nav>
+      <h1 id="h1" class="h1s">Mock exam</h1>
+      <p class="lede">Practice under exam conditions. You won't see whether an answer is right until you submit.</p>
+      <ul class="how">
+        <li>${total} question${total === 1 ? "" : "s"}, drawn by exam weight: ${DOMAINS.map((d) => `Domain ${d.id} ${d.weight}%`).join(", ")}.</li>
+        <li>A ${EXAM.durationMinutes / 60}-hour timer. You'll hear a reminder at 30, 10, 5 and 1 minutes left. The exam submits itself when time runs out.</li>
+        <li>Mark any question for review and come back to it before you submit.</li>
+        <li>Your progress is saved on this device, so you can leave and resume.</li>
+      </ul>
+      ${QUESTIONS.length < EXAM.questions ? `<p class="note">The question bank has ${QUESTIONS.length} question${QUESTIONS.length === 1 ? "" : "s"} so far. A full mock needs ${EXAM.questions}. Until then, the mock uses every question available.</p>` : ""}
+      <div class="actions">
+        <button class="btn" id="mock-start" type="button">Start the timer</button>
+        ${store.lastMock ? `<a class="btn ghost" href="#mock-results">Last results</a>` : ""}
+      </div>
+    </div>`;
+    document.getElementById("mock-start").onclick = () => {
+      store.mock = { order: drawMock(), answers: {}, flags: {}, startedAt: Date.now(), i: 0, view: "q", warned: [] };
+      save(); renderMock(); finish();
+    };
+    finish();
+  }
+
+  function mockStatus(id) {
+    const m = store.mock;
+    return m.flags[id] ? "flag" : m.answers[id] !== undefined ? "answered" : "none";
+  }
+
+  function mockGrid(currentIndex) {
+    const m = store.mock;
+    return `<ol class="mgrid">${m.order.map((id, k) => `<li><button type="button" data-goto="${k}" class="mg mg-${mockStatus(id)}" ${k === currentIndex ? 'aria-current="step"' : ""}>
+      <span aria-hidden="true">${k + 1}</span><span class="vh">Question ${k + 1}, ${STATUS_TEXT[mockStatus(id)]}</span></button></li>`).join("")}</ol>
+      <p class="mlegend" aria-hidden="true"><span><span class="st st-answered">•</span>Answered</span><span><span class="st st-flag">⚑</span>Marked</span><span><span class="st st-none"></span>Not answered</span></p>`;
+  }
+
+  function mockBar(extra) {
+    return `<div class="mbar">
+      <span class="mtime"><span class="vh">Time left: </span><span id="timer" role="timer" aria-live="off">--:--:--</span></span>
+      ${extra || ""}
+    </div>`;
+  }
+
+  function renderMockQuestion() {
+    const m = store.mock;
+    const i = Math.min(m.i, m.order.length - 1);
+    const q = QBYID[m.order[i]];
+    const pick = m.answers[q.id];
+    const flagged = !!m.flags[q.id];
+    const last = i === m.order.length - 1;
+    main.innerHTML = `
+    <div class="split">
+      <aside class="side" aria-labelledby="side-h"><h2 id="side-h" class="side-h">Mock exam</h2>${mockGrid(i)}</aside>
+      <div class="col">
+        ${mockBar(`<button type="button" class="counter" id="open-list" aria-haspopup="dialog">Question ${i + 1} of ${m.order.length}<span class="counter-more"> · All</span></button><span class="counter-static">Question ${i + 1} of ${m.order.length}</span>`)}
+        <form id="qform">
+          <fieldset>
+            <legend><h1 class="qtext" id="h1">${esc(q.question)}</h1></legend>
+            <div class="opts">${q.options.map((o, k) => `<label class="opt">
+              <input type="radio" name="opt" value="${k}" ${pick === k ? "checked" : ""}>
+              <span class="dot" aria-hidden="true">${LETTERS[k]}</span>
+              <span><span class="vh">${LETTERS[k]}. </span>${esc(o)}</span></label>`).join("")}</div>
+          </fieldset>
+        </form>
+        <div class="actions"><button type="button" class="btn ghost small" id="flag" aria-pressed="${flagged}">${flagged ? "⚑ Marked for review" : "⚐ Mark for review"}</button></div>
+        <nav class="nav" aria-label="Previous and next question">
+          ${i > 0 ? `<button class="btn ghost" type="button" id="m-prev">← Previous</button>` : `<span></span>`}
+          <button class="btn next" type="button" id="m-next">${last ? "Review and submit →" : "Next →"}</button>
+        </nav>
+      </div>
+    </div>`;
+    document.getElementById("qform").addEventListener("change", (e) => { m.answers[q.id] = +e.target.value; save(); });
+    document.getElementById("flag").onclick = (e) => {
+      m.flags[q.id] = !m.flags[q.id]; if (!m.flags[q.id]) delete m.flags[q.id]; save();
+      const on = !!m.flags[q.id];
+      e.currentTarget.setAttribute("aria-pressed", on);
+      e.currentTarget.textContent = on ? "⚑ Marked for review" : "⚐ Mark for review";
+      const g = main.querySelector(`[data-goto="${i}"]`); if (g) { g.className = `mg mg-${mockStatus(q.id)}`; g.querySelector(".vh").textContent = `Question ${i + 1}, ${STATUS_TEXT[mockStatus(q.id)]}`; }
+    };
+    const p = document.getElementById("m-prev"); if (p) p.onclick = () => gotoMock(i - 1);
+    document.getElementById("m-next").onclick = () => (last ? (m.view = "review", save(), renderMock(), finish()) : gotoMock(i + 1));
+    wireGrid(main);
+    document.getElementById("open-list").onclick = () => { openSheet("Mock exam", mockGrid(i)); wireGrid(sheetBody); };
+    startTimer();
+  }
+
+  function wireGrid(root) {
+    root.querySelectorAll("[data-goto]").forEach((b) => (b.onclick = () => { closeSheet(); gotoMock(+b.dataset.goto); }));
+  }
+  function gotoMock(i) { store.mock.i = i; store.mock.view = "q"; save(); renderMockQuestion(); finish(); }
+
+  function renderMockReview() {
+    const m = store.mock;
+    const unanswered = m.order.filter((id) => m.answers[id] === undefined).length;
+    const flagged = Object.keys(m.flags).length;
+    main.innerHTML = `
+    <div class="page">
+      ${mockBar()}
+      <h1 id="h1" class="h1s">Review before you submit</h1>
+      <p class="sub">${m.order.length - unanswered} of ${m.order.length} answered. ${unanswered ? `${unanswered} not answered.` : ""} ${flagged ? `${flagged} marked for review.` : ""} Select a number to go back to it.</p>
+      ${mockGrid(-1)}
+      <div class="confirm" id="confirm">
+        <p>${unanswered ? `Unanswered questions count as wrong. ` : ""}Once you submit, you can't change your answers.</p>
+        <div class="actions">
+          <button class="btn" type="button" id="submit">Submit mock exam</button>
+          <button class="btn ghost" type="button" id="back">Keep working</button>
+        </div>
+      </div>
+    </div>`;
+    wireGrid(main);
+    document.getElementById("back").onclick = () => gotoMock(m.i);
+    document.getElementById("submit").onclick = () => submitMock(false);
+    startTimer();
+  }
+
+  function submitMock(timedOut) {
+    stopTimer();
+    const m = store.mock;
+    if (!m || m.submittedAt) return;
+    m.submittedAt = Date.now();
+    m.timedOut = !!timedOut;
+    store.lastMock = m;
+    store.mock = null;
+    save();
+    setHash("mock-results");
+    renderResults();
+    if (timedOut) announce("Time is up. Your mock exam was submitted.");
+  }
+
+  function renderResults() {
+    setNav("mock");
+    stopTimer();
+    const m = store.lastMock;
+    if (!m) return renderMockIntro();
+    const qs = m.order.map((id) => QBYID[id]).filter(Boolean);
+    const right = qs.filter((q) => m.answers[q.id] === q.answer);
+    const missed = qs.filter((q) => m.answers[q.id] !== q.answer);
+    const pct = qs.length ? Math.round((right.length / qs.length) * 100) : 0;
+    const used = fmtTime(Math.min(MOCK_MS, m.submittedAt - m.startedAt));
+    main.innerHTML = `
+    <div class="page">
+      <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#start">Home</a></li><li><a href="#mock">Mock exam</a></li><li aria-current="page">Results</li></ol></nav>
+      <h1 id="h1" class="h1s">Mock exam results</h1>
+      <p class="bigscore"><b>${right.length}</b> of ${qs.length} correct <span>(${pct}%)</span></p>
+      <p class="sub">${m.timedOut ? "Time ran out, so the exam submitted itself." : `Finished in ${used}.`} This is practice and does not predict an official IAAP score.</p>
+      <section aria-labelledby="bd" class="block">
+        <h2 id="bd" class="h2">By domain</h2>
+        <ul class="bars">${DOMAINS.map((d) => {
+          const dq = qs.filter((q) => q.domain === d.id);
+          const dr = dq.filter((q) => m.answers[q.id] === q.answer).length;
+          const p = dq.length ? Math.round((dr / dq.length) * 100) : 0;
+          return `<li style="--c:${color(d)}"><div class="bar-l"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></div>
+            <div class="bar-t" aria-hidden="true"><span style="width:${p}%"></span></div>
+            <div class="bar-v">${dq.length ? `${dr}/${dq.length}` : "None drawn"}</div></li>`;
+        }).join("")}</ul>
+      </section>
+      ${missed.length ? `<section aria-labelledby="ms" class="block">
+        <h2 id="ms" class="h2">Study what you missed</h2>
+        <p class="sub">Each link opens the question in Study mode with the full explanation.</p>
+        <ol class="ql">${missed.map((q) => `<li><a href="#${q.id}">${mark("bad")}<span class="ql-q">${esc(q.question)}</span></a></li>`).join("")}</ol>
+      </section>` : ""}
+      <div class="actions"><a class="btn" href="#mock">New mock exam</a><a class="btn ghost" href="#start">Home</a></div>
+    </div>`;
+    finish();
   }
 
   // ---------- routing ----------
-  // Deep links use the question id, e.g. #d1-social-model. #start is the landing page.
-  function go(i) { setHash(QUESTIONS[i].id); renderQ(i, true); window.scrollTo(0, 0); }
-  function home() { setHash("start"); renderHome(true); window.scrollTo(0, 0); }
+  function setHash(h) { try { history.replaceState(null, "", "#" + h); } catch (e) { /* ignore */ } }
 
-  function route() {
-    const id = (location.hash || "").slice(1);
-    const i = QUESTIONS.findIndex((q) => q.id === id);
-    if (i > -1) renderQ(i); else renderHome();
+  function route(initial) {
+    const h = (location.hash || "").slice(1);
+    if (sheet.open) closeSheet();
+    if (!h || h === "start") { stopTimer(); renderHome(); return finish(); }
+    if (/^(d[123]|all)$/.test(h)) { stopTimer(); return renderOverview(h); }
+    if (TOPIC[h]) { stopTimer(); return renderOverview("d" + TOPIC[h].domain, h); }
+    if (QBYID[h]) { stopTimer(); return renderQuestion(QBYID[h]); }
+    if (h === "mock") { renderMock(); return finish(); }
+    if (h === "mock-results") return renderResults();
+    if (initial) { renderHome(); finish(); } // unknown token on first load; otherwise ignore (e.g. #main skip link)
   }
 
   // ---------- boot ----------
   async function boot() {
     try {
-      const [d, q] = await Promise.all([
-        fetch("data/domains.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
-        fetch("data/questions.json").then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }),
-      ]);
+      const get = (p) => fetch(p).then((r) => { if (!r.ok) throw new Error(p + " " + r.status); return r.json(); });
+      const [d, q] = await Promise.all([get("data/domains.json"), get("data/questions.json")]);
       EXAM = d.exam;
-      d.domains.forEach((x) => (DOMAINS[x.id] = x));
-      QUESTIONS = q;
+      DOMAINS = d.domains;
+      DOMAINS.forEach((x) => { DOMAIN[x.id] = x; x.topics.forEach((t) => (TOPIC[t.id] = { ...t, domain: x.id })); });
+      const topicOrder = Object.keys(TOPIC);
+      QUESTIONS = q.slice().sort((a, b) => topicOrder.indexOf(a.topic) - topicOrder.indexOf(b.topic));
+      QUESTIONS.forEach((x) => (QBYID[x.id] = x));
     } catch (e) {
-      main.innerHTML = `<p class="score">The question data could not load. If you opened index.html straight from your files, run a local server instead (see README).</p>`;
+      main.innerHTML = `<div class="page"><p class="note">The question data could not load. If you opened index.html straight from your files, run a local server instead (see README).</p></div>`;
       return;
     }
     load();
-    document.getElementById("home").onclick = home;
-    route();
+    if (store.mock && !store.mock.submittedAt && Date.now() > store.mock.startedAt + MOCK_MS) submitMock(true);
+    window.addEventListener("hashchange", () => route(false));
+    route(true);
   }
 
   boot();

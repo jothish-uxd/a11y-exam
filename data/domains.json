@@ -4,11 +4,51 @@
     "code": "CPACC",
     "issuer": "International Association of Accessibility Professionals (IAAP)",
     "questions": 100,
-    "durationMinutes": 120
+    "durationMinutes": 120,
+    "bodyOfKnowledge": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+    "bodyOfKnowledgeVersion": "October 2023"
   },
   "domains": [
-    { "id": 1, "name": "Disabilities, challenges & assistive technologies", "weight": 40, "colorToken": "--d1" },
-    { "id": 2, "name": "Accessibility & universal design", "weight": 20, "colorToken": "--d2" },
-    { "id": 3, "name": "Standards, laws & management strategies", "weight": 40, "colorToken": "--d3" }
+    {
+      "id": 1,
+      "name": "Disabilities, challenges & assistive technologies",
+      "weight": 40,
+      "colorToken": "--d1",
+      "topics": [
+        { "id": "d1a", "name": "Models of disability" },
+        { "id": "d1b", "name": "Disability categories, barriers & solutions" },
+        { "id": "d1c", "name": "Assistive technologies & adaptive strategies" },
+        { "id": "d1d", "name": "Demographics & statistics" },
+        { "id": "d1e", "name": "Disability etiquette" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Accessibility & universal design",
+      "weight": 40,
+      "colorToken": "--d2",
+      "topics": [
+        { "id": "d2a", "name": "Accommodations vs. universal design" },
+        { "id": "d2b", "name": "Benefits of accessibility" },
+        { "id": "d2c", "name": "Web accessibility principles (WCAG)" },
+        { "id": "d2d", "name": "Built environment" },
+        { "id": "d2e", "name": "Principles of universal design" },
+        { "id": "d2f", "name": "Universal Design for Learning, usability & UX" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Standards, laws & management strategies",
+      "weight": 20,
+      "colorToken": "--d3",
+      "topics": [
+        { "id": "d3a", "name": "International declarations & conventions" },
+        { "id": "d3b", "name": "Regional instruments" },
+        { "id": "d3c", "name": "National & provincial laws" },
+        { "id": "d3d", "name": "Domain-specific & procurement laws" },
+        { "id": "d3e", "name": "Applying standards to ICT" },
+        { "id": "d3f", "name": "Integrating accessibility across the organization" }
+      ]
+    }
   ]
 }
