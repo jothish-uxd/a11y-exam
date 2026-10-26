@@ -141,5 +141,543 @@
         "note": "Domain 3.1, International declarations and conventions."
       }
     ]
+  },
+  {
+    "id": "d1-biopsychosocial-model",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "The WHO International Classification of Functioning, Disability and Health (ICF) describes disability as the result of interaction between a health condition, personal factors and environmental factors. Which model of disability does this reflect?",
+    "options": [
+      "Medical model",
+      "Charity model",
+      "Biopsychosocial model",
+      "Economic model"
+    ],
+    "answer": 2,
+    "rationale": "The biopsychosocial model combines the medical and social views instead of choosing one. It accepts that a health condition affects body function, and also that the environment can turn that condition into a barrier or remove it. The ICF is the best known example: its framework looks at body functions, activities and participation, and treats environmental factors as either facilitators or barriers. A person with arthritis, for example, may struggle with a jar lid at home (body and activity) and also be excluded by a workplace with no ergonomic tools (environment).",
+    "distractors": {
+      "0": "The medical model places disability entirely inside the person, as a condition to diagnose and treat. The ICF deliberately goes further by counting environmental factors as part of disability.",
+      "1": "The charity model presents disabled people as objects of pity who need help from others. It says nothing about how health conditions and environments interact.",
+      "3": "The economic model views disability through a person's capacity to work and the costs or benefits to employers and the state. The ICF is a health and functioning framework, not an economic one."
+    },
+    "tip": "If a question mentions both the body and the environment, think biopsychosocial. If it blames only the body, think medical. If it blames only the environment, think social.",
+    "sources": [
+      {
+        "title": "The ICF: An Overview (WHO, hosted by CDC)",
+        "url": "https://cdc.gov/nchs/media/pdfs/2024/06/icfoverview_finalforwho10sept.pdf",
+        "note": "States that the ICF uses a biopsychosocial model that integrates the medical and social models."
+      },
+      {
+        "title": "WHO International Classification of Functioning, Disability and Health (ICF)",
+        "url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+        "note": "WHO's official ICF page, explaining why environmental factors are part of the classification."
+      }
+    ]
+  },
+  {
+    "id": "d1-photosensitive-seizures",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A promotional video on a website includes a rapid strobe effect. Which group of users does this put at the most direct risk of harm?",
+    "options": [
+      "People with photosensitive epilepsy",
+      "People with color vision deficiency",
+      "People who are hard of hearing",
+      "People with speech disabilities"
+    ],
+    "answer": 0,
+    "rationale": "Flashing or flickering at certain rates can trigger seizures in people with photosensitive seizure disorders, including photosensitive epilepsy. This is a physical safety risk, not just an inconvenience, which is why WCAG makes it a Level A requirement. Success criterion 2.3.1 allows no more than three flashes in any one-second period unless the flashes stay below defined size and brightness thresholds. The barrier sits in the content, so the fix is to remove or tone down the flashing, not to expect the user to look away.",
+    "distractors": {
+      "1": "People with color vision deficiency have trouble telling certain colors apart. A strobe is a problem of flash rate and brightness change, not of color distinction.",
+      "2": "People who are hard of hearing meet barriers with audio content, such as missing captions. A visual strobe does not create a hearing-related barrier.",
+      "3": "Speech disabilities create barriers with voice-only interfaces, such as phone menus that require spoken answers. Watching a video does not depend on speech."
+    },
+    "tip": "Seizure risk is one of the few cases where an accessibility failure can cause direct physical harm. Remember the number three: three flashes per second.",
+    "sources": [
+      {
+        "title": "Understanding SC 2.3.1 Three Flashes or Below Threshold",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html",
+        "note": "Explains the flash threshold and why it protects people with photosensitive seizure disorders."
+      },
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Lists flickering content that can trigger seizures among the barriers people meet."
+      }
+    ]
+  },
+  {
+    "id": "d1-dyslexia-barriers",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A student with dyslexia is using an online course. Which design choice is most likely to reduce the barriers they face?",
+    "options": [
+      "Adding audio descriptions to every video",
+      "Providing a sign language interpreter for lectures",
+      "Short text sections with clear headings, plus text-to-speech",
+      "Increasing the size of clickable targets"
+    ],
+    "answer": 2,
+    "rationale": "Dyslexia is a learning disability that mainly affects reading and recognizing written words, which in turn affects spelling and comprehension. Long, dense passages with complex sentences are a common barrier. Short text blocks, plain words, clear headings, enough white space and support for text-to-speech (ideally with synchronized highlighting) all reduce the reading load. Letting users adjust text size, spacing and colors also helps.",
+    "distractors": {
+      "0": "Audio description narrates important visual information in video for people who are blind or have low vision. It does not address difficulty reading text.",
+      "1": "Sign language interpretation serves Deaf people who use sign language. Dyslexia does not affect hearing.",
+      "3": "Larger targets help people with motor impairments, such as tremor, who struggle to hit small controls. They do not make text easier to read."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Cognitive and Learning (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Describes dyslexia, the barriers it creates online, and strategies such as structure and text-to-speech."
+      }
+    ]
+  },
+  {
+    "id": "d1-refreshable-braille",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A person who is deafblind, with no usable vision or hearing, wants to read email on a computer. Which assistive technology best fits this need?",
+    "options": [
+      "Screen magnification software",
+      "A screen reader sending output to a refreshable braille display",
+      "Real-time captioning",
+      "Speech recognition software"
+    ],
+    "answer": 1,
+    "rationale": "A refreshable braille display raises and lowers pins to form braille characters, which the user reads by touch. Screen readers can send their output to a braille display instead of, or as well as, speech. For someone with no usable sight or hearing, touch is the remaining channel, so braille output is the practical way to read digital text. Deafblindness covers a wide range, though: some deafblind people have partial vision and use magnification, which is why the stem specifies no usable vision or hearing.",
+    "distractors": {
+      "0": "Magnification enlarges the screen for people with low vision. It requires some usable sight, which this person does not have.",
+      "2": "Captions turn audio into visible text for Deaf and hard of hearing people. They depend on sight, so they do not help here.",
+      "3": "Speech recognition is an input method: it lets users control a computer or dictate by voice. It does not help anyone read output."
+    },
+    "tip": "Separate input technologies (keyboards, switches, speech recognition) from output technologies (screen readers, magnifiers, braille displays). Exam questions often hinge on this.",
+    "sources": [
+      {
+        "title": "W3C WAI: Visual (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/visual/",
+        "note": "Covers screen readers, braille output, magnification and the definition of deafblindness."
+      },
+      {
+        "title": "W3C WAI: User Stories",
+        "url": "https://www.w3.org/WAI/people-use-web/user-stories/",
+        "note": "Includes Marta, who is deaf and blind and uses magnification, showing the range within deafblindness."
+      }
+    ]
+  },
+  {
+    "id": "d1-switch-access",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A user with high-level quadriplegia controls their computer by sipping and puffing on a tube. What kind of assistive technology is this?",
+    "options": [
+      "Alternative keyboard",
+      "Eye-tracking system",
+      "Head pointer",
+      "Switch"
+    ],
+    "answer": 3,
+    "rationale": "A sip-and-puff device is a type of switch: it sends a simple on or off signal when the user sips or puffs. Switches can also be pressed by a foot, shoulder, cheek or any other movement the user controls reliably. Software then steps through options on screen, and the user activates the switch to choose one. Because switch users depend on keyboard-style navigation, sites that lack full keyboard support or have short time limits are serious barriers for them.",
+    "distractors": {
+      "0": "Alternative keyboards, such as ergonomic layouts or larger keys, still require the user to press keys with their hands or a typing aid.",
+      "1": "Eye tracking follows where the user is looking to move the pointer or select items. It uses gaze, not breath.",
+      "2": "A head pointer is a stick worn on the head to press keys or touch a screen. It requires head movement, not sipping and puffing."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Lists switches operated by foot, shoulder or sip-and-puff, plus head pointers, eye tracking and other tools."
+      },
+      {
+        "title": "W3C WAI: Tools and Techniques",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/",
+        "note": "Overview of assistive technologies, including selection switches and speech recognition."
+      }
+    ]
+  },
+  {
+    "id": "d1-screen-magnification",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A user with low vision enlarges their whole screen with magnification software and sees only a small part of the page at a time. Which design practice helps them most?",
+    "options": [
+      "Providing captions for all video",
+      "Keeping layout, navigation and visual cues consistent from page to page",
+      "Allowing users to operate the page by voice",
+      "Offering content in simplified language"
+    ],
+    "answer": 1,
+    "rationale": "Screen magnification works like a digital magnifying glass: everything gets bigger, including the pointer, but the user loses the overview of the page. They have to pan around to find things, so they rely on consistent placement and clear visual cues to stay oriented. When navigation, search and key controls stay in the same place on every page, the user knows where to pan. Content that reflows instead of forcing horizontal scrolling helps for the same reason.",
+    "distractors": {
+      "0": "Captions help Deaf and hard of hearing users, and many others, follow audio. They do not address the loss of overview caused by magnification.",
+      "2": "Voice control is an input method that mainly helps people who cannot use a keyboard or mouse. It does not help a user find content they can only see in small pieces.",
+      "3": "Simplified language mainly supports people with cognitive or learning disabilities and non-native readers. A magnifier user's main barrier is orientation on the page, not the complexity of the words."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Visual (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/visual/",
+        "note": "Explains screen magnification and why magnifier users depend on visual cues and consistent design."
+      },
+      {
+        "title": "W3C WAI: Tools and Techniques",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/",
+        "note": "Lists screen magnifiers among the assistive technologies people with low vision use."
+      }
+    ]
+  },
+  {
+    "id": "d1-who-global-prevalence",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "According to the World Health Organization's 2023 fact sheet, roughly how many people worldwide experience significant disability?",
+    "options": [
+      "About 1 in 50 people (around 160 million)",
+      "About 1 in 20 people (around 400 million)",
+      "About 1 in 10 people (around 800 million)",
+      "About 1 in 6 people (around 1.3 billion)"
+    ],
+    "answer": 3,
+    "rationale": "WHO estimates that about 1.3 billion people, or 16% of the world's population, experience significant disability. That is roughly one person in six. The figure matters because it frames disabled people as a large group and a large market, not a small niche, which is central to the business and social case for accessibility. Prevalence also rises with age, so the number grows as populations age.",
+    "distractors": {
+      "0": "This figure is far too low. It would make disability a rare condition, which the global data does not support.",
+      "1": "This underestimates prevalence by about two thirds. It may come from confusing a single disability category with all disability.",
+      "2": "This is closer, but still understates the WHO figure of about 16%, which is nearer one in six than one in ten."
+    },
+    "tip": "Memorize '1.3 billion, 16%, about 1 in 6'. Statistics questions on the exam tend to test the order of magnitude, not exact decimals.",
+    "sources": [
+      {
+        "title": "WHO fact sheet: Disability (March 2023)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/disability-and-health",
+        "note": "Key facts on the global number of people with significant disability and the health inequities they face."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-interpreter",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "A hotel clerk is checking in a Deaf guest who is accompanied by a sign language interpreter. What should the clerk do?",
+    "options": [
+      "Look at and speak directly to the guest, for example \"What dates would you like?\"",
+      "Speak to the interpreter, for example \"Ask her what dates she'd like\"",
+      "Write everything down and avoid speaking",
+      "Speak more loudly and slowly so the guest can lip-read"
+    ],
+    "answer": 0,
+    "rationale": "The conversation is with the guest, not the interpreter. The clerk should face the guest, keep eye contact with them and speak in the first person, as they would with any other guest. The interpreter's job is to relay the conversation, not to take part in it. Talking about the guest in the third person sidelines them and is a common etiquette mistake.",
+    "distractors": {
+      "1": "Addressing the interpreter treats the guest as a third party in their own conversation. Etiquette guidance specifically warns against phrasing like \"ask her\".",
+      "2": "Writing can work when no interpreter is present, but here a qualified interpreter is already providing communication. Refusing to speak ignores the access the guest arranged.",
+      "3": "Shouting distorts lip shapes and is not how sign language interpretation works. Many Deaf people do not rely on lip-reading, and exaggerated speech can be patronizing."
+    },
+    "tip": "Most etiquette questions come down to one rule: treat the disabled person as the person you are dealing with. Speak to them, ask before helping, and do not touch their equipment or guide dog.",
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Guidance on talking directly to Deaf people who use interpreters, and other everyday etiquette."
+      }
+    ]
+  },
+  {
+    "id": "d2-accommodation-vs-ud",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "An employee who is blind asks for screen reader software, and the employer buys a license for that employee's computer. How is this best described?",
+    "options": [
+      "Universal design",
+      "Reasonable accommodation",
+      "Inclusive design",
+      "Usability testing"
+    ],
+    "answer": 1,
+    "rationale": "A reasonable accommodation is an adjustment made for a particular person in a particular situation, as long as it does not impose an undue burden. The CRPD defines it this way, and U.S. employment law uses the same idea. It is reactive: it starts with a request and an individual need. Universal design works the other way around, building usability for as many people as possible into the product or environment from the start so that fewer individual adjustments are needed.",
+    "distractors": {
+      "0": "Universal design aims for products and environments everyone can use without adaptation. Buying software for one employee on request is an individual adaptation, the opposite approach.",
+      "2": "Inclusive design is a proactive design approach that considers diverse users throughout the process. It is not a term for responding to one person's request.",
+      "3": "Usability testing evaluates how well people can use a product. Providing a tool to an employee is not an evaluation method."
+    },
+    "tip": "Accommodation is individual and after the fact. Universal design is for everyone and up front. Both are needed: universal design reduces how many accommodations are required, but never removes the need for all of them.",
+    "sources": [
+      {
+        "title": "UN CRPD Article 2: Definitions",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-2-definitions",
+        "note": "Defines both reasonable accommodation and universal design."
+      },
+      {
+        "title": "Job Accommodation Network: The Interactive Process",
+        "url": "https://AskJAN.org/topics/interactive.cfm",
+        "note": "How employers and employees work together to find individual accommodations."
+      }
+    ]
+  },
+  {
+    "id": "d2-business-case-innovation",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "Features such as voice control and text autocomplete were shaped by accessibility needs and are now used by almost everyone. Which benefit of accessibility does this illustrate most directly?",
+    "options": [
+      "Minimizing legal risk",
+      "Enhancing brand reputation",
+      "Driving innovation",
+      "Meeting procurement requirements"
+    ],
+    "answer": 2,
+    "rationale": "The W3C business case for accessibility groups the benefits into four areas: driving innovation, enhancing the brand, extending market reach and minimizing legal risk. Innovation is the argument that solving for disabled users often produces features that turn out to be useful to everyone. Voice control and autocomplete are classic examples. This is the digital version of the curb-cut effect, where a feature designed for a specific group becomes a mainstream convenience.",
+    "distractors": {
+      "0": "Legal risk is about avoiding lawsuits and complaints by meeting accessibility laws. The scenario is about features that spread to mainstream use, not legal exposure.",
+      "1": "Brand benefits come from being seen as socially responsible. Wide adoption of a feature may help a brand, but the scenario describes new product capabilities.",
+      "3": "Procurement rules, such as Section 508, require buyers to choose accessible products. That is a market access driver, not the spread of new features."
+    },
+    "tip": "Learn the four W3C business case headings. A scenario about new features points to innovation; one about older users or people in noisy places points to market reach.",
+    "sources": [
+      {
+        "title": "W3C WAI: The Business Case for Digital Accessibility",
+        "url": "https://www.w3.org/WAI/business-case/",
+        "note": "The four benefit areas, with case studies for each."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-keyboard-trap",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A keyboard user tabs into an embedded video player and cannot tab back out of it. Under which WCAG principle does this failure fall?",
+    "options": [
+      "Perceivable",
+      "Understandable",
+      "Robust",
+      "Operable"
+    ],
+    "answer": 3,
+    "rationale": "Operable means users must be able to work every part of the interface. Guideline 2.1 requires that all functionality be available from a keyboard, and success criterion 2.1.2 No Keyboard Trap, Level A, says that if focus can move into a component with the keyboard, it must also be able to move out of it. A trapped user cannot reach the rest of the page at all. This hits keyboard-only users, screen reader users and people using switches or other keyboard-emulating devices.",
+    "distractors": {
+      "0": "Perceivable is about whether information can be sensed, through text alternatives, captions and contrast. The user can perceive the player; the problem is that they cannot leave it.",
+      "1": "Understandable covers readable content, predictable behavior and help with input. A keyboard trap is not a comprehension problem.",
+      "2": "Robust concerns compatibility with browsers and assistive technologies, such as correct names, roles and states. A trap is about operating the interface, even though it may be caused by code."
+    },
+    "tip": "The SC number gives it away: 2.1.2 starts with 2, and every 2.x criterion is Operable.",
+    "sources": [
+      {
+        "title": "Understanding SC 2.1.2 No Keyboard Trap",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html",
+        "note": "Intent and examples for the keyboard trap requirement."
+      },
+      {
+        "title": "Understanding WCAG 2.2: the four principles",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility",
+        "note": "W3C explanation of Perceivable, Operable, Understandable and Robust."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-conformance-levels",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "An organization's policy says its website must conform to WCAG 2.2 Level AA. What does that require of each page?",
+    "options": [
+      "Meeting all Level AA success criteria, with Level A criteria optional",
+      "Meeting all Level A and Level AA success criteria",
+      "Meeting all Level A, AA and AAA success criteria",
+      "Meeting at least half of the Level AA success criteria"
+    ],
+    "answer": 1,
+    "rationale": "WCAG conformance levels are cumulative. Level A is the minimum. Level AA means a page meets every Level A criterion and every Level AA criterion, or provides a conforming alternate version. Level AAA adds all AAA criteria on top. AA is the level most laws and policies reference, and W3C advises against requiring AAA for entire sites because some content cannot meet every AAA criterion.",
+    "distractors": {
+      "0": "Levels build on each other. Skipping Level A would leave out the most basic requirements, such as text alternatives and keyboard access, so a page cannot be AA without them.",
+      "2": "That describes Level AAA. W3C does not recommend requiring AAA as a general policy for whole sites.",
+      "3": "There is no partial conformance by percentage. A page conforms at a level only if it meets every criterion at that level and below."
+    },
+    "tip": "Think of the levels as stairs: you cannot stand on AA without standing on A first.",
+    "sources": [
+      {
+        "title": "Understanding Conformance (WCAG 2.2)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/conformance",
+        "note": "Explains the three levels and the note advising against requiring AAA site-wide."
+      },
+      {
+        "title": "WCAG 2.2: Conformance Requirements",
+        "url": "https://www.w3.org/TR/WCAG22/#conformance-reqs",
+        "note": "The normative conformance requirements in the W3C Recommendation."
+      }
+    ]
+  },
+  {
+    "id": "d2-ramp-slope",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Under the 2010 ADA Standards for Accessible Design, what is the steepest running slope allowed for a ramp in new construction?",
+    "options": [
+      "1:8",
+      "1:12",
+      "1:16",
+      "1:20"
+    ],
+    "answer": 1,
+    "rationale": "The ADA Standards cap ramp running slope at 1:12, meaning one unit of rise for every twelve units of run (about 8.33%). Each ramp run can rise at most 30 inches before a landing is needed, and ramps rising more than 6 inches need handrails on both sides. The limit reflects what many manual wheelchair users can push up, and control coming down, without help. Gentler slopes are better where space allows.",
+    "distractors": {
+      "0": "1:8 is much steeper. It is only allowed for very short rises (3 inches or less) in existing sites where space rules out a gentler slope.",
+      "2": "1:16 is gentler than required. It would be compliant, but it is not the maximum the Standards allow.",
+      "3": "1:20 is the threshold that defines a ramp: anything steeper than 1:20 on an accessible route must be built as a ramp. It is not the ramp maximum."
+    },
+    "tip": "Remember 1:12 for ramps and 1:20 as the line between a walking surface and a ramp.",
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Chapter 4 Ramps and Curb Ramps",
+        "url": "https://www.access-board.gov/ada/guides/chapter-4-ramps-and-curb-ramps/",
+        "note": "Plain-language guide to ramp slope, rise, width and handrail requirements."
+      },
+      {
+        "title": "U.S. Access Board: 2010 ADA Standards for Accessible Design",
+        "url": "https://www.access-board.gov/ada/",
+        "note": "Full text of the Standards, including section 405 Ramps."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-tolerance-for-error",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "An email app shows an \"Undo\" button for several seconds after a message is deleted or sent. Which principle of universal design does this most directly apply?",
+    "options": [
+      "Tolerance for Error",
+      "Flexibility in Use",
+      "Low Physical Effort",
+      "Perceptible Information"
+    ],
+    "answer": 0,
+    "rationale": "Tolerance for Error asks designers to reduce hazards and the consequences of accidental or unintended actions. An undo window lets anyone recover from a slip, whether it was caused by a tremor, a distraction or a mistaken tap. The seven principles were developed in 1997 by a team at North Carolina State University led by Ronald Mace. Other common examples of this principle are confirmation steps before destructive actions and guards on dangerous machinery.",
+    "distractors": {
+      "1": "Flexibility in Use is about supporting different preferences and abilities, such as left- or right-handed use or choice of pace. Undo is about recovering from mistakes, not offering choices.",
+      "2": "Low Physical Effort is about using a design efficiently and comfortably with little fatigue. Undo does not reduce effort; it limits harm.",
+      "3": "Perceptible Information is about communicating essential information whatever the user's senses or the surrounding conditions. Undo is not a way of presenting information."
+    },
+    "tip": "Learn the seven principles in order: Equitable Use, Flexibility in Use, Simple and Intuitive Use, Perceptible Information, Tolerance for Error, Low Physical Effort, Size and Space for Approach and Use.",
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Each principle with its definition and guidelines, and the history of the NCSU working group."
+      }
+    ]
+  },
+  {
+    "id": "d2-udl-representation",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "A teacher presents the same lesson as a written handout, a narrated video with captions, and a diagram. Which Universal Design for Learning (UDL) principle does this apply?",
+    "options": [
+      "Engagement",
+      "Action & Expression",
+      "Perceptible Information",
+      "Representation"
+    ],
+    "answer": 3,
+    "rationale": "UDL, developed by CAST, has three principles: Engagement, Representation, and Action & Expression. Representation is about offering information in more than one form so that learners can perceive and understand it in the way that works for them. Text, captioned video and diagrams give different routes into the same content, which helps students with sensory disabilities, learning disabilities, or a different first language. The current guidelines are version 3.0, released in 2024.",
+    "distractors": {
+      "0": "Engagement is about motivation and interest: giving learners reasons to care, sustaining effort and supporting emotional capacity. The scenario is about how content is presented.",
+      "1": "Action & Expression is about how learners interact and show what they know, such as letting them choose between an essay, a presentation or a project. Here the teacher is varying the input, not the output.",
+      "2": "Perceptible Information is one of the seven principles of universal design for products and environments, not a UDL principle. The ideas overlap, but the question asks about UDL."
+    },
+    "tip": "A common shorthand: Engagement is the why of learning, Representation the what, and Action & Expression the how. If the teacher changes the material, it is Representation; if the student chooses how to respond, it is Action & Expression.",
+    "sources": [
+      {
+        "title": "CAST: The UDL Guidelines",
+        "url": "https://udlguidelines.cast.org/",
+        "note": "The three UDL principles and nine guidelines, version 3.0."
+      },
+      {
+        "title": "CAST: Representation",
+        "url": "https://udlguidelines.cast.org/representation/",
+        "note": "Guidelines for perception, language and symbols, and building knowledge."
+      }
+    ]
+  },
+  {
+    "id": "d3-ada-title-iii",
+    "domain": 3,
+    "topic": "d3c",
+    "question": "A privately owned movie theater in the United States has no accessible seating. Which part of the Americans with Disabilities Act (ADA) primarily applies?",
+    "options": [
+      "Title I",
+      "Title II",
+      "Title III",
+      "Title IV"
+    ],
+    "answer": 2,
+    "rationale": "Title III covers public accommodations: privately operated businesses and nonprofits that serve the public, such as restaurants, hotels, shops, theaters, doctors' offices and gyms. It also covers commercial facilities and private transportation. A private movie theater is a public accommodation, so Title III applies. The ADA was signed in 1990 and is one of the national laws named in the CPACC Body of Knowledge.",
+    "distractors": {
+      "0": "Title I covers employment by employers with 15 or more employees, including hiring and reasonable accommodation at work. A customer's seating is not an employment matter.",
+      "1": "Title II covers state and local government services, such as public schools, courts and public transit. The theater is privately owned.",
+      "3": "Title IV covers telecommunications, requiring relay services for people with hearing and speech disabilities and captioning of federally funded public service announcements."
+    },
+    "tip": "Memory aid: I = Employment (I work), II = Government (public sector), III = Businesses open to the public, IV = Telecommunications.",
+    "sources": [
+      {
+        "title": "ADA.gov: Guide to Disability Rights Laws",
+        "url": "https://www.ada.gov/resources/disability-rights-guide/",
+        "note": "U.S. Department of Justice summary of each ADA title and related federal laws."
+      }
+    ]
+  },
+  {
+    "id": "d3-section-508-wcag",
+    "domain": 3,
+    "topic": "d3d",
+    "question": "The revised Section 508 Standards, issued by the U.S. Access Board in 2017, set accessibility requirements for which of the following?",
+    "options": [
+      "ICT used or bought by federal agencies, referencing WCAG 2.0 Level A and AA",
+      "All private-sector websites, referencing WCAG 2.2 Level AA",
+      "Buildings and facilities constructed with federal funds",
+      "State and local government websites and apps"
+    ],
+    "answer": 0,
+    "rationale": "Section 508 of the Rehabilitation Act requires federal agencies to make the information and communication technology (ICT) they develop, procure, maintain or use accessible to employees and members of the public with disabilities. The 2017 refresh of the standards incorporated WCAG 2.0 Level A and AA by reference for electronic content and software. Because agencies must buy accessible products, Section 508 is also a procurement law, and it shapes what vendors build.",
+    "distractors": {
+      "1": "Section 508 applies to the federal government, not private businesses. Private-sector accessibility in the U.S. comes mainly from the ADA, and the 508 Standards reference WCAG 2.0, not 2.2.",
+      "2": "Facilities built with federal funds fall under the Architectural Barriers Act (ABA) and its standards. Section 508 is about ICT.",
+      "3": "State and local governments are covered by Title II of the ADA. Section 508 applies to federal agencies."
+    },
+    "tip": "Section 508 = federal ICT and procurement. Its European counterpart is EN 301 549. Note that the 508 Standards still point to WCAG 2.0, even though newer versions exist.",
+    "sources": [
+      {
+        "title": "U.S. Access Board: Revised 508 Standards and 255 Guidelines",
+        "url": "https://www.access-board.gov/ict/",
+        "note": "Full text of the standards, including the incorporation of WCAG 2.0 Level A and AA."
+      },
+      {
+        "title": "ADA.gov: Guide to Disability Rights Laws",
+        "url": "https://www.ada.gov/resources/disability-rights-guide/",
+        "note": "Summarizes Section 508 alongside the ADA and other federal laws."
+      }
+    ]
+  },
+  {
+    "id": "d3-en-301-549",
+    "domain": 3,
+    "topic": "d3e",
+    "question": "What is EN 301 549?",
+    "options": [
+      "A UN convention on the rights of persons with disabilities",
+      "A W3C guideline for accessible authoring tools",
+      "The European standard setting accessibility requirements for ICT products and services",
+      "A U.S. federal regulation for accessible telecommunications equipment"
+    ],
+    "answer": 2,
+    "rationale": "EN 301 549 is a European standard, produced jointly by CEN, CENELEC and ETSI, that sets accessibility requirements for ICT products and services, including web pages, mobile and desktop apps, and hardware such as kiosks and computers. It was first published in 2014 to support accessible public procurement. It is harmonised with the EU Web Accessibility Directive, so meeting it is a way to show compliance.",
+    "distractors": {
+      "0": "That is the CRPD, adopted by the UN in 2006. It is a human rights treaty, not a technical standard.",
+      "1": "That describes ATAG, the Authoring Tool Accessibility Guidelines from W3C. EN 301 549 covers ICT in general, not only authoring tools.",
+      "3": "That describes the Section 255 Guidelines in the United States, maintained by the U.S. Access Board. EN 301 549 is European."
+    },
+    "tip": "EN 301 549 is the European counterpart to the U.S. Section 508 Standards. Both apply accessibility standards to ICT and are used in public procurement.",
+    "sources": [
+      {
+        "title": "ETSI: EN 301 549 V3, the harmonised European standard for ICT accessibility",
+        "url": "https://www.etsi.org/human-factors-accessibility/en-301-549-v3-the-harmonized-european-standard-for-ict-accessibility",
+        "note": "What the standard covers, who produced it, and its link to the Web Accessibility Directive."
+      }
+    ]
   }
 ]
