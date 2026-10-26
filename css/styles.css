@@ -279,6 +279,9 @@ legend{padding:0;margin-bottom:1.2rem;width:100%}
 .dlg{border:1px solid var(--rule);border-radius:12px;background:var(--sheet);color:var(--ink);padding:1.4rem;width:min(28rem,calc(100% - 32px))}
 .dlg h2{font-family:var(--f-display);font-size:1.3rem;margin:0}
 .dlg p{margin:.6rem 0 0}
+.dlg .actions{justify-content:flex-end}
+/* .btn sets display, which would otherwise beat the hidden attribute. */
+.btn[hidden]{display:none}
 .btn.danger{background:var(--bad);border-color:var(--bad);color:var(--sheet)}
 .btn.danger:hover{background:var(--ink);border-color:var(--ink)}
 .sheet-head{position:sticky;top:0;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding-block:1rem .75rem;border-bottom:1px solid var(--rule);z-index:1}

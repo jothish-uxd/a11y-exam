@@ -548,6 +548,7 @@
     document.getElementById("clear-desc").textContent = n
       ? `This removes your answers to ${n} study question${n === 1 ? "" : "s"}. Mock exam results are kept.`
       : "You have no study answers to clear yet.";
+    document.getElementById("clear-title").textContent = n ? "Clear study progress?" : "No study progress to clear";
     document.getElementById("clear-yes").hidden = !n;
     document.getElementById("clear-cancel").textContent = n ? "Cancel" : "Close";
     clearDlg.returnValue = "";
