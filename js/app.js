@@ -368,11 +368,24 @@
     return m.flags[id] ? "flag" : m.answers[id] !== undefined ? "answered" : "none";
   }
 
+  // status key with live counts, above the number grid so it stays in view as the exam grows
+  function mockCounts() {
+    const c = { answered: 0, flag: 0, none: 0 };
+    store.mock.order.forEach((id) => c[mockStatus(id)]++);
+    return c;
+  }
   function mockGrid(currentIndex) {
-    const m = store.mock;
-    return `<ol class="mgrid">${m.order.map((id, k) => `<li><button type="button" data-goto="${k}" class="mg mg-${mockStatus(id)}" ${k === currentIndex ? 'aria-current="step"' : ""}>
-      <span aria-hidden="true">${k + 1}</span><span class="vh">Question ${k + 1}, ${STATUS_TEXT[mockStatus(id)]}</span></button></li>`).join("")}</ol>
-      <p class="mlegend" aria-hidden="true"><span><span class="st st-answered">•</span>Answered</span><span><span class="st st-flag">⚑</span>Marked</span><span><span class="st st-none"></span>Not answered</span></p>`;
+    const m = store.mock, c = mockCounts();
+    const key = [["answered", '<span class="st st-answered" aria-hidden="true">•</span>', "Answered"], ["flag", '<span class="st st-flag" aria-hidden="true">⚑</span>', "Marked"], ["none", '<span class="st st-none" aria-hidden="true"></span>', "Not answered"]];
+    return `<p class="mlegend mkey">${key.map(([k, icon, label]) => `<span>${icon}${label} <b data-count="${k}">${c[k]}</b></span>`).join("")}</p>
+      <ol class="mgrid">${m.order.map((id, k) => `<li><button type="button" data-goto="${k}" class="mg mg-${mockStatus(id)}" ${k === currentIndex ? 'aria-current="step"' : ""}>
+      <span aria-hidden="true">${k + 1}</span><span class="vh">Question ${k + 1}, ${STATUS_TEXT[mockStatus(id)]}</span></button></li>`).join("")}</ol>`;
+  }
+  // refresh one question's grid cell and the key's counts in place (side panel and open sheet)
+  function updateMockStatus(i, id) {
+    const st = mockStatus(id), c = mockCounts();
+    document.querySelectorAll(`[data-goto="${i}"]`).forEach((g) => { g.className = `mg mg-${st}`; g.querySelector(".vh").textContent = `Question ${i + 1}, ${STATUS_TEXT[st]}`; });
+    document.querySelectorAll("[data-count]").forEach((b) => (b.textContent = c[b.dataset.count]));
   }
 
   function mockBar(extra) {
@@ -410,13 +423,13 @@
         </nav>
       </div>
     </div>`;
-    document.getElementById("qform").addEventListener("change", (e) => { m.answers[q.id] = +e.target.value; save(); });
+    document.getElementById("qform").addEventListener("change", (e) => { m.answers[q.id] = +e.target.value; save(); updateMockStatus(i, q.id); });
     document.getElementById("flag").onclick = (e) => {
       m.flags[q.id] = !m.flags[q.id]; if (!m.flags[q.id]) delete m.flags[q.id]; save();
       const on = !!m.flags[q.id];
       e.currentTarget.setAttribute("aria-pressed", on);
       e.currentTarget.textContent = on ? "⚑ Marked for review" : "⚐ Mark for review";
-      const g = main.querySelector(`[data-goto="${i}"]`); if (g) { g.className = `mg mg-${mockStatus(q.id)}`; g.querySelector(".vh").textContent = `Question ${i + 1}, ${STATUS_TEXT[mockStatus(q.id)]}`; }
+      updateMockStatus(i, q.id);
     };
     const p = document.getElementById("m-prev"); if (p) p.onclick = () => gotoMock(i - 1);
     document.getElementById("m-next").onclick = () => (last ? (m.view = "review", save(), renderMock(), finish()) : gotoMock(i + 1));
