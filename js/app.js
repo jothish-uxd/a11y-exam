@@ -259,7 +259,7 @@
         <div id="result">${rationale}</div>
         <nav class="nav" aria-label="Previous and next question">
           ${prev ? `<a class="btn ghost" href="#${prev.id}">← Previous</a>` : `<a class="btn ghost" href="#${scope}">← ${scopeLabel(scope)}</a>`}
-          <a class="btn next" href="${nextHref}">${nextLabel}</a>
+          <a class="btn ghost next" href="${nextHref}">${nextLabel}</a>
         </nav>
       </div>
     </div>`;
@@ -421,7 +421,7 @@
         <div class="actions"><button type="button" class="btn ghost small" id="flag" aria-pressed="${flagged}">${flagged ? "⚑ Marked for review" : "⚐ Mark for review"}</button></div>
         <nav class="nav" aria-label="Previous and next question">
           ${i > 0 ? `<button class="btn ghost" type="button" id="m-prev">← Previous</button>` : `<span></span>`}
-          <button class="btn next" type="button" id="m-next">${last ? "Review and submit →" : "Next →"}</button>
+          <button class="btn ghost next" type="button" id="m-next">${last ? "Review and submit →" : "Next →"}</button>
         </nav>
       </div>
     </div>`;
