@@ -250,7 +250,8 @@ legend{padding:0;margin-bottom:1.2rem;width:100%}
 .mlegend{display:flex;flex-wrap:wrap;gap:.5rem 1rem;font-size:.85rem;color:var(--ink-soft);margin:.75rem 0 0}
 .mlegend>span{display:inline-flex;gap:.4rem;align-items:center}
 /* Side panel: the status key sits in its own box, on the footer's fill. */
-.side .mlegend{background:var(--foot-bg);border-radius:8px;padding:.6rem .75rem;margin:.9rem 0 0}
+.mkey{background:var(--foot-bg);border-radius:8px;padding:.6rem .75rem;margin:.9rem 0 0}
+.mkey b{color:var(--ink);font-variant-numeric:tabular-nums}
 /* Question lists in the side panel and sheet: the domain pill and status key share one box. */
 .compact .ql-key{background:var(--foot-bg);border-radius:8px;padding:.75rem;display:grid;gap:.6rem;margin-bottom:.75rem}
 .side .compact .ql-key .mlegend,.compact .ql-key .mlegend{margin:0;padding:0;background:none}
