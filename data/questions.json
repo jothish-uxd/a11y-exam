@@ -679,5 +679,830 @@
         "note": "What the standard covers, who produced it, and its link to the Web Accessibility Directive."
       }
     ]
+  },
+  {
+    "id": "d3-udhr-disability",
+    "domain": 3,
+    "topic": "d3a",
+    "question": "How does the Universal Declaration of Human Rights (1948) relate to disability?",
+    "options": [
+      "It contains a dedicated chapter on the rights of persons with disabilities",
+      "It applies to everyone and mentions disability once, as a circumstance in which people are entitled to security",
+      "It defines disability using the social model",
+      "It requires states to adopt accessibility standards for buildings and ICT"
+    ],
+    "answer": 1,
+    "rationale": "The UDHR, proclaimed by the UN General Assembly on 10 December 1948, sets out rights that belong to every person equally. It names disability only once: Article 25 lists it, alongside sickness, widowhood and old age, as a situation in which people are entitled to social security. The UDHR is the foundation the later disability instruments build on. The CRPD (2006) does not create new rights; it spells out how the existing universal rights apply to persons with disabilities.",
+    "distractors": {
+      "0": "There is no disability chapter in the UDHR. A dedicated treaty on disability rights came much later, with the CRPD in 2006.",
+      "2": "The UDHR does not define disability at all. The interaction between impairments and barriers is described in the CRPD's preamble and Article 1.",
+      "3": "Accessibility obligations for the built environment and ICT appear in Article 9 of the CRPD, not the UDHR."
+    },
+    "tip": "Order the international instruments by date: UDHR 1948, CRPD 2006, Marrakesh Treaty 2013.",
+    "sources": [
+      {
+        "title": "United Nations: Universal Declaration of Human Rights",
+        "url": "https://www.un.org/en/about-us/universal-declaration-of-human-rights",
+        "note": "Full text of the Declaration, including Article 25."
+      }
+    ]
+  },
+  {
+    "id": "d3-crpd-article-9",
+    "domain": 3,
+    "topic": "d3a",
+    "question": "Which article of the UN Convention on the Rights of Persons with Disabilities (CRPD) requires states to ensure access to the physical environment, transportation, and information and communications technologies?",
+    "options": [
+      "Article 9, Accessibility",
+      "Article 2, Definitions",
+      "Article 27, Work and employment",
+      "Article 33, National implementation and monitoring"
+    ],
+    "answer": 0,
+    "rationale": "Article 9 is the CRPD's accessibility article. It asks states to identify and remove barriers in buildings, roads, transport, information and communications (including ICT and emergency services), and other facilities and services open to the public. It also calls for minimum accessibility standards, Braille and easy-to-read signage, live assistance such as sign language interpreters, and designing ICT to be accessible from an early stage so that accessibility costs as little as possible. For ICT professionals, it is the article most often cited.",
+    "distractors": {
+      "1": "Article 2 defines terms such as communication, reasonable accommodation and universal design. It does not set accessibility obligations itself.",
+      "2": "Article 27 covers the right to work and employment on an equal basis with others. Workplace accessibility is part of it, but the broad accessibility obligation sits in Article 9.",
+      "3": "Article 33 requires states to set up structures to implement and monitor the Convention nationally. It is about oversight, not the content of accessibility."
+    },
+    "tip": "Remember 'Article 9 = accessibility'. It is the CRPD article most likely to appear in an accessibility exam.",
+    "sources": [
+      {
+        "title": "UN DESA: CRPD Article 9, Accessibility",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-9-accessibility",
+        "note": "Full text of Article 9."
+      }
+    ]
+  },
+  {
+    "id": "d3-crpd-general-principles",
+    "domain": 3,
+    "topic": "d3a",
+    "question": "Which of the following is listed among the general principles in Article 3 of the CRPD?",
+    "options": [
+      "Cost-effectiveness",
+      "Medical rehabilitation",
+      "Respect for difference and acceptance of persons with disabilities as part of human diversity",
+      "Separate provision of services for persons with disabilities"
+    ],
+    "answer": 2,
+    "rationale": "Article 3 lists eight principles that guide how the whole Convention is read: respect for dignity and autonomy, non-discrimination, full participation and inclusion, respect for difference and human diversity, equality of opportunity, accessibility, equality between men and women, and respect for the evolving capacities of children with disabilities. Recognizing disability as part of human diversity reflects the human rights approach, which treats disability as a normal part of life rather than a defect to fix.",
+    "distractors": {
+      "0": "Cost matters in the CRPD's idea of reasonable accommodation (no disproportionate burden), but cost-effectiveness is not one of the Article 3 principles.",
+      "1": "Rehabilitation is covered in Article 26, but it is not a general principle. Framing disability mainly through medical treatment reflects the medical model, which the CRPD moves away from.",
+      "3": "Separate provision runs against the principles of inclusion and participation. The CRPD aims for persons with disabilities to take part in mainstream society."
+    },
+    "sources": [
+      {
+        "title": "UN DESA: CRPD Article 3, General principles",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-3-general-principles",
+        "note": "The eight general principles of the Convention."
+      }
+    ]
+  },
+  {
+    "id": "d3-crpd-optional-protocol",
+    "domain": 3,
+    "topic": "d3a",
+    "question": "What does the Optional Protocol to the CRPD allow?",
+    "options": [
+      "States to opt out of the Convention's accessibility article",
+      "Individuals and groups to bring complaints of violations to the Committee on the Rights of Persons with Disabilities",
+      "Copyright exceptions for making accessible copies of books",
+      "The UN to impose fines on states that do not comply"
+    ],
+    "answer": 1,
+    "rationale": "The Optional Protocol is a separate treaty that states can join in addition to the CRPD. States that join recognize the Committee's power to receive complaints (called communications) from individuals or groups who say their rights under the Convention were violated, once domestic remedies are exhausted. It also lets the Committee inquire into reliable reports of grave or systematic violations. The Committee issues views and recommendations; it is not a court and cannot impose penalties.",
+    "distractors": {
+      "0": "Neither the Convention nor the Protocol allows a state to opt out of Article 9. The only opt-out in the Protocol concerns its own inquiry procedure.",
+      "2": "Copyright exceptions for accessible formats come from the Marrakesh Treaty, administered by WIPO.",
+      "3": "The Committee makes suggestions and recommendations. There is no power to fine states."
+    },
+    "sources": [
+      {
+        "title": "OHCHR: Optional Protocol to the CRPD",
+        "url": "https://www.ohchr.org/en/instruments-mechanisms/instruments/optional-protocol-convention-rights-persons-disabilities",
+        "note": "Full text, including the communications (Articles 1–5) and inquiry (Articles 6–7) procedures."
+      }
+    ]
+  },
+  {
+    "id": "d3-crpd-consultation",
+    "domain": 3,
+    "topic": "d3a",
+    "question": "A government is drafting a new national accessibility law. Under the CRPD, what must it do with persons with disabilities while developing the law?",
+    "options": [
+      "Inform them once the law has passed",
+      "Consult only medical professionals who represent them",
+      "Hold a public vote restricted to persons with disabilities",
+      "Closely consult and actively involve them, including through their representative organizations"
+    ],
+    "answer": 3,
+    "rationale": "Article 4(3) of the CRPD requires states to closely consult and actively involve persons with disabilities, including children with disabilities, through their representative organizations when developing laws and policies that implement the Convention or affect them. This is the legal form of the disability rights slogan 'Nothing about us without us'. The same idea shows up in practice when organizations involve disabled users throughout design and testing.",
+    "distractors": {
+      "0": "Informing people after the fact is not consultation. The obligation applies while laws and policies are being developed.",
+      "1": "The CRPD calls for involving persons with disabilities and their own organizations. Professionals speaking on their behalf reflects the older medical model.",
+      "2": "The CRPD does not require a vote. It requires consultation and active involvement in decision-making."
+    },
+    "tip": "If an answer choice involves disabled people directly in decisions about them, it usually matches the CRPD.",
+    "sources": [
+      {
+        "title": "UN DESA: CRPD Article 4, General obligations",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-4-general-obligations",
+        "note": "Article 4(3) on consulting persons with disabilities and their representative organizations."
+      }
+    ]
+  },
+  {
+    "id": "d3-crpd-purpose-definition",
+    "domain": 3,
+    "topic": "d3a",
+    "question": "How does Article 1 of the CRPD describe persons with disabilities?",
+    "options": [
+      "People with long-term physical, mental, intellectual or sensory impairments which, in interaction with various barriers, may hinder their full and equal participation in society",
+      "People certified by a doctor as unable to work",
+      "People who use assistive technology",
+      "People whose impairment has lasted at least five years"
+    ],
+    "answer": 0,
+    "rationale": "Article 1 sets out the Convention's purpose: to promote, protect and ensure the full and equal enjoyment of all human rights by persons with disabilities, and respect for their dignity. It then describes who is included: people with long-term impairments that, combined with barriers, may stop them participating equally. The key word is interaction. Disability is not located only in the person, which is why the CRPD is often linked to the social and human rights models.",
+    "distractors": {
+      "1": "Medical certification of incapacity reflects the medical and economic models. The CRPD does not tie disability to inability to work.",
+      "2": "Many disabled people do not use assistive technology, and many people who use it would not consider themselves disabled. AT use is not the CRPD's test.",
+      "3": "The CRPD says 'long-term' but sets no number of years."
+    },
+    "sources": [
+      {
+        "title": "UN DESA: CRPD Article 1, Purpose",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-1-purpose",
+        "note": "The purpose of the Convention and its description of persons with disabilities."
+      },
+      {
+        "title": "UN DESA: Convention on the Rights of Persons with Disabilities",
+        "url": "https://social.desa.un.org/issues/disability/crpd/convention-on-the-rights-of-persons-with-disabilities-crpd",
+        "note": "Overview, adoption (13 December 2006) and entry into force (3 May 2008)."
+      }
+    ]
+  },
+  {
+    "id": "d3-eu-charter-article-26",
+    "domain": 3,
+    "topic": "d3b",
+    "question": "Which article of the Charter of Fundamental Rights of the European Union specifically recognizes the right of persons with disabilities to measures supporting their independence, inclusion and participation?",
+    "options": [
+      "Article 1, Human dignity",
+      "Article 21, Non-discrimination",
+      "Article 25, The rights of the elderly",
+      "Article 26, Integration of persons with disabilities"
+    ],
+    "answer": 3,
+    "rationale": "Article 26 of the EU Charter says the Union recognizes and respects the right of persons with disabilities to benefit from measures designed to ensure their independence, social and occupational integration, and participation in community life. Article 21 works alongside it by banning discrimination on grounds including disability. Together they make disability rights part of EU fundamental rights law, which supports EU laws such as the Web Accessibility Directive and the European Accessibility Act.",
+    "distractors": {
+      "0": "Article 1 protects human dignity for everyone. It does not single out persons with disabilities.",
+      "1": "Article 21 prohibits discrimination on many grounds, including disability. It is a non-discrimination rule, not the article about integration measures.",
+      "2": "Article 25 covers older people's right to a life of dignity and independence. Article 26 is the one about disability."
+    },
+    "tip": "EU Charter: 21 bans discrimination (disability among the grounds), 26 is the disability integration article.",
+    "sources": [
+      {
+        "title": "EU Fundamental Rights Agency: Charter Article 26",
+        "url": "https://fra.europa.eu/en/eu-charter/article/26-integration-persons-disabilities",
+        "note": "Text of Article 26 with related case law and materials."
+      },
+      {
+        "title": "EU Fundamental Rights Agency: Charter Article 21",
+        "url": "https://fra.europa.eu/en/eu-charter/article/21-non-discrimination",
+        "note": "Text of Article 21, which lists disability as a prohibited ground."
+      }
+    ]
+  },
+  {
+    "id": "d3-african-charter-article-18",
+    "domain": 3,
+    "topic": "d3b",
+    "question": "The African Charter on Human and Peoples' Rights (1981) addresses persons with disabilities mainly through which provision?",
+    "options": [
+      "A complaints procedure for persons with disabilities",
+      "A right of the aged and disabled to special measures of protection suited to their needs",
+      "Mandatory accessibility standards for public websites",
+      "A copyright exception for accessible formats"
+    ],
+    "answer": 1,
+    "rationale": "The African Charter, adopted in Nairobi in 1981 and in force since 1986, is the main human rights treaty of the African Union region. Article 18(4) gives older persons and persons with disabilities a right to special protective measures that match their physical or moral needs. That brief, protection-focused wording was later strengthened by a dedicated Protocol on the Rights of Persons with Disabilities in Africa, adopted in 2018.",
+    "distractors": {
+      "0": "The Charter does not set up a disability-specific complaints procedure. Individual complaints under the CRPD come through its Optional Protocol.",
+      "2": "The Charter predates the web and does not mention technical accessibility standards.",
+      "3": "Copyright exceptions for accessible formats come from the Marrakesh Treaty (2013)."
+    },
+    "sources": [
+      {
+        "title": "African Commission on Human and Peoples' Rights: African Charter",
+        "url": "https://achpr.au.int/sw/node/689",
+        "note": "Full text of the Charter, including Article 18, with adoption and entry-into-force dates."
+      }
+    ]
+  },
+  {
+    "id": "d3-inter-american-convention",
+    "domain": 3,
+    "topic": "d3b",
+    "question": "Which regional treaty, adopted by the Organization of American States in Guatemala in 1999, aims to prevent and eliminate discrimination against persons with disabilities?",
+    "options": [
+      "The Inter-American Convention on the Elimination of All Forms of Discrimination against Persons with Disabilities",
+      "The American Convention on Human Rights",
+      "The Americans with Disabilities Act",
+      "The Accessible Canada Act"
+    ],
+    "answer": 0,
+    "rationale": "The Inter-American Convention was adopted by the OAS General Assembly on 7 June 1999 in Guatemala. It defines discrimination as any distinction, exclusion or restriction based on a disability, a record of disability or a perceived disability, that impairs the exercise of human rights. Its goals are to prevent and eliminate such discrimination and to promote full integration through legislation, social programs and education. It predates the CRPD by seven years.",
+    "distractors": {
+      "1": "The American Convention on Human Rights (1969) is the general human rights treaty of the Americas. It is not specific to disability.",
+      "2": "The ADA (1990) is a U.S. national law, not an OAS treaty.",
+      "3": "The Accessible Canada Act (2019) is a Canadian federal law, not a regional treaty."
+    },
+    "sources": [
+      {
+        "title": "OAS: Inter-American Convention on the Elimination of All Forms of Discrimination against Persons with Disabilities",
+        "url": "https://oas.org/en/sedi/ddse/pages/index-4_convention.asp",
+        "note": "Text of the Convention, with its adoption details and definitions."
+      }
+    ]
+  },
+  {
+    "id": "d3-african-disability-protocol",
+    "domain": 3,
+    "topic": "d3b",
+    "question": "The African Union's 2018 Protocol on the Rights of Persons with Disabilities in Africa is notable for explicitly requiring states to address which issue?",
+    "options": [
+      "Website accessibility conformance levels",
+      "Copyright exceptions for braille books",
+      "Harmful practices such as witchcraft accusations, abandonment and ritual killings",
+      "Accessible air travel"
+    ],
+    "answer": 2,
+    "rationale": "The Protocol, adopted in Addis Ababa in January 2018, adds to the African Charter with detailed disability rights. It stands out for naming harmful practices rooted in tradition, culture, religion or superstition. It requires states to eliminate practices such as witchcraft accusations, abandonment, concealment and ritual killings of persons with disabilities, and its preamble expresses alarm at attacks on persons with albinism. It shows how regional instruments address barriers specific to their region.",
+    "distractors": {
+      "0": "The Protocol is a human rights instrument and does not set web conformance levels. Those come from WCAG and laws that reference it.",
+      "1": "Accessible-format copyright exceptions are the subject of the Marrakesh Treaty.",
+      "3": "Air travel accessibility is the subject of laws like the U.S. Air Carrier Access Act. It is not what makes the African Protocol distinctive."
+    },
+    "sources": [
+      {
+        "title": "AfricanLII: Protocol to the African Charter on the Rights of Persons with Disabilities in Africa",
+        "url": "https://africanlii.org/akn/aa-au/act/protocol/2018/rights-of-persons-with-disabilities-in-africa/eng@2018-01-29",
+        "note": "Full text, including Article 11 on harmful practices."
+      }
+    ]
+  },
+  {
+    "id": "d3-european-accessibility-act",
+    "domain": 3,
+    "topic": "d3b",
+    "question": "A private bank sells services online and through ATMs in several EU countries. Which EU law sets accessibility requirements for these products and services?",
+    "options": [
+      "The Web Accessibility Directive",
+      "The European Accessibility Act",
+      "The EU Charter of Fundamental Rights, Article 26",
+      "EN 301 549 alone, as a binding law"
+    ],
+    "answer": 1,
+    "rationale": "The European Accessibility Act (Directive 2019/882) sets common accessibility requirements for key products and services sold in the EU, including those from private companies. It covers computers and operating systems, smartphones, ATMs, ticketing and check-in machines, e-readers and e-books, e-commerce, banking services, telephony, audiovisual media services and passenger transport services. Member States had to write it into national law by 2022. Its purpose is to remove the barriers created when each country has different rules.",
+    "distractors": {
+      "0": "The Web Accessibility Directive applies to public sector bodies' websites and apps. A private bank is not a public sector body.",
+      "2": "Article 26 recognizes a right but does not set technical requirements for products or services.",
+      "3": "EN 301 549 is a technical standard. Laws such as the Web Accessibility Directive reference it, but the standard by itself is not the law that creates the obligation."
+    },
+    "tip": "Public sector websites and apps: Web Accessibility Directive. Private sector products and services: European Accessibility Act.",
+    "sources": [
+      {
+        "title": "European Commission: European Accessibility Act",
+        "url": "https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-accessibility-act-eaa_en",
+        "note": "The products and services the Act covers."
+      },
+      {
+        "title": "EUR-Lex: Directive (EU) 2019/882",
+        "url": "https://eur-lex.europa.eu/eli/dir/2019/882/oj/eng",
+        "note": "Official text of the European Accessibility Act."
+      }
+    ]
+  },
+  {
+    "id": "d3-web-accessibility-directive",
+    "domain": 3,
+    "topic": "d3b",
+    "question": "Under the EU Web Accessibility Directive, what must public sector bodies publish for each website and mobile app?",
+    "options": [
+      "A VPAT for every page",
+      "A list of the users with disabilities who tested the site",
+      "An accessibility statement, with a way for users to report problems",
+      "A copy of their WCAG source code"
+    ],
+    "answer": 2,
+    "rationale": "The Web Accessibility Directive (Directive 2016/2102) requires public sector bodies in EU Member States to make their websites and mobile apps accessible. Each one must have an accessibility statement that explains which content is not accessible, and a feedback mechanism so users can report problems or ask for content in an accessible format. Member States monitor compliance and report to the Commission. The harmonised standard EN 301 549 gives a presumption of conformity.",
+    "distractors": {
+      "0": "A VPAT is a U.S. industry template for vendors to document product conformance. It is not a Directive requirement.",
+      "1": "Involving users is good practice, but the Directive does not require public bodies to publish a list of testers.",
+      "3": "WCAG is a set of guidelines, not source code. The Directive asks for a public statement, not code."
+    },
+    "sources": [
+      {
+        "title": "European Commission: Web Accessibility",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/web-accessibility",
+        "note": "Scope, accessibility statement, feedback mechanism and monitoring under the Directive."
+      },
+      {
+        "title": "W3C WAI: Developing an Accessibility Statement",
+        "url": "https://www.w3.org/WAI/planning/statements/",
+        "note": "What a statement contains, and why EU public bodies must provide one."
+      }
+    ]
+  },
+  {
+    "id": "d3-uk-anticipatory-duty",
+    "domain": 3,
+    "topic": "d3c",
+    "question": "Under the UK Equality Act 2010, the duty on service providers to make reasonable adjustments is described as \"anticipatory\". What does that mean?",
+    "options": [
+      "Providers only need to act once a disabled customer complains",
+      "Providers must plan ahead for the needs of disabled people in general, not wait for an individual request",
+      "Providers must predict which individual customers are disabled and contact them",
+      "The duty only applies to new buildings designed after 2010"
+    ],
+    "answer": 1,
+    "rationale": "For services and public functions, the reasonable adjustments duty is owed to disabled people as a group. Providers have to think in advance about what disabled people are likely to need and make reasonable changes before anyone asks, for example by offering information in accessible formats or making a website usable with assistive technology. This differs from the employment duty, which mostly responds to a known employee or applicant. The anticipatory nature pushes UK organizations toward building accessibility in rather than handling it case by case.",
+    "distractors": {
+      "0": "Waiting for complaints is the reactive approach the anticipatory duty rules out. A provider who only fixes problems after a complaint may already be in breach.",
+      "2": "The duty does not require identifying individuals. It asks providers to anticipate the needs of disabled people in general.",
+      "3": "The duty covers how services are provided, including policies, physical features and auxiliary aids. It is not limited to new buildings."
+    },
+    "tip": "UK services: anticipatory, owed to disabled people at large. UK employment: mostly triggered by a known individual.",
+    "sources": [
+      {
+        "title": "Equality Act 2010, Explanatory Notes to Schedule 2 (legislation.gov.uk)",
+        "url": "https://www.legislation.gov.uk/ukpga/2010/15/schedule/2/notes",
+        "note": "Official notes explaining that the duty for services and public functions is anticipatory."
+      }
+    ]
+  },
+  {
+    "id": "d3-aoda-standards",
+    "domain": 3,
+    "topic": "d3c",
+    "question": "How does the Accessibility for Ontarians with Disabilities Act, 2005 (AODA) mainly achieve its goals?",
+    "options": [
+      "By funding assistive technology for individuals",
+      "By applying only to the provincial government's own websites",
+      "Through a single complaint process at a human rights tribunal",
+      "Through accessibility standards developed with people with disabilities and industry, which apply to public, private and non-profit organizations"
+    ],
+    "answer": 3,
+    "rationale": "The AODA sets up a process for developing and enforcing accessibility standards in Ontario. People with disabilities and industry representatives help develop them. The standards cover five areas, customer service, information and communications, employment, transportation and design of public spaces, and are gathered in the Integrated Accessibility Standards Regulation. They apply to government, businesses and non-profits, not just the public sector. Ontario was one of the first jurisdictions to set a goal and timeframe for accessibility.",
+    "distractors": {
+      "0": "Funding devices for individuals is an accommodation approach. The AODA works by setting standards organizations must meet.",
+      "1": "The AODA applies far more widely, including to private businesses and non-profits.",
+      "2": "Complaints about discrimination go through human rights law. The AODA's main tool is proactive standards with reporting requirements."
+    },
+    "tip": "Know the five AODA standards: customer service, information and communications, employment, transportation, design of public spaces.",
+    "sources": [
+      {
+        "title": "Government of Ontario: About accessibility laws",
+        "url": "https://www.ontario.ca/page/about-accessibility-laws",
+        "note": "How AODA standards are developed, who they apply to, and the five standard areas."
+      }
+    ]
+  },
+  {
+    "id": "d3-accessible-canada-act",
+    "domain": 3,
+    "topic": "d3c",
+    "question": "Which organizations does the Accessible Canada Act (2019) apply to?",
+    "options": [
+      "All businesses in every Canadian province",
+      "Only Ontario municipalities",
+      "Federally regulated entities, such as federal government departments, banks, telecommunications companies and interprovincial transportation",
+      "Only organizations with more than 500 employees"
+    ],
+    "answer": 2,
+    "rationale": "The Accessible Canada Act came into force in July 2019 with the goal of a barrier-free Canada by January 1, 2040. Because it is federal law, it covers areas under federal jurisdiction: federal departments and Crown corporations, and federally regulated private sectors such as banking, broadcasting, telecommunications and transportation that crosses provincial or international borders. Covered organizations must publish accessibility plans, set up a feedback process and publish progress reports, consulting people with disabilities throughout.",
+    "distractors": {
+      "0": "Most businesses fall under provincial jurisdiction, so they are covered by provincial laws such as the AODA in Ontario, not the federal Act.",
+      "1": "Ontario municipalities are covered by the provincial AODA.",
+      "3": "Coverage depends on federal jurisdiction, not headcount."
+    },
+    "tip": "Canada has two layers: the federal Accessible Canada Act for federally regulated sectors, and provincial laws such as the AODA for most other organizations.",
+    "sources": [
+      {
+        "title": "Government of Canada: Summary of the Accessible Canada Act",
+        "url": "https://www.canada.ca/en/employment-social-development/programs/accessible-canada/act-summary.html",
+        "note": "Who the Act applies to, the 2040 goal, priority areas and requirements."
+      }
+    ]
+  },
+  {
+    "id": "d3-ada-definition-disability",
+    "domain": 3,
+    "topic": "d3c",
+    "question": "Under the ADA as amended in 2008, which of the following is part of the definition of disability?",
+    "options": [
+      "Being regarded as having an impairment",
+      "Having been certified as unable to work",
+      "Using a wheelchair, cane or other mobility aid",
+      "Having an impairment listed in a government schedule"
+    ],
+    "answer": 0,
+    "rationale": "The ADA defines disability in three ways: a physical or mental impairment that substantially limits one or more major life activities, a record of such an impairment, or being regarded as having an impairment. Major life activities include tasks like seeing, hearing, walking and learning, and also major bodily functions such as immune or neurological function. The 2008 amendments told courts to read the definition broadly and, with the exception of ordinary eyeglasses and contact lenses, to ignore the effect of mitigating measures such as medication or hearing aids.",
+    "distractors": {
+      "1": "The ADA does not require inability to work. Many people protected by the ADA are employed.",
+      "2": "Using a mobility aid is not the test. What matters is whether an impairment substantially limits a major life activity, and mitigating measures are generally ignored.",
+      "3": "The ADA uses a functional definition, not a list of qualifying conditions."
+    },
+    "tip": "Three prongs: actual, record of, regarded as.",
+    "sources": [
+      {
+        "title": "EEOC: Notice Concerning the ADA Amendments Act of 2008",
+        "url": "https://www.eeoc.gov/laws/guidance/notice-rights-under-ada-amendments-act-2008",
+        "note": "The three-part definition, major life activities and the mitigating measures rule."
+      }
+    ]
+  },
+  {
+    "id": "d3-ada-title-ii-web-rule",
+    "domain": 3,
+    "topic": "d3c",
+    "question": "The U.S. Department of Justice's 2024 rule under ADA Title II sets which technical standard for state and local government web content and mobile apps?",
+    "options": [
+      "WCAG 2.0 Level A",
+      "WCAG 2.1 Level AA",
+      "WCAG 2.2 Level AAA",
+      "EN 301 549"
+    ],
+    "answer": 1,
+    "rationale": "The rule, published in April 2024, adopts WCAG 2.1 Level AA as the standard for web content and mobile apps of state and local governments, including special districts and public transit entities. Governments that contract with others to provide services must make sure those services comply too. Compliance dates depend on the population served and have been pushed back once, so check ADA.gov for current deadlines.",
+    "distractors": {
+      "0": "WCAG 2.0 Level AA is the Section 508 standard for federal agencies. The Title II rule chose a newer version and the AA level, not just Level A.",
+      "2": "No U.S. law requires AAA across the board. W3C itself advises against requiring AAA as a policy for whole sites.",
+      "3": "EN 301 549 is the European ICT standard. The Title II rule references WCAG directly."
+    },
+    "tip": "U.S. technical standards to keep straight: Section 508 uses WCAG 2.0 AA; the ADA Title II rule uses WCAG 2.1 AA.",
+    "sources": [
+      {
+        "title": "ADA.gov: Fact Sheet on the Title II web and mobile app rule",
+        "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+        "note": "The standard adopted, who is covered, and current compliance dates."
+      }
+    ]
+  },
+  {
+    "id": "d3-section-504",
+    "domain": 3,
+    "topic": "d3d",
+    "question": "A private university that receives U.S. federal financial aid refuses to make a lecture hall accessible. Which law, older than the ADA, most directly applies because of the federal funding?",
+    "options": [
+      "Section 508 of the Rehabilitation Act",
+      "Section 504 of the Rehabilitation Act",
+      "The Air Carrier Access Act",
+      "The 21st Century Communications and Video Accessibility Act"
+    ],
+    "answer": 1,
+    "rationale": "Section 504 of the Rehabilitation Act of 1973 prohibits disability discrimination in programs and activities that receive federal financial assistance, as well as in programs run by federal agencies. Universities, hospitals and many nonprofits that receive federal funds are covered. It predates the ADA by 17 years and still applies alongside it.",
+    "distractors": {
+      "0": "Section 508 covers the ICT that federal agencies develop, buy, maintain or use. It is not about recipients of federal funds or physical access.",
+      "2": "The Air Carrier Access Act covers air travel, not universities.",
+      "3": "The CVAA covers advanced communications services and equipment, such as VoIP and messaging, not buildings."
+    },
+    "tip": "Rehabilitation Act sections: 504 = recipients of federal funds (non-discrimination), 508 = federal ICT.",
+    "sources": [
+      {
+        "title": "HHS: Section 504 of the Rehabilitation Act of 1973",
+        "url": "https://www.hhs.gov/civil-rights/for-individuals/disability/section-504-rehabilitation-act-of-1973/index.html",
+        "note": "What Section 504 prohibits and which programs it covers."
+      },
+      {
+        "title": "ADA.gov: Guide to Disability Rights Laws",
+        "url": "https://www.ada.gov/resources/disability-rights-guide/",
+        "note": "Summaries of Section 504, Section 508 and other federal laws."
+      }
+    ]
+  },
+  {
+    "id": "d3-air-carrier-access-act",
+    "domain": 3,
+    "topic": "d3d",
+    "question": "Under the U.S. Air Carrier Access Act and its Department of Transportation rule, which practice is prohibited?",
+    "options": [
+      "Requiring passengers to meet exit-row safety criteria before sitting there",
+      "Asking for 48 hours' notice to set up a respirator on board",
+      "Limiting the number of passengers with disabilities on a flight",
+      "Charging for optional services such as supplemental oxygen"
+    ],
+    "answer": 2,
+    "rationale": "The Air Carrier Access Act bans disability discrimination in air travel, and the DOT rule (14 CFR Part 382) applies to all flights of U.S. airlines and to foreign airlines' flights to or from the U.S. Airlines cannot refuse to carry someone because of disability, require general advance notice that a disabled passenger is flying, or cap the number of disabled passengers on a flight. They must also provide prompt assistance with boarding and connections and train their staff. It is a good example of a domain-specific law, covering one sector in detail.",
+    "distractors": {
+      "0": "Exit-row seating can be limited to people able to perform evacuation tasks. This is allowed for safety reasons.",
+      "1": "Airlines may ask for up to 48 hours' notice for certain accommodations, such as respirator hook-up.",
+      "3": "Airlines may charge for optional services like supplemental oxygen. They cannot charge for accommodations the rule requires."
+    },
+    "sources": [
+      {
+        "title": "U.S. Department of Transportation: Passengers with Disabilities",
+        "url": "https://www.transportation.gov/airconsumer/passengers-disabilities",
+        "note": "Summary of the Air Carrier Access Act rule, what airlines must and must not do."
+      }
+    ]
+  },
+  {
+    "id": "d3-cvaa",
+    "domain": 3,
+    "topic": "d3d",
+    "question": "Which U.S. law requires advanced communications services, such as email, text messaging, VoIP and interoperable video conferencing, to be accessible where achievable?",
+    "options": [
+      "The 21st Century Communications and Video Accessibility Act (CVAA)",
+      "Section 504 of the Rehabilitation Act",
+      "The Fair Housing Act",
+      "Title I of the ADA"
+    ],
+    "answer": 0,
+    "rationale": "The CVAA updated U.S. communications accessibility law for internet-era services. Under the FCC's rules, providers and manufacturers of advanced communications services and equipment must make them accessible unless that is not achievable, and if it is not, they must be compatible with assistive technology such as braille displays and screen magnifiers. Support services like billing and tech support must also be accessible, and providers may not strip accessibility information such as screen reader data.",
+    "distractors": {
+      "1": "Section 504 covers programs that receive federal funds. It does not regulate communications services in general.",
+      "2": "The Fair Housing Act covers housing discrimination, including accessible design of some multifamily housing.",
+      "3": "ADA Title I covers employment. Telecommunications relay services fall under Title IV, and modern communications services under the CVAA."
+    },
+    "sources": [
+      {
+        "title": "FCC: Accessibility of Advanced Communications Services and Equipment",
+        "url": "https://www.fcc.gov/sites/default/files/accessibility_of_advanced_communications_services_and_equipment.pdf",
+        "note": "FCC consumer guide to what the CVAA requires of providers and manufacturers."
+      }
+    ]
+  },
+  {
+    "id": "d3-vpat-acr",
+    "domain": 3,
+    "topic": "d3e",
+    "question": "A software vendor completes a VPAT with its test results to show a government buyer how its product meets accessibility standards. What is the completed document called?",
+    "options": [
+      "An accessibility statement",
+      "A WCAG conformance certificate",
+      "An Accessibility Conformance Report (ACR)",
+      "A Section 508 waiver"
+    ],
+    "answer": 2,
+    "rationale": "The Voluntary Product Accessibility Template (VPAT) is a free template from the Information Technology Industry Council (ITI). Vendors fill it in to document how their product supports each criterion of a standard, and the completed document is an Accessibility Conformance Report. There are editions for Section 508, the EU standard EN 301 549, WCAG, and an international edition that combines all three. Buyers use ACRs during procurement to compare products, ideally checking the claims rather than accepting them at face value.",
+    "distractors": {
+      "0": "An accessibility statement is a public notice on a website or app that explains its accessibility and how to report problems. It is aimed at users, not buyers.",
+      "1": "W3C does not issue WCAG certificates. Conformance is claimed by the content owner, and an ACR documents the claim.",
+      "3": "A waiver is not what a VPAT produces. A completed VPAT documents conformance; it does not excuse it."
+    },
+    "tip": "VPAT is the blank template; ACR is the filled-in report.",
+    "sources": [
+      {
+        "title": "ITI: VPAT",
+        "url": "https://www.itic.org/policy/accessibility/vpat",
+        "note": "What the VPAT is, its four editions, and the Accessibility Conformance Report."
+      }
+    ]
+  },
+  {
+    "id": "d3-wcag-iso-backwards-compatible",
+    "domain": 3,
+    "topic": "d3e",
+    "question": "An organization's policy requires WCAG 2.1 Level AA. Its new site has been tested and conforms to WCAG 2.2 Level AA. What follows?",
+    "options": [
+      "It must be retested against WCAG 2.1 separately",
+      "It conforms to WCAG 2.2 only, because the versions are incompatible",
+      "It conforms only if ISO/IEC 40500 is also met separately",
+      "It also conforms to WCAG 2.1 and 2.0 Level AA, because the versions are backwards compatible"
+    ],
+    "answer": 3,
+    "rationale": "W3C designed WCAG 2.0, 2.1 and 2.2 to be backwards compatible: content that conforms to WCAG 2.2 also conforms to 2.1 and 2.0 at the same level. Each newer version adds criteria on top of the earlier ones. That makes it safe for organizations to aim for the newest version even when a law references an older one. WCAG 2.2 is also an international standard, ISO/IEC 40500.",
+    "distractors": {
+      "0": "A separate retest isn't required, because meeting 2.2 AA means meeting 2.1 AA.",
+      "1": "The versions are explicitly designed to be compatible.",
+      "2": "ISO/IEC 40500 is the ISO publication of WCAG itself, not an extra set of requirements."
+    },
+    "tip": "Newer WCAG versions are supersets. Meeting the newest version at a given level covers the older ones.",
+    "sources": [
+      {
+        "title": "W3C WAI: WCAG 2 Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/wcag/",
+        "note": "Explains backwards compatibility between versions and the ISO/IEC 40500 status of WCAG 2.2."
+      }
+    ]
+  },
+  {
+    "id": "d3-atag",
+    "domain": 3,
+    "topic": "d3e",
+    "question": "A university chooses a new learning management system that instructors will use to build course pages. Which W3C standard addresses both whether instructors with disabilities can use the tool and whether it helps them produce accessible content?",
+    "options": [
+      "ATAG (Authoring Tool Accessibility Guidelines)",
+      "UAAG (User Agent Accessibility Guidelines)",
+      "WAI-ARIA",
+      "WCAG-EM"
+    ],
+    "answer": 0,
+    "rationale": "ATAG 2.0 covers authoring tools: anything used to create web content, such as content management systems, learning management systems, HTML editors, blogs and wikis. Part A requires the tool's own interface to be accessible so authors with disabilities can use it. Part B requires the tool to support authors in producing accessible content, for example by prompting for text alternatives. Using ATAG in procurement multiplies the effect, because one accessible tool shapes thousands of pages.",
+    "distractors": {
+      "1": "UAAG covers user agents that render content, such as browsers and media players, not tools for creating content.",
+      "2": "WAI-ARIA defines roles, states and properties that make custom interface components understandable to assistive technologies. It is not a standard for authoring tools.",
+      "3": "WCAG-EM is a methodology for evaluating how well a website conforms to WCAG."
+    },
+    "tip": "WAI standards by role: WCAG for content, ATAG for authoring tools, UAAG for browsers and players, ARIA for rich interface semantics.",
+    "sources": [
+      {
+        "title": "W3C WAI: Authoring Tool Accessibility Guidelines (ATAG) Overview",
+        "url": "https://www.w3.org/WAI/standards-guidelines/atag/",
+        "note": "ATAG Parts A and B and examples of authoring tools."
+      },
+      {
+        "title": "W3C WAI: Standards and Guidelines",
+        "url": "https://www.w3.org/WAI/standards-guidelines/",
+        "note": "Overview of WCAG, ATAG, UAAG and ARIA."
+      }
+    ]
+  },
+  {
+    "id": "d3-wcag-em",
+    "domain": 3,
+    "topic": "d3e",
+    "question": "An auditor must assess a 20,000-page website for WCAG conformance and cannot check every page. According to WCAG-EM, what should they do?",
+    "options": [
+      "Test only the home page",
+      "Rely on an automated scan of all pages, since that covers every criterion",
+      "Test only the pages with the most traffic",
+      "Explore the site, then evaluate a representative sample chosen with both structured and random selection"
+    ],
+    "answer": 3,
+    "rationale": "WCAG-EM, the W3C's WCAG Evaluation Methodology, has five steps: define the scope, explore the product, select a representative sample, evaluate the sample, and report the findings. When checking everything isn't practical, the sample should include key pages, common functions, different types of content and templates, plus some randomly chosen pages to check the result. This gives a defensible basis for a conformance claim about a whole site.",
+    "distractors": {
+      "0": "One page can't represent the templates, functions and content types across a large site.",
+      "1": "Automated tools check only part of WCAG; many criteria need human judgment. WCAG-EM is a manual method, which tools can support.",
+      "2": "Traffic alone misses important but less visited pages, such as forms or account pages. WCAG-EM combines structured and random selection."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: WCAG-EM Overview",
+        "url": "https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/",
+        "note": "The five steps of the evaluation methodology and the WCAG-EM Report Tool."
+      }
+    ]
+  },
+  {
+    "id": "d3-maturity-model",
+    "domain": 3,
+    "topic": "d3f",
+    "question": "In the W3C Accessibility Maturity Model, an organization has a roadmap and a defined, organized approach to accessibility, but it is not yet embedded and continuously evaluated across the whole organization. Which maturity level is this?",
+    "options": [
+      "Inactive",
+      "Launch",
+      "Integrate",
+      "Optimize"
+    ],
+    "answer": 2,
+    "rationale": "The W3C Accessibility Maturity Model describes four cumulative levels. Inactive means little or no awareness. Launch means the need is recognized and planning has begun, but activities are not well organized. Integrate means there is a roadmap and the overall approach is defined and organized. Optimize means accessibility runs through the whole organization and is regularly evaluated and improved. The model assesses seven dimensions: communications, oversight and culture, the ICT development life cycle, knowledge and skills, personnel, procurement, and support.",
+    "distractors": {
+      "0": "Inactive describes an organization with little awareness of accessibility. This organization already has a roadmap.",
+      "1": "Launch is the stage where planning has started but work is not yet well organized. A defined, organized approach is a step beyond it.",
+      "3": "Optimize is the highest level, where accessibility is embedded everywhere and assessed consistently. The scenario says that is not yet true."
+    },
+    "tip": "Inactive → Launch → Integrate → Optimize. Maturity is measured per dimension, so an organization can be at different levels in different areas.",
+    "sources": [
+      {
+        "title": "W3C: Accessibility Maturity Model",
+        "url": "https://www.w3.org/TR/maturity-model/",
+        "note": "Group Note describing the seven dimensions and four maturity levels."
+      }
+    ]
+  },
+  {
+    "id": "d3-accessibility-statement",
+    "domain": 3,
+    "topic": "d3f",
+    "question": "According to W3C guidance, who is the main audience for an organization's accessibility statement, and what must it include?",
+    "options": [
+      "Users, with a commitment to accessibility, the standard the content aims to meet, and a contact for feedback",
+      "Lawyers, with a full legal defense against complaints",
+      "Developers, with code samples for each fix",
+      "Investors, with the cost of accessibility work"
+    ],
+    "answer": 0,
+    "rationale": "An accessibility statement is written mainly for users, who often read it when they hit a problem. W3C recommends at minimum a commitment to accessibility, the standard applied (such as WCAG 2.2 AA), and contact details for feedback. Known limitations and alternatives are also recommended so users aren't surprised. Plain language works better than technical or legal wording: 'some videos have no captions' helps a user more than a criterion number.",
+    "distractors": {
+      "1": "A statement is a communication to users, not a legal brief. Legal jargon makes it less useful.",
+      "2": "Technical detail belongs in internal documentation. The statement explains accessibility to the people using the content.",
+      "3": "Costs are an internal planning concern, not part of a public accessibility statement."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Developing an Accessibility Statement",
+        "url": "https://www.w3.org/WAI/planning/statements/",
+        "note": "Required and recommended contents, plus a statement generator."
+      }
+    ]
+  },
+  {
+    "id": "d3-involving-users",
+    "domain": 3,
+    "topic": "d3f",
+    "question": "A product team plans to have one blind employee review their app just before launch and treat that as their accessibility testing. What is the main weakness of this plan?",
+    "options": [
+      "Blind users cannot evaluate mobile apps",
+      "Involving users is only useful after launch",
+      "One person cannot represent other disabilities or even all blind users, and feedback that comes only at the end arrives too late to shape the design",
+      "User feedback is not accepted as evidence under WCAG"
+    ],
+    "answer": 2,
+    "rationale": "W3C recommends involving users with a range of disabilities early and throughout a project: in planning, personas and walkthroughs, prototype reviews, and evaluation. One person can't speak for how others with the same disability use technology, let alone other disabilities. Leaving it to the end means problems are found when they are most expensive to fix. User involvement works best alongside standards like WCAG and a conformance evaluation, not as a replacement for them.",
+    "distractors": {
+      "0": "Blind people use mobile apps every day with built-in screen readers, and their feedback is valuable.",
+      "1": "W3C says the opposite: involve users from the start, when findings are cheapest to act on.",
+      "3": "WCAG conformance is judged against its success criteria, but user feedback is a recommended part of good practice. That is not the main weakness of this plan."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Involving Users in Web Projects for Better, Easier Accessibility",
+        "url": "https://www.w3.org/WAI/planning/involving-users/",
+        "note": "Why and when to involve users with disabilities, and the limits of relying on one person."
+      }
+    ]
+  },
+  {
+    "id": "d3-org-policy",
+    "domain": 3,
+    "topic": "d3f",
+    "question": "An organization is writing a web accessibility policy. Which set of elements does W3C guidance recommend it include?",
+    "options": [
+      "A list of employees with disabilities",
+      "The standard and conformance level, the scope of content covered, and a timeline with milestones",
+      "A promise to be fully accessible to every person immediately",
+      "Only a reference to the national law, with no further detail"
+    ],
+    "answer": 1,
+    "rationale": "W3C suggests that a policy name the standard (for example WCAG) and the conformance level (AA is the most widely adopted), define its scope (public sites, intranets, mobile apps, third-party content, authoring tools), and set a realistic timeline with measurable milestones. Fuller policies also assign responsibilities to specific departments and include a way to review progress and respond to user feedback. A clear policy turns a general commitment into something teams can plan and be held to.",
+    "distractors": {
+      "0": "Employee disability information is private and has nothing to do with a content accessibility policy.",
+      "2": "W3C advises setting realistic, measurable targets. An unrealistic promise undermines credibility and gives teams no plan.",
+      "3": "Laws often lack the detail teams need, and some content may fall outside legal scope. A useful policy states its own standard, scope and timeline."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Developing Organizational Policies on Web Accessibility",
+        "url": "https://www.w3.org/WAI/planning/org-policies/",
+        "note": "Policy elements: standards, conformance level, scope, timeline and responsibilities."
+      }
+    ]
+  },
+  {
+    "id": "d3-planning-initiate",
+    "domain": 3,
+    "topic": "d3f",
+    "question": "W3C's \"Planning and Managing Web Accessibility\" groups activities into four phases. In which phase does an organization develop a business case, raise awareness and gather support?",
+    "options": [
+      "Implement",
+      "Sustain",
+      "Plan",
+      "Initiate"
+    ],
+    "answer": 3,
+    "rationale": "The four phases are Initiate, Plan, Implement and Sustain. Initiate is about building understanding and enthusiasm: learning the basics, exploring the current situation, setting objectives, developing a business case, raising awareness and gathering support. Plan then creates the policy, assigns responsibilities and sets budget and monitoring. Implement builds skills, integrates accessibility into processes and evaluates early. Sustain keeps monitoring, tracks changes in standards and law, and acts on user feedback.",
+    "distractors": {
+      "0": "Implement is when staff are trained, tools are in place and accessibility is built into work. It comes after support has been secured.",
+      "1": "Sustain is about ongoing monitoring and improvement once accessibility is in place.",
+      "2": "Plan is where the policy, responsibilities, budget and monitoring framework are set. It follows Initiate."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Planning and Managing Web Accessibility",
+        "url": "https://www.w3.org/WAI/planning-and-managing/",
+        "note": "The Initiate, Plan, Implement and Sustain phases and their activities."
+      }
+    ]
+  },
+  {
+    "id": "d3-arrm-ownership",
+    "domain": 3,
+    "topic": "d3f",
+    "question": "A team uses W3C's Accessibility Roles and Responsibilities Mapping (ARRM) to decide who owns writing text alternatives for images. What does it mean to give the content author the \"primary\" role for that task?",
+    "options": [
+      "The author should be consulted, but someone else decides",
+      "The author helps complete the task but is not accountable",
+      "The author must approve the task before launch, but not do it",
+      "The author is ultimately accountable for the task being done"
+    ],
+    "answer": 3,
+    "rationale": "ARRM helps teams map each WCAG-related task to the project roles that own it, such as content authors, UX designers, visual designers and front-end developers. Each task has a primary owner, who is ultimately accountable; secondary owners, who share responsibility and help complete it; and contributors, whose input should be sought. Clear ownership stops accessibility work from falling between roles, a common reason it gets missed.",
+    "distractors": {
+      "0": "Being consulted describes the contributor role.",
+      "1": "Helping without being accountable describes the secondary role.",
+      "2": "ARRM has no approver role. Its levels are primary, secondary and contributor."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Accessibility Roles and Responsibilities Mapping (ARRM)",
+        "url": "https://www.w3.org/WAI/planning/arrm/",
+        "note": "How ARRM assigns primary, secondary and contributor ownership of accessibility tasks."
+      }
+    ]
   }
 ]

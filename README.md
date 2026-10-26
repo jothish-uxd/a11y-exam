@@ -27,7 +27,7 @@ Two modes, both reachable from the header on every page.
 
 **Study** — pick Domain 1, 2, 3 or All. Each domain page lists the Body of Knowledge topics (1.1, 1.2, …) with every question and its status: not answered, correct or missed. On a question page the same list sits in a side panel on wide screens and in a bottom sheet on phones (open it from the "Question 2 of 4" button). Previous and Next stay inside the chosen domain; the last question offers the next domain. Feedback appears after each answer.
 
-**Mock exam** — up to 100 questions drawn by exam weight (40 / 40 / 20), a 2-hour timer with spoken reminders at 30, 10, 5 and 1 minutes, mark for review, and a review screen before submitting. Results break down by domain and link each missed question back into Study.
+**Mock exam** — 100 questions drawn at random from each domain's pool by exam weight (40 / 40 / 20), so a domain can hold more questions than its share and each attempt gets a fresh set. A pool smaller than its share is used whole and the setup screen says so. Each mock has a 2-hour timer with spoken reminders at 30, 10, 5 and 1 minutes, mark for review, and a review screen before submitting. Results break down by domain and link each missed question back into Study.
 
 Every view has its own link:
 
