@@ -13,6 +13,7 @@
   --flag:#8a5a00; --flag-tint:#fbf0d9;
   --accent:#7a3fb8; --accent-tint:#f2ebfb;
   --control:#7b859d;
+  --foot-bg:#e6eaf0;
   --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
   --f-body:"Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -22,18 +23,18 @@
   --cobalt:#8ea2ff; --cobalt-tint:#1f2a52;
   --good:#6fd39a; --good-tint:#13301f; --bad:#ff8a90; --bad-tint:#3a1619;
   --flag:#f2c46b; --flag-tint:#33270f;
-  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; color-scheme:dark;
+  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; --foot-bg:#1a2236; color-scheme:dark;
 }}
 :root[data-theme="dark"]{
   --paper:#0e1322; --sheet:#161d31; --ink:#e8ecf6; --ink-soft:#a5aec6; --rule:#2c3652;
   --cobalt:#8ea2ff; --cobalt-tint:#1f2a52;
   --good:#6fd39a; --good-tint:#13301f; --bad:#ff8a90; --bad-tint:#3a1619;
   --flag:#f2c46b; --flag-tint:#33270f;
-  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; color-scheme:dark;
+  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; --foot-bg:#1a2236; color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;margin:0;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 3rem}
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0}
 a{color:var(--cobalt);text-underline-offset:.18em}
 :focus-visible{outline:3px solid var(--cobalt);outline-offset:3px;border-radius:4px}
 main:focus{outline:none}
@@ -62,7 +63,10 @@ h1:focus,h4:focus{outline:none}
 .wlegend b{display:block;color:var(--ink);font-variant-numeric:tabular-nums}
 
 .page{max-width:46rem;margin:0 auto}
-.foot{max-width:46rem;margin:3rem auto 0;font-size:.85rem;color:var(--ink-soft)}
+/* Footer bleeds past the body's side padding to span the viewport. */
+.foot{margin:4rem calc(-1 * max(16px,env(safe-area-inset-right,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));background:var(--foot-bg);border-top:1px solid var(--rule);font-size:.9rem;color:var(--ink-soft);
+  padding:1.5rem max(16px,env(safe-area-inset-right,0px)) max(2rem,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.foot p{max-width:72rem;margin:0 auto}
 
 /* Shared type */
 .eyebrow{font-family:var(--f-mono);font-size:.8125rem;letter-spacing:.01em;color:var(--accent);margin:0}
@@ -199,9 +203,12 @@ legend{padding:0;margin-bottom:1.2rem;width:100%}
 .tip-icon{width:1.35rem;height:1.35rem;color:var(--accent);margin-top:.15rem;grid-row:span 2}
 .rationale .tip h3{font-family:var(--f-body);font-size:1rem;font-weight:700;letter-spacing:0;color:var(--accent);margin:0}
 .tip p{color:var(--ink)}
-.refs{list-style:none;padding:0;margin:0;display:grid;gap:.5rem}
-.refs a{font-weight:700}
-.refs small{display:block;color:var(--ink-soft);font-size:.85rem}
+/* Sources sit below the answer card, not inside it. Link and note share one size. */
+.sources{margin-top:1.75rem}
+.sources h3{font-family:var(--f-mono);font-size:.8125rem;font-weight:500;letter-spacing:.01em;color:var(--ink-soft);margin:0 0 .6rem}
+.refs{list-style:none;padding:0;margin:0;display:grid;gap:.75rem;font-size:.9rem;line-height:1.45}
+.refs a{font-weight:700;text-decoration:underline}
+.refs small{display:block;color:var(--ink-soft);font-size:inherit}
 
 .nav{display:flex;justify-content:space-between;gap:.75rem;margin-top:2rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
 .nav .btn{flex:1;max-width:15rem}

@@ -227,7 +227,10 @@
         <div><h3>Why ${LETTERS[q.answer]} is correct</h3><p>${esc(q.rationale)}</p></div>
         <div><h3>Why the others are wrong</h3><ul class="why-not">${Object.entries(q.distractors).map(([k, txt]) => `<li><span class="l">${LETTERS[k]}</span><span><b>${esc(q.options[k])}.</b> ${esc(txt)}</span></li>`).join("")}</ul></div>
         ${q.tip ? `<div class="tip">${TIP_ICON}<h3>Exam tip</h3><p>${esc(q.tip)}</p></div>` : ""}
-        <div><h3>Sources</h3><ul class="refs">${q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul></div>
+      </section>
+      <section class="sources" aria-labelledby="sources-h">
+        <h3 id="sources-h">Sources</h3>
+        <ul class="refs">${q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul>
       </section>` : "";
 
     main.innerHTML = `
