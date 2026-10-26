@@ -7,6 +7,8 @@ Static study site for the IAAP CPACC exam. No framework, no build, no dependenci
 - Exam facts and domain weights: `data/domains.json`.
 - Styling: `css/styles.css`. Every color is a custom property on `:root`, redefined for dark mode in both the `prefers-color-scheme` block and `[data-theme="dark"]`. Add new colors the same way.
 - After editing data, run `node scripts/validate.mjs`. It must pass.
+- Status, decisions and next steps: `docs/HANDOFF.md`. Goals and content rules: `docs/PROJECT_INSTRUCTIONS.md`.
+- Use the `cpacc-question-author` skill (`.claude/skills/`) when writing or editing questions.
 
 - Routes are bare hash tokens (letters, digits, hyphens) handled in `route()` in `js/app.js`. See the table in README.md. Keep links as real `<a href="#…">` elements.
 - The Claude artifact preview is generated from `index.html` by `node scripts/build-preview.mjs <out>`. Only markup between the `SHELL:START` and `SHELL:END` comments is used, so keep page markup there.
