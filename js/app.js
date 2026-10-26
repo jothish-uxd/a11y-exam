@@ -48,9 +48,9 @@
   const TIP_ICON = `<svg class="tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/></svg>`;
   const STATUS_TEXT = { none: "Not answered", good: "Correct", bad: "Missed", answered: "Answered", flag: "Marked for review" };
 
-  function mark(st) {
+  function mark(st, label = true) {
     const glyph = { none: "", good: "✓", bad: "✕", answered: "•", flag: "⚑" }[st];
-    return `<span class="st st-${st}" aria-hidden="true">${glyph}</span><span class="vh">${STATUS_TEXT[st]}: </span>`;
+    return `<span class="st st-${st}" aria-hidden="true">${glyph}</span>${label ? `<span class="vh">${STATUS_TEXT[st]}: </span>` : ""}`;
   }
 
   function inScope(s) {
@@ -88,7 +88,9 @@
   // head: optional markup shown with the status key in one box (the side panel puts the domain pill there)
   function questionList(s, currentId, head = "") {
     const ds = s === "all" ? DOMAINS : [DOMAIN[+s.slice(1)]];
-    const legend = `<div class="ql-key">${head}<p class="mlegend" aria-hidden="true">${["good", "bad", "none"].map((st) => `<span>${mark(st)}${STATUS_TEXT[st]}</span>`).join("")}</p></div>`;
+    const n = { good: 0, bad: 0, none: 0 };
+    QUESTIONS.forEach((q) => { if (s === "all" || q.domain === +s.slice(1)) n[status(q)]++; });
+    const legend = `<div class="ql-key">${head}<p class="mlegend">${["good", "bad", "none"].map((st) => `<span>${mark(st, false)}${STATUS_TEXT[st]} (${n[st]})</span>`).join("")}</p></div>`;
     return legend + ds.map((d) => `
       <div class="ql-domain">
         ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
@@ -377,7 +379,7 @@
   function mockGrid(currentIndex) {
     const m = store.mock, c = mockCounts();
     const key = [["answered", '<span class="st st-answered" aria-hidden="true">•</span>', "Answered"], ["flag", '<span class="st st-flag" aria-hidden="true">⚑</span>', "Marked"], ["none", '<span class="st st-none" aria-hidden="true"></span>', "Not answered"]];
-    return `<p class="mlegend mkey">${key.map(([k, icon, label]) => `<span>${icon}${label} <b data-count="${k}">${c[k]}</b></span>`).join("")}</p>
+    return `<p class="mlegend mkey">${key.map(([k, icon, label]) => `<span>${icon}<span>${label} (<span data-count="${k}">${c[k]}</span>)</span></span>`).join("")}</p>
       <ol class="mgrid">${m.order.map((id, k) => `<li><button type="button" data-goto="${k}" class="mg mg-${mockStatus(id)}" ${k === currentIndex ? 'aria-current="step"' : ""}>
       <span aria-hidden="true">${k + 1}</span><span class="vh">Question ${k + 1}, ${STATUS_TEXT[mockStatus(id)]}</span></button></li>`).join("")}</ol>`;
   }
