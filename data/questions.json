@@ -116,10 +116,10 @@
     "topic": "d3a",
     "question": "What is the main purpose of the Marrakesh Treaty?",
     "options": [
-      "To require all public websites to conform to WCAG 2.1 Level AA",
-      "To make published works easier to get in accessible formats for people who are blind, visually impaired or otherwise print disabled",
+      "To require public websites to meet WCAG 2.1 Level AA",
+      "To ease access to books in accessible formats for print-disabled people",
       "To set physical accessibility standards for public buildings",
-      "To guarantee equal employment rights for people with disabilities"
+      "To guarantee equal employment rights for disabled people"
     ],
     "answer": 1,
     "rationale": "The Marrakesh Treaty, administered by the World Intellectual Property Organization (WIPO) and adopted in 2013, creates copyright exceptions so that authorized organizations can make accessible copies of books and other published works, such as braille, large print, audio or digital accessible formats, without asking permission from the copyright holder. It also lets those copies be shared across borders between countries that have joined. It targets the 'book famine', where only a small share of published works ever become available in accessible formats.",
@@ -239,8 +239,8 @@
     "question": "A person who is deafblind, with no usable vision or hearing, wants to read email on a computer. Which assistive technology best fits this need?",
     "options": [
       "Screen magnification software",
-      "A screen reader sending output to a refreshable braille display",
-      "Real-time captioning",
+      "A screen reader with a braille display",
+      "Real-time captioning (CART)",
       "Speech recognition software"
     ],
     "answer": 1,
@@ -301,10 +301,10 @@
     "topic": "d1c",
     "question": "A user with low vision enlarges their whole screen with magnification software and sees only a small part of the page at a time. Which design practice helps them most?",
     "options": [
-      "Providing captions for all video",
-      "Keeping layout, navigation and visual cues consistent from page to page",
-      "Allowing users to operate the page by voice",
-      "Offering content in simplified language"
+      "Providing captions for every video on the site",
+      "Keeping layout and navigation consistent across pages",
+      "Letting users operate every page by voice commands",
+      "Offering all content in simplified, plain language"
     ],
     "answer": 1,
     "rationale": "Screen magnification works like a digital magnifying glass: everything gets bigger, including the pointer, but the user loses the overview of the page. They have to pan around to find things, so they rely on consistent placement and clear visual cues to stay oriented. When navigation, search and key controls stay in the same place on every page, the user knows where to pan. Content that reflows instead of forcing horizontal scrolling helps for the same reason.",
@@ -686,10 +686,10 @@
     "topic": "d3a",
     "question": "How does the Universal Declaration of Human Rights (1948) relate to disability?",
     "options": [
-      "It contains a dedicated chapter on the rights of persons with disabilities",
-      "It applies to everyone and mentions disability once, as a circumstance in which people are entitled to security",
-      "It defines disability using the social model",
-      "It requires states to adopt accessibility standards for buildings and ICT"
+      "It has a dedicated chapter on the rights of disabled people",
+      "It applies to everyone and names disability only once",
+      "It defines disability using the social model of disability",
+      "It requires accessibility standards for buildings and ICT"
     ],
     "answer": 1,
     "rationale": "The UDHR, proclaimed by the UN General Assembly on 10 December 1948, sets out rights that belong to every person equally. It names disability only once: Article 25 lists it, alongside sickness, widowhood and old age, as a situation in which people are entitled to social security. The UDHR is the foundation the later disability instruments build on. The CRPD (2006) does not create new rights; it spells out how the existing universal rights apply to persons with disabilities.",
@@ -740,10 +740,10 @@
     "topic": "d3a",
     "question": "Which of the following is listed among the general principles in Article 3 of the CRPD?",
     "options": [
-      "Cost-effectiveness",
-      "Medical rehabilitation",
-      "Respect for difference and acceptance of persons with disabilities as part of human diversity",
-      "Separate provision of services for persons with disabilities"
+      "Cost-effectiveness of disability services",
+      "Medical rehabilitation as the first priority",
+      "Respect for difference and human diversity",
+      "Separate provision of services for disabled people"
     ],
     "answer": 2,
     "rationale": "Article 3 lists eight principles that guide how the whole Convention is read: respect for dignity and autonomy, non-discrimination, full participation and inclusion, respect for difference and human diversity, equality of opportunity, accessibility, equality between men and women, and respect for the evolving capacities of children with disabilities. Recognizing disability as part of human diversity reflects the human rights approach, which treats disability as a normal part of life rather than a defect to fix.",
@@ -767,9 +767,9 @@
     "question": "What does the Optional Protocol to the CRPD allow?",
     "options": [
       "States to opt out of the Convention's accessibility article",
-      "Individuals and groups to bring complaints of violations to the Committee on the Rights of Persons with Disabilities",
+      "Individuals to bring complaints to the CRPD Committee",
       "Copyright exceptions for making accessible copies of books",
-      "The UN to impose fines on states that do not comply"
+      "The UN to fine states that don't comply with the Convention"
     ],
     "answer": 1,
     "rationale": "The Optional Protocol is a separate treaty that states can join in addition to the CRPD. States that join recognize the Committee's power to receive complaints (called communications) from individuals or groups who say their rights under the Convention were violated, once domestic remedies are exhausted. It also lets the Committee inquire into reliable reports of grave or systematic violations. The Committee issues views and recommendations; it is not a court and cannot impose penalties.",
@@ -792,10 +792,10 @@
     "topic": "d3a",
     "question": "A government is drafting a new national accessibility law. Under the CRPD, what must it do with persons with disabilities while developing the law?",
     "options": [
-      "Inform them once the law has passed",
-      "Consult only medical professionals who represent them",
-      "Hold a public vote restricted to persons with disabilities",
-      "Closely consult and actively involve them, including through their representative organizations"
+      "Inform them about the law once it has been passed",
+      "Consult only medical professionals on their behalf",
+      "Hold a public vote open only to disabled people",
+      "Closely consult them, including via their own organizations"
     ],
     "answer": 3,
     "rationale": "Article 4(3) of the CRPD requires states to closely consult and actively involve persons with disabilities, including children with disabilities, through their representative organizations when developing laws and policies that implement the Convention or affect them. This is the legal form of the disability rights slogan 'Nothing about us without us'. The same idea shows up in practice when organizations involve disabled users throughout design and testing.",
@@ -819,9 +819,9 @@
     "topic": "d3a",
     "question": "How does Article 1 of the CRPD describe persons with disabilities?",
     "options": [
-      "People with long-term physical, mental, intellectual or sensory impairments which, in interaction with various barriers, may hinder their full and equal participation in society",
+      "People with long-term impairments that, with barriers, hinder participation",
       "People certified by a doctor as unable to work",
-      "People who use assistive technology",
+      "People who use some form of assistive technology",
       "People whose impairment has lasted at least five years"
     ],
     "answer": 0,
@@ -882,10 +882,10 @@
     "topic": "d3b",
     "question": "The African Charter on Human and Peoples' Rights (1981) addresses persons with disabilities mainly through which provision?",
     "options": [
-      "A complaints procedure for persons with disabilities",
-      "A right of the aged and disabled to special measures of protection suited to their needs",
+      "A complaints procedure just for persons with disabilities",
+      "A right of older and disabled people to special protection",
       "Mandatory accessibility standards for public websites",
-      "A copyright exception for accessible formats"
+      "A copyright exception for accessible-format books"
     ],
     "answer": 1,
     "rationale": "The African Charter, adopted in Nairobi in 1981 and in force since 1986, is the main human rights treaty of the African Union region. Article 18(4) gives older persons and persons with disabilities a right to special protective measures that match their physical or moral needs. That brief, protection-focused wording was later strengthened by a dedicated Protocol on the Rights of Persons with Disabilities in Africa, adopted in 2018.",
@@ -908,7 +908,7 @@
     "topic": "d3b",
     "question": "Which regional treaty, adopted by the Organization of American States in Guatemala in 1999, aims to prevent and eliminate discrimination against persons with disabilities?",
     "options": [
-      "The Inter-American Convention on the Elimination of All Forms of Discrimination against Persons with Disabilities",
+      "The Inter-American Convention on disability discrimination",
       "The American Convention on Human Rights",
       "The Americans with Disabilities Act",
       "The Accessible Canada Act"
@@ -934,10 +934,10 @@
     "topic": "d3b",
     "question": "The African Union's 2018 Protocol on the Rights of Persons with Disabilities in Africa is notable for explicitly requiring states to address which issue?",
     "options": [
-      "Website accessibility conformance levels",
-      "Copyright exceptions for braille books",
-      "Harmful practices such as witchcraft accusations, abandonment and ritual killings",
-      "Accessible air travel"
+      "Conformance levels for public website accessibility",
+      "Copyright exceptions for braille and audio books",
+      "Harmful practices such as ritual killings and abandonment",
+      "Accessible air travel for passengers with disabilities"
     ],
     "answer": 2,
     "rationale": "The Protocol, adopted in Addis Ababa in January 2018, adds to the African Charter with detailed disability rights. It stands out for naming harmful practices rooted in tradition, culture, religion or superstition. It requires states to eliminate practices such as witchcraft accusations, abandonment, concealment and ritual killings of persons with disabilities, and its preamble expresses alarm at attacks on persons with albinism. It shows how regional instruments address barriers specific to their region.",
@@ -1050,10 +1050,10 @@
     "topic": "d3c",
     "question": "How does the Accessibility for Ontarians with Disabilities Act, 2005 (AODA) mainly achieve its goals?",
     "options": [
-      "By funding assistive technology for individuals",
+      "By funding assistive technology for individual residents",
       "By applying only to the provincial government's own websites",
       "Through a single complaint process at a human rights tribunal",
-      "Through accessibility standards developed with people with disabilities and industry, which apply to public, private and non-profit organizations"
+      "Through standards for public, private and non-profit bodies"
     ],
     "answer": 3,
     "rationale": "The AODA sets up a process for developing and enforcing accessibility standards in Ontario. People with disabilities and industry representatives help develop them. The standards cover five areas, customer service, information and communications, employment, transportation and design of public spaces, and are gathered in the Integrated Accessibility Standards Regulation. They apply to government, businesses and non-profits, not just the public sector. Ontario was one of the first jurisdictions to set a goal and timeframe for accessibility.",
@@ -1077,9 +1077,9 @@
     "topic": "d3c",
     "question": "Which organizations does the Accessible Canada Act (2019) apply to?",
     "options": [
-      "All businesses in every Canadian province",
-      "Only Ontario municipalities",
-      "Federally regulated entities, such as federal government departments, banks, telecommunications companies and interprovincial transportation",
+      "All businesses in every Canadian province and territory",
+      "Only municipalities and public bodies in Ontario",
+      "Federally regulated bodies, such as banks and airlines",
       "Only organizations with more than 500 employees"
     ],
     "answer": 2,
@@ -1328,10 +1328,10 @@
     "topic": "d3e",
     "question": "An auditor must assess a 20,000-page website for WCAG conformance and cannot check every page. According to WCAG-EM, what should they do?",
     "options": [
-      "Test only the home page",
-      "Rely on an automated scan of all pages, since that covers every criterion",
-      "Test only the pages with the most traffic",
-      "Explore the site, then evaluate a representative sample chosen with both structured and random selection"
+      "Test only the home page, since it represents the whole site",
+      "Rely on an automated scan, since it covers every criterion",
+      "Test only the pages that get the most traffic",
+      "Explore the site, then test a structured and random sample"
     ],
     "answer": 3,
     "rationale": "WCAG-EM, the W3C's WCAG Evaluation Methodology, has five steps: define the scope, explore the product, select a representative sample, evaluate the sample, and report the findings. When checking everything isn't practical, the sample should include key pages, common functions, different types of content and templates, plus some randomly chosen pages to check the result. This gives a defensible basis for a conformance claim about a whole site.",
@@ -1381,10 +1381,10 @@
     "topic": "d3f",
     "question": "According to W3C guidance, who is the main audience for an organization's accessibility statement, and what must it include?",
     "options": [
-      "Users, with a commitment to accessibility, the standard the content aims to meet, and a contact for feedback",
-      "Lawyers, with a full legal defense against complaints",
-      "Developers, with code samples for each fix",
-      "Investors, with the cost of accessibility work"
+      "Users; it needs a commitment, the standard and a contact",
+      "Lawyers; it needs a full legal defense against complaints",
+      "Developers; it needs code samples for each known fix",
+      "Investors; it needs the cost of all accessibility work"
     ],
     "answer": 0,
     "rationale": "An accessibility statement is written mainly for users, who often read it when they hit a problem. W3C recommends at minimum a commitment to accessibility, the standard applied (such as WCAG 2.2 AA), and contact details for feedback. Known limitations and alternatives are also recommended so users aren't surprised. Plain language works better than technical or legal wording: 'some videos have no captions' helps a user more than a criterion number.",
@@ -1407,10 +1407,10 @@
     "topic": "d3f",
     "question": "A product team plans to have one blind employee review their app just before launch and treat that as their accessibility testing. What is the main weakness of this plan?",
     "options": [
-      "Blind users cannot evaluate mobile apps",
-      "Involving users is only useful after launch",
-      "One person cannot represent other disabilities or even all blind users, and feedback that comes only at the end arrives too late to shape the design",
-      "User feedback is not accepted as evidence under WCAG"
+      "Blind users can't evaluate mobile apps in a useful way",
+      "Involving users is only worthwhile after a product launches",
+      "One person can't represent everyone, and launch is too late",
+      "User feedback isn't accepted as evidence under WCAG"
     ],
     "answer": 2,
     "rationale": "W3C recommends involving users with a range of disabilities early and throughout a project: in planning, personas and walkthroughs, prototype reviews, and evaluation. One person can't speak for how others with the same disability use technology, let alone other disabilities. Leaving it to the end means problems are found when they are most expensive to fix. User involvement works best alongside standards like WCAG and a conformance evaluation, not as a replacement for them.",
@@ -1433,10 +1433,10 @@
     "topic": "d3f",
     "question": "An organization is writing a web accessibility policy. Which set of elements does W3C guidance recommend it include?",
     "options": [
-      "A list of employees with disabilities",
-      "The standard and conformance level, the scope of content covered, and a timeline with milestones",
-      "A promise to be fully accessible to every person immediately",
-      "Only a reference to the national law, with no further detail"
+      "A list of the organization's employees with disabilities",
+      "The standard and level, the scope, and a timeline",
+      "A promise to be fully accessible to everyone immediately",
+      "Only a reference to the national law, with no other detail"
     ],
     "answer": 1,
     "rationale": "W3C suggests that a policy name the standard (for example WCAG) and the conformance level (AA is the most widely adopted), define its scope (public sites, intranets, mobile apps, third-party content, authoring tools), and set a realistic timeline with measurable milestones. Fuller policies also assign responsibilities to specific departments and include a way to review progress and respond to user feedback. A clear policy turns a general commitment into something teams can plan and be held to.",
@@ -1502,6 +1502,1785 @@
         "title": "W3C WAI: Accessibility Roles and Responsibilities Mapping (ARRM)",
         "url": "https://www.w3.org/WAI/planning/arrm/",
         "note": "How ARRM assigns primary, secondary and contributor ownership of accessibility tasks."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-decorative-images",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A web page has a purely decorative swirl image between sections. How should it be handled to meet WCAG 1.1.1 Non-text Content?",
+    "options": [
+      "Give it alt text that describes the swirl's shape and colors",
+      "Hide it from assistive technology, for example with an empty alt attribute",
+      "Add a visible caption below the image explaining what it is",
+      "Give it a short alt text that just says \"image\""
+    ],
+    "answer": 1,
+    "rationale": "Success criterion 1.1.1 (Level A) requires text alternatives for meaningful non-text content, but decorative images are handled differently: they must be implemented so assistive technology can ignore them. In HTML that usually means alt=\"\" (null alt), or placing the image in CSS. Describing decoration wastes screen reader users' time and adds noise. The skill being tested is judging purpose: the same picture can need a description in one context and none in another.",
+    "distractors": {
+      "0": "Describing decoration makes screen reader users listen to content that carries no information, which is exactly what the criterion tries to avoid.",
+      "2": "A visible caption adds clutter for everyone and still exposes the decoration to assistive technology.",
+      "3": "Placeholder alt text like \"image\" is a known WCAG failure. It tells the user nothing and stops the image being ignored."
+    },
+    "tip": "Ask what the image is for. Informative: describe the information. Functional (a link or button): describe the action. Decorative: hide it.",
+    "sources": [
+      {
+        "title": "Understanding SC 1.1.1 Non-text Content",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html",
+        "note": "Intent, decorative images, and related techniques and failures."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-info-relationships",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A designer makes section titles look like headings by using large bold text, but marks them up as ordinary paragraphs. Which WCAG success criterion does this fail?",
+    "options": [
+      "1.4.3 Contrast (Minimum)",
+      "2.4.7 Focus Visible",
+      "1.3.1 Info and Relationships",
+      "3.1.1 Language of Page"
+    ],
+    "answer": 2,
+    "rationale": "Success criterion 1.3.1 (Level A) requires that structure and relationships shown visually, such as headings, lists, table headers and form labels, are also available in code. Large bold text looks like a heading to sighted users, but a screen reader announces it as plain text, and users can't jump between headings. Using real heading elements makes the same structure available to everyone. W3C lists using presentation alone to convey structure as a failure of this criterion.",
+    "distractors": {
+      "0": "Contrast is about the lightness difference between text and background. The problem here is missing structure, not readability.",
+      "1": "Focus Visible is about seeing which element has keyboard focus. Headings are not focusable controls.",
+      "3": "Language of Page is about declaring the page's human language so screen readers pronounce it correctly."
+    },
+    "tip": "If sighted users get meaning from layout or styling, ask whether that meaning is in the code too. If not, think 1.3.1.",
+    "sources": [
+      {
+        "title": "Understanding SC 1.3.1 Info and Relationships",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships.html",
+        "note": "Intent, examples with headings, labels and tables, and related failures."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-use-of-color",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A form marks required fields only by turning their labels red. Which change would satisfy WCAG 1.4.1 Use of Color?",
+    "options": [
+      "Switch to a brighter, more saturated red",
+      "Make the required labels green instead of red",
+      "Add a tooltip saying \"required\" that appears on mouse hover",
+      "Add a visible asterisk, explained in the form instructions"
+    ],
+    "answer": 3,
+    "rationale": "Success criterion 1.4.1 (Level A) says color must not be the only visual means of conveying information. People with color vision deficiencies, people with low vision and anyone using a monochrome display may not see the red. Adding a visible marker, such as an asterisk or the word \"required\", gives a second cue that doesn't depend on color. Color can still be used, as long as it isn't the only cue.",
+    "distractors": {
+      "0": "A brighter red still relies on color alone. Contrast doesn't help someone who can't tell red from other colors.",
+      "1": "Changing the color keeps the same problem. Red-green color blindness is the most common type, so green may be even worse.",
+      "2": "A hover tooltip isn't available to keyboard or touch users and isn't visible until the user acts. The cue needs to be visible."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 1.4.1 Use of Color",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+        "note": "Intent and examples, including required form fields and links."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-contrast-ratios",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "Under WCAG 1.4.3 Contrast (Minimum), what contrast ratio does normal-size body text need against its background?",
+    "options": [
+      "At least 4.5:1",
+      "At least 3:1",
+      "At least 7:1",
+      "At least 2:1"
+    ],
+    "answer": 0,
+    "rationale": "Success criterion 1.4.3 (Level AA) requires at least 4.5:1 for normal text and 3:1 for large text, meaning at least 18 point, or 14 point bold. Logos and incidental text, such as text in inactive controls or pure decoration, are exempt. Enough contrast helps people with low vision or reduced contrast sensitivity, which becomes common with age. It also helps anyone reading a screen in bright light.",
+    "distractors": {
+      "1": "3:1 is the minimum for large text under 1.4.3, not for normal body text.",
+      "2": "7:1 is the enhanced requirement for normal text under 1.4.6, which is Level AAA.",
+      "3": "2:1 is below every WCAG text contrast requirement."
+    },
+    "tip": "Memorize 4.5 / 3 / 7: AA normal text, AA large text, AAA normal text.",
+    "sources": [
+      {
+        "title": "Understanding SC 1.4.3 Contrast (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+        "note": "Ratios, the definition of large text, and exceptions."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-resize-text",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "WCAG 1.4.4 Resize Text requires that text can be enlarged to what level without assistive technology and without loss of content or functionality?",
+    "options": [
+      "150%",
+      "200%",
+      "400%",
+      "800%"
+    ],
+    "answer": 1,
+    "rationale": "Success criterion 1.4.4 (Level AA) requires that text can be resized up to 200% using the browser's or platform's built-in features, such as zoom or text-size settings, without content being cut off or controls breaking. Captions and images of text are excluded. It supports people with low vision who need larger text but don't use a screen magnifier.",
+    "distractors": {
+      "0": "150% is less than WCAG requires.",
+      "2": "400% is the zoom level tied to 1.4.10 Reflow, where content must work at a width of 320 CSS pixels. It is a different criterion.",
+      "3": "No WCAG criterion sets 800%."
+    },
+    "tip": "200% for Resize Text, 400% for Reflow.",
+    "sources": [
+      {
+        "title": "Understanding SC 1.4.4 Resize Text",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html",
+        "note": "Intent and the 200% requirement."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-reflow",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A user with low vision zooms a desktop page to 400% and has to scroll left and right to read every line. Which WCAG success criterion addresses this?",
+    "options": [
+      "1.4.4 Resize Text",
+      "2.4.1 Bypass Blocks",
+      "1.4.10 Reflow",
+      "1.3.4 Orientation"
+    ],
+    "answer": 2,
+    "rationale": "Success criterion 1.4.10 (Level AA) requires content to be usable at a width of 320 CSS pixels, which matches a 1280-pixel-wide window zoomed to 400%, without scrolling in two directions. Scrolling both ways on every line is slow and makes it easy to lose your place. Content that needs a two-dimensional layout, such as maps, data tables or video, is excepted. Responsive layouts that collapse into a single column usually meet it, and they help phone users too.",
+    "distractors": {
+      "0": "Resize Text is about enlarging text to 200%. Reflow is the criterion about horizontal scrolling at high zoom.",
+      "1": "Bypass Blocks is about skipping repeated content such as navigation menus.",
+      "3": "Orientation is about not locking content to portrait or landscape. It doesn't cover zoom."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 1.4.10 Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "note": "The 320 CSS pixel requirement, exceptions and who benefits."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-audio-description",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A training video shows on-screen steps that the narrator never says aloud. Which WCAG requirement ensures blind viewers get that information?",
+    "options": [
+      "Audio description (1.2.5)",
+      "Captions (1.2.2)",
+      "Sign language interpretation (1.2.6)",
+      "Pause, Stop, Hide (2.2.2)"
+    ],
+    "answer": 0,
+    "rationale": "Success criterion 1.2.5 Audio Description (Prerecorded), Level AA, requires narration of important visual information that the soundtrack doesn't already convey, such as actions, scene changes and on-screen text. The narration is added during natural pauses in the dialogue. It benefits people who are blind or have low vision, and some people with cognitive disabilities who find it hard to interpret visual events. If the main narration already describes everything important, no extra description is needed.",
+    "distractors": {
+      "1": "Captions turn audio into text for Deaf and hard of hearing viewers. They don't describe visual content.",
+      "2": "Sign language interpretation (Level AAA) serves Deaf viewers who use sign language. It is visual, so it doesn't help blind viewers.",
+      "3": "Pause, Stop, Hide gives users control over moving or auto-updating content. It doesn't make visual information available as audio."
+    },
+    "tip": "Captions make sound visible; audio description makes visuals audible.",
+    "sources": [
+      {
+        "title": "Understanding SC 1.2.5 Audio Description (Prerecorded)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html",
+        "note": "Intent and who benefits."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-timing-adjustable",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "An online form logs users out after 5 minutes. Which approach satisfies WCAG 2.2.1 Timing Adjustable?",
+    "options": [
+      "Show a countdown timer so users know how long they have left",
+      "Raise the timeout to 10 minutes for every user of the form",
+      "Let users ask for more time by phoning or emailing support",
+      "Warn users before time runs out and let them extend it simply"
+    ],
+    "answer": 3,
+    "rationale": "Success criterion 2.2.1 (Level A) requires that for each time limit, users can turn it off, adjust it to at least ten times the default, or be warned before it expires and given at least 20 seconds to extend it with a simple action, at least ten times. Exceptions cover real-time events like auctions, limits that are essential to the activity, and limits over 20 hours. Time limits are a major barrier for people who read slowly, use assistive technology, or have motor or cognitive disabilities.",
+    "distractors": {
+      "0": "A countdown informs users but doesn't give them any way to get more time.",
+      "1": "A fixed longer limit still isn't adjustable, and 10 minutes may not be enough for some users.",
+      "2": "Contacting support is not a simple action within the content, and the user would likely be logged out while trying."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 2.2.1 Timing Adjustable",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/timing-adjustable.html",
+        "note": "The turn off, adjust and extend options, and the exceptions."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-bypass-blocks",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A keyboard user must press Tab more than 40 times on every page to get past the site navigation. Which technique addresses WCAG 2.4.1 Bypass Blocks?",
+    "options": [
+      "Adding a \"Skip to main content\" link at the top of each page",
+      "Making each navigation link larger and easier to click",
+      "Increasing the color contrast of the navigation links",
+      "Adding a site map page linked from the page footer"
+    ],
+    "answer": 0,
+    "rationale": "Success criterion 2.4.1 (Level A) requires a way to bypass blocks of content that repeat across pages, such as headers and navigation. Sufficient techniques include a skip link to the main content, headings at the start of each section, and ARIA landmarks. It helps anyone who moves through a page in sequence: keyboard users, screen reader users, switch users and people using screen magnifiers.",
+    "distractors": {
+      "1": "Larger links help people with motor impairments hit them, but they still have to tab through every one.",
+      "2": "Better contrast helps people read the navigation, not skip it.",
+      "3": "A site map helps people find pages, but on each page they would still have to tab through the repeated navigation."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 2.4.1 Bypass Blocks",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html",
+        "note": "Intent and techniques: skip links, headings and landmarks."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-focus-visible",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A design team removes the browser's focus outline because they find it unattractive and doesn't replace it. Which users are most directly affected?",
+    "options": [
+      "Blind users who navigate with a screen reader",
+      "Deaf users who rely on captions",
+      "Sighted people who navigate by keyboard",
+      "Mouse users who have hand tremors"
+    ],
+    "answer": 2,
+    "rationale": "Success criterion 2.4.7 Focus Visible (Level AA) requires a visible indicator of keyboard focus. Without it, sighted people who navigate by keyboard, including many people with motor disabilities, can't tell where they are or what pressing Enter will do. It also helps people with attention or memory limitations. Custom focus styles are fine, as long as they are clearly visible.",
+    "distractors": {
+      "0": "Screen readers announce the focused element, so blind users don't depend on the visual outline. Sighted keyboard users do.",
+      "1": "Deafness doesn't affect seeing focus.",
+      "3": "Mouse users point directly at what they want, so they rely much less on a focus indicator."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 2.4.7 Focus Visible",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
+        "note": "Intent and who benefits."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-focus-not-obscured",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "As a keyboard user tabs down a page, a sticky cookie banner completely covers the focused link. Which WCAG 2.2 success criterion does this fail?",
+    "options": [
+      "2.4.3 Focus Order",
+      "2.4.11 Focus Not Obscured (Minimum)",
+      "1.4.13 Content on Hover or Focus",
+      "3.2.1 On Focus"
+    ],
+    "answer": 1,
+    "rationale": "Success criterion 2.4.11 (Level AA, added in WCAG 2.2) requires that a focused component is not entirely hidden by content the author created, such as sticky headers, footers or cookie banners. At AA, partial overlap is allowed; the AAA version, 2.4.12, requires the item to be fully visible. Fixes include scroll padding so focused items scroll clear of sticky elements, or making the banner modal so it is dismissed first.",
+    "distractors": {
+      "0": "Focus Order is about whether focus moves in a logical sequence. Here the order may be fine; the problem is that the focused item can't be seen.",
+      "2": "Content on Hover or Focus covers extra content that appears when hovering or focusing, such as tooltips. A cookie banner isn't triggered by focus.",
+      "3": "On Focus is about receiving focus causing an unexpected change of context."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 2.4.11 Focus Not Obscured (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+        "note": "Intent, sticky headers and cookie banners, and sufficient techniques."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-target-size",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "WCAG 2.2 introduced 2.5.8 Target Size (Minimum) at Level AA. What minimum size does it set for pointer targets, unless an exception applies?",
+    "options": [
+      "16 by 16 CSS pixels",
+      "44 by 44 CSS pixels",
+      "48 by 48 CSS pixels",
+      "24 by 24 CSS pixels"
+    ],
+    "answer": 3,
+    "rationale": "Success criterion 2.5.8 requires pointer targets to be at least 24 by 24 CSS pixels. Smaller targets can still pass if they have enough spacing, if an equivalent control meets the size, if they sit inline in text, if their size is essential or legally required, or if the browser controls the size. Bigger targets help people with tremors or limited dexterity, and anyone using a phone on the move.",
+    "distractors": {
+      "0": "16 by 16 is smaller than the AA minimum.",
+      "1": "44 by 44 is the Level AAA requirement in 2.5.5 Target Size (Enhanced), and a common platform guideline, but not the AA minimum.",
+      "2": "48 by 48 is a common platform design recommendation, not a WCAG number."
+    },
+    "tip": "AA: 24 by 24. AAA: 44 by 44.",
+    "sources": [
+      {
+        "title": "Understanding SC 2.5.8 Target Size (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "note": "The 24 by 24 minimum and its exceptions."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-language-of-page",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A French-language website doesn't declare its language in the code, and screen readers read it with English pronunciation. Which WCAG success criterion is failed?",
+    "options": [
+      "3.1.1 Language of Page",
+      "3.1.5 Reading Level",
+      "1.3.1 Info and Relationships",
+      "4.1.2 Name, Role, Value"
+    ],
+    "answer": 0,
+    "rationale": "Success criterion 3.1.1 (Level A) requires that the default human language of each page can be determined by software. In HTML that is the lang attribute on the html element, for example lang=\"fr\". Screen readers and text-to-speech tools use it to choose the right pronunciation rules. It also helps tools such as translation and captioning. A related criterion, 3.1.2 Language of Parts, covers passages in a different language.",
+    "distractors": {
+      "1": "Reading Level (AAA) is about how difficult the text is to read, not which language it is in.",
+      "2": "Info and Relationships is about structure such as headings and labels.",
+      "3": "Name, Role, Value is about interface controls exposing their information to assistive technology."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 3.1.1 Language of Page",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html",
+        "note": "Intent, who benefits, and the lang attribute technique."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-on-input",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "Choosing a country from a dropdown immediately loads a different page, without warning and without a submit button. Which WCAG success criterion addresses this?",
+    "options": [
+      "2.1.1 Keyboard",
+      "3.3.2 Labels or Instructions",
+      "3.2.2 On Input",
+      "2.4.4 Link Purpose (In Context)"
+    ],
+    "answer": 2,
+    "rationale": "Success criterion 3.2.2 (Level A) says that changing a setting in a form control should not cause an unexpected change of context unless the user was told beforehand. Loading a new page, opening a window or moving focus as soon as an option is chosen is disorienting, especially for screen reader users, people with low vision and people with cognitive disabilities. Keyboard users can also trigger it by accident while arrowing through options. A separate Go or Submit button fixes it.",
+    "distractors": {
+      "0": "The dropdown may be fully keyboard operable. The problem is the unexpected change, not keyboard access.",
+      "1": "Labels or Instructions is about telling users what input is expected. It doesn't cover controls that change context on their own.",
+      "3": "Link Purpose is about understanding where links go. A dropdown is a form control, not a link."
+    },
+    "tip": "3.2.x criteria are about predictability: nothing big should happen just because something received focus (3.2.1) or a value changed (3.2.2).",
+    "sources": [
+      {
+        "title": "Understanding SC 3.2.2 On Input",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/on-input.html",
+        "note": "Intent and failures for unexpected changes of context."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-error-identification",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "When a form submission fails, the only sign is a red border around the invalid field. What does WCAG 3.3.1 Error Identification require?",
+    "options": [
+      "Play a warning sound whenever an error is detected",
+      "Clear the form so the user can start again from scratch",
+      "Make the red border at least 3 pixels wide so it stands out",
+      "Identify the field in error and describe the error in text"
+    ],
+    "answer": 3,
+    "rationale": "Success criterion 3.3.1 (Level A) requires that when an input error is detected automatically, the field in error is identified and the error is described in text. Color, icons or borders can support the message, but text is required, so screen reader users and people who can't see the color difference get it too. The message can appear inline, in a summary at the top, or both. Related criteria go further: 3.3.3 asks for suggestions to fix the error.",
+    "distractors": {
+      "0": "A sound is not a text description, and many users won't hear it or know what it means.",
+      "1": "Clearing the form makes errors harder to fix and doesn't identify anything.",
+      "2": "A thicker border is still a visual-only cue."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 3.3.1 Error Identification",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+        "note": "Intent and techniques for identifying and describing errors."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-accessible-authentication",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A login page blocks pasting into the password field, so password managers can't fill it. Which WCAG 2.2 success criterion does this affect most directly?",
+    "options": [
+      "3.3.8 Accessible Authentication (Minimum)",
+      "3.3.7 Redundant Entry",
+      "1.3.5 Identify Input Purpose",
+      "2.2.1 Timing Adjustable"
+    ],
+    "answer": 0,
+    "rationale": "Success criterion 3.3.8 (Level AA) says no step in a login process may require a cognitive function test, such as remembering a password or transcribing a code, unless an alternative or a supporting mechanism is available. Password managers and copy and paste are the mechanisms that make passwords acceptable, so blocking them fails. Object recognition and identifying your own uploaded content are allowed at AA. It mainly helps people with memory, reading or other cognitive disabilities.",
+    "distractors": {
+      "1": "Redundant Entry is about not asking users to re-enter information they already gave in the same process. It doesn't cover login tests.",
+      "2": "Identify Input Purpose helps browsers autofill personal data fields. It supports the same goal but isn't the criterion that bans blocking paste in authentication.",
+      "3": "Timing Adjustable is about time limits, not how users prove who they are."
+    },
+    "sources": [
+      {
+        "title": "Understanding SC 3.3.8 Accessible Authentication (Minimum)",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html",
+        "note": "What counts as a cognitive function test and the permitted alternatives."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-name-role-value",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A developer builds a custom toggle from a styled div with a click handler. Screen readers announce nothing useful about it. Which WCAG success criterion does this fail?",
+    "options": [
+      "1.4.3 Contrast (Minimum)",
+      "2.5.8 Target Size (Minimum)",
+      "4.1.2 Name, Role, Value",
+      "3.1.1 Language of Page"
+    ],
+    "answer": 2,
+    "rationale": "Success criterion 4.1.2 (Level A) requires every interface component to expose its name, role and current state to assistive technology, and to let it be operated. Native HTML controls do this automatically. A scripted div doesn't, so a screen reader can't tell the user it is a toggle, what it controls, or whether it is on. The fix is to use a native element such as a button, or add the right WAI-ARIA role, state and accessible name.",
+    "distractors": {
+      "0": "Contrast is about visibility, not what assistive technology can detect.",
+      "1": "Target size is about how easy a control is to hit with a pointer.",
+      "3": "Language of Page is about pronunciation, not controls."
+    },
+    "tip": "Native HTML first. If a custom control is unavoidable, ARIA must supply the name, role and state.",
+    "sources": [
+      {
+        "title": "Understanding SC 4.1.2 Name, Role, Value",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html",
+        "note": "Intent for custom controls and related ARIA techniques and failures."
+      }
+    ]
+  },
+  {
+    "id": "d2-wcag-techniques-informative",
+    "domain": 2,
+    "topic": "d2c",
+    "question": "A team meets a WCAG success criterion using a method that isn't in W3C's list of sufficient techniques. Can the content still conform?",
+    "options": [
+      "No, because only W3C-listed sufficient techniques count",
+      "Only if W3C reviews and approves the alternative method",
+      "Only for Level A criteria, not for Level AA criteria",
+      "Yes, because techniques are informative, not required"
+    ],
+    "answer": 3,
+    "rationale": "In WCAG, the success criteria are the normative requirements: conformance is judged against them. The techniques documents are informative guidance showing known ways to meet a criterion. Content doesn't have to use W3C's published techniques. Any method that actually satisfies the criterion counts, and failing one technique's test doesn't by itself mean failing WCAG. This lets WCAG stay technology-neutral while technology changes.",
+    "distractors": {
+      "0": "W3C says outright that techniques are not required.",
+      "1": "W3C doesn't approve or certify individual implementations.",
+      "2": "The normative and informative distinction applies at every level."
+    },
+    "tip": "Normative = required (the success criteria). Informative = helpful guidance (Understanding documents and techniques).",
+    "sources": [
+      {
+        "title": "Understanding Techniques for WCAG Success Criteria",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/understanding-techniques",
+        "note": "Explains that techniques are informative and other methods can meet the criteria."
+      }
+    ]
+  },
+  {
+    "id": "d2-clear-floor-space",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Under the 2010 ADA Standards, what is the minimum clear floor space needed in front of an element such as a drinking fountain or a control, to fit a single stationary wheelchair?",
+    "options": [
+      "24 by 36 inches",
+      "30 by 48 inches",
+      "36 by 60 inches",
+      "48 by 48 inches"
+    ],
+    "answer": 1,
+    "rationale": "Section 305 sets the minimum clear floor or ground space at 30 by 48 inches, for either a forward or a side approach. The space must be level, firm and free of obstructions so a wheelchair user can pull up to the element. Where a forward approach is required, such as at a lavatory, knee and toe clearance underneath is also needed. Turning space, used to change direction, is a separate and larger requirement.",
+    "distractors": {
+      "0": "24 by 36 inches is too small to hold a typical wheelchair.",
+      "2": "36 by 60 inches is larger than the minimum. 36 inches is the minimum accessible route width, and 60 inches is the turning circle diameter.",
+      "3": "48 by 48 inches is not the clear floor space dimension in the Standards."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Clear Floor or Ground Space and Turning Space",
+        "url": "https://www.access-board.gov/ada/guides/chapter-3-clear-floor-or-ground-space-and-turning-space/",
+        "note": "Sections 304 and 305, with diagrams."
+      }
+    ]
+  },
+  {
+    "id": "d2-turning-space",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "A wheelchair user needs to turn around in an accessible restroom. Which turning space does the 2010 ADA Standards allow?",
+    "options": [
+      "A circle at least 48 inches across",
+      "A 60-inch circle, or a T-shaped space",
+      "A square measuring 36 by 36 inches",
+      "Any space at least 30 inches wide"
+    ],
+    "answer": 1,
+    "rationale": "Section 304 allows two forms of turning space: a circle at least 60 inches across, or a T-shaped space within a 60-inch square, with arms and stem at least 36 inches wide. The T-shape lets the user make a three-point turn. Turning space can overlap clear floor spaces, and doors may swing into it. Without it, a wheelchair user can enter a room but not turn to use fixtures or leave forwards.",
+    "distractors": {
+      "0": "A 48-inch circle is too small for most wheelchairs to turn in.",
+      "2": "36 inches is the width of each arm of the T-shape, not a turning space by itself.",
+      "3": "30 inches is the width of a clear floor space, which holds a stationary wheelchair but doesn't allow turning."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Clear Floor or Ground Space and Turning Space",
+        "url": "https://www.access-board.gov/ada/guides/chapter-3-clear-floor-or-ground-space-and-turning-space/",
+        "note": "Circular and T-shaped turning space, section 304."
+      }
+    ]
+  },
+  {
+    "id": "d2-reach-range",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Under the 2010 ADA Standards, what is the unobstructed forward or side reach range for operable parts such as light switches and card readers?",
+    "options": [
+      "10 to 40 inches above the floor",
+      "20 to 54 inches above the floor",
+      "15 to 48 inches above the floor",
+      "24 to 60 inches above the floor"
+    ],
+    "answer": 2,
+    "rationale": "Section 308 sets the unobstructed reach range at 15 to 48 inches above the floor for both forward and side reach. Reaching over an obstruction, such as a counter, lowers the maximum. The range covers only the parts someone has to operate, so the rest of an element can sit outside it. Placing controls within this range lets seated users, people of short stature and children use them.",
+    "distractors": {
+      "0": "40 inches is lower than necessary, and 10 inches is too low to reach comfortably from a seat.",
+      "1": "54 inches is above the 48-inch maximum, so many seated users couldn't reach it.",
+      "3": "60 inches is out of reach for most seated users. It is the upper limit for tactile sign characters, not controls."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Operable Parts",
+        "url": "https://www.access-board.gov/ada/guides/chapter-3-operable-parts/",
+        "note": "Reach ranges (section 308) and operation requirements (section 309)."
+      }
+    ]
+  },
+  {
+    "id": "d2-door-hardware",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Which door hardware is compliant under the 2010 ADA Standards?",
+    "options": [
+      "A round knob that must be gripped tightly and turned",
+      "A thumb latch that must be pinched to release the door",
+      "A lever handle that works with one hand and no twisting",
+      "A keypad mounted 54 inches above the finished floor"
+    ],
+    "answer": 2,
+    "rationale": "Door hardware must work with one hand, without tight grasping, pinching or twisting of the wrist, and with no more than 5 pounds of force. It must be mounted 34 to 48 inches above the floor. Lever handles and U-shaped pulls meet this; round knobs don't. The same rules apply to other operable parts, which helps people with arthritis, limited grip strength or full hands.",
+    "distractors": {
+      "0": "Round knobs need tight grasping and twisting, so they don't comply.",
+      "1": "Pinching is specifically ruled out.",
+      "3": "54 inches is above the 48-inch maximum for door hardware and reach ranges."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Entrances, Doors, and Gates",
+        "url": "https://www.access-board.gov/ada/guides/chapter-4-entrances-doors-and-gates/",
+        "note": "Door hardware (section 404.2.7), clear width and maneuvering clearance."
+      }
+    ]
+  },
+  {
+    "id": "d2-door-clear-width",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "What is the minimum clear width of an accessible doorway under the 2010 ADA Standards, measured with the door open 90 degrees?",
+    "options": [
+      "28 inches",
+      "30 inches",
+      "36 inches",
+      "32 inches"
+    ],
+    "answer": 3,
+    "rationale": "Doorways need at least 32 inches of clear width, measured from the face of the open door to the stop on the other side. It is measured as clear width, not as the size of the door leaf. Accessible routes are 36 inches wide but may narrow to 32 inches for up to 24 inches, which covers doorways. Doors also need level maneuvering space on both sides and thresholds no higher than half an inch.",
+    "distractors": {
+      "0": "28 inches is too narrow for many wheelchairs.",
+      "1": "30 inches is the width of a clear floor space, not a doorway.",
+      "2": "36 inches is the minimum width of an accessible route. Doorways may be narrower, at 32 inches."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Entrances, Doors, and Gates",
+        "url": "https://www.access-board.gov/ada/guides/chapter-4-entrances-doors-and-gates/",
+        "note": "Clear width (section 404.2.3) and other door requirements."
+      }
+    ]
+  },
+  {
+    "id": "d2-protruding-objects",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "A wall-mounted fire extinguisher cabinet sticks 8 inches into a corridor, with its bottom edge 40 inches above the floor. Who does this mainly put at risk, and why?",
+    "options": [
+      "Blind people who use a long cane, which sweeps below it",
+      "Wheelchair users, because it narrows the corridor below 36 inches",
+      "Deaf people, because they can't hear it as they approach",
+      "Tall people, because it sits at about chest or head height"
+    ],
+    "answer": 0,
+    "rationale": "Objects with leading edges between 27 and 80 inches high may protrude no more than 4 inches into a circulation path. A long cane sweeps close to the ground, so it detects objects below 27 inches, but anything higher and deeper than 4 inches can hit a blind person's body or head without warning. Circulation paths also need at least 80 inches of headroom. Fixes include recessing the cabinet or putting a cane-detectable barrier underneath.",
+    "distractors": {
+      "1": "Protruding objects can narrow a route, but the specific risk of a high, deep object is that canes can't detect it.",
+      "2": "The risk is physical collision. Hearing doesn't affect it.",
+      "3": "At 40 inches the object is below head height for nearly everyone. The danger is to people who can't see it."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Protruding Objects",
+        "url": "https://www.access-board.gov/ada/guides/chapter-3-protruding-objects/",
+        "note": "The 4-inch protrusion limit, the 27 to 80-inch zone, and headroom."
+      }
+    ]
+  },
+  {
+    "id": "d2-van-accessible-parking",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Under the 2010 ADA Standards, how many of a parking facility's accessible spaces must be van-accessible?",
+    "options": [
+      "All of them",
+      "At least 1 in every 2",
+      "At least 1 in every 6",
+      "At least 1 in every 25"
+    ],
+    "answer": 2,
+    "rationale": "At least one of every six accessible spaces (or fraction of six) in each facility must be van-accessible. A van space can be 132 inches wide with a 60-inch access aisle, or 96 inches wide with a 96-inch aisle, and it needs a sign with the words \"van accessible\" in addition to the International Symbol of Accessibility. The designation is informational: anyone with an accessible parking permit may use it.",
+    "distractors": {
+      "0": "Requiring every space to be van-sized would take a lot of space without need. The Standards set a ratio.",
+      "1": "1 in 2 is much higher than the Standards require.",
+      "3": "1 in 25 is far fewer van spaces than the Standards require."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Parking Spaces",
+        "url": "https://www.access-board.gov/ada/guides/chapter-5-parking/",
+        "note": "Van-accessible ratio, space and aisle dimensions, and signage."
+      }
+    ]
+  },
+  {
+    "id": "d2-parking-access-aisle",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Why do accessible parking spaces need a marked access aisle beside them?",
+    "options": [
+      "To give drivers of all cars extra room to open their doors",
+      "To give room to transfer to a wheelchair or deploy a van lift",
+      "To give shoppers a safe place to leave their shopping carts",
+      "To show where the accessible parking sign must be mounted"
+    ],
+    "answer": 1,
+    "rationale": "The access aisle, at least 60 inches wide and as long as the space, gives a wheelchair user room to get between the car and the chair, and room for a van's ramp or lift, usually on the passenger side. It must connect to the accessible route and be marked so people don't park in it. Curb ramps, posts and bollards can't intrude into it. A space without a clear aisle can be unusable even if it is signed as accessible.",
+    "distractors": {
+      "0": "Extra door room helps everyone, but the aisle's purpose is transfer and lift space for wheelchair users.",
+      "2": "Using the aisle for storage would block the access it exists to provide.",
+      "3": "Signs mark the space and must be at least 60 inches high, but that is not why the aisle exists."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Parking Spaces",
+        "url": "https://www.access-board.gov/ada/guides/chapter-5-parking/",
+        "note": "Access aisle requirements and why they matter."
+      }
+    ]
+  },
+  {
+    "id": "d2-tactile-signs",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Where should a tactile room identification sign with raised characters and braille be placed beside a single door, under the 2010 ADA Standards?",
+    "options": [
+      "On the door itself, at the average adult's eye level",
+      "Above the door frame, where it can be seen from a distance",
+      "On the wall on the hinge side of the door, at any height",
+      "On the latch side wall, 48 to 60 inches above the floor"
+    ],
+    "answer": 3,
+    "rationale": "Permanent room identification signs, such as room numbers and restroom labels, need raised characters and braille. They go on the wall on the latch side of the door, with the baseline of the tactile characters between 48 and 60 inches above the floor. Consistent placement lets blind people find signs by touch without searching. There must also be clear floor space in front of the sign, outside the door's swing, so the reader isn't hit by the door.",
+    "distractors": {
+      "0": "Signs on a door move when it opens and are hard to find by touch. The Standards allow push-side placement only in limited cases.",
+      "1": "Above the door is out of reach for reading by touch.",
+      "2": "The hinge side is where a person reading the sign could be hit by the opening door. The Standards specify the latch side."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Signs",
+        "url": "https://www.access-board.gov/ada/guides/chapter-7-signs/",
+        "note": "Which signs need tactile characters, and mounting height and location."
+      }
+    ]
+  },
+  {
+    "id": "d2-accessible-route",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Under the 2010 ADA Standards, what are the minimum clear width and maximum running slope of a walking surface on an accessible route?",
+    "options": [
+      "36 inches wide, running slope no steeper than 1:20",
+      "32 inches wide, running slope no steeper than 1:12",
+      "48 inches wide, running slope no steeper than 1:8",
+      "30 inches wide, no slope limit"
+    ],
+    "answer": 0,
+    "rationale": "An accessible route needs a continuous clear width of at least 36 inches, narrowing to 32 inches only for short stretches such as doorways. Its walking surfaces may be no steeper than 1:20 in the direction of travel and 1:48 across. Anything steeper than 1:20 must be built as a ramp, with handrails and landings. Accessible routes must link site arrival points, such as parking, transit stops and sidewalks, to accessible entrances and spaces.",
+    "distractors": {
+      "1": "32 inches is allowed only for short stretches like doorways, and 1:12 is the maximum ramp slope, not a walking surface slope.",
+      "2": "1:8 is far too steep and is allowed only in very limited alteration cases.",
+      "3": "30 inches is a clear floor space dimension, and accessible routes do have slope limits."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Accessible Routes",
+        "url": "https://www.access-board.gov/ada/guides/chapter-4-accessible-routes/",
+        "note": "Width, running and cross slope, and what accessible routes must connect."
+      }
+    ]
+  },
+  {
+    "id": "d2-detectable-warnings",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "What is the purpose of detectable warnings, the surfaces of truncated domes at transit platform edges and some curb ramps?",
+    "options": [
+      "To give wheelchair wheels better traction on wet slopes",
+      "To help rainwater drain off curb ramps and platforms",
+      "To warn blind pedestrians, by touch, of a street or drop-off",
+      "To mark the start of the accessible parking area"
+    ],
+    "answer": 2,
+    "rationale": "Detectable warnings are a standardized pattern of small flat-topped domes that can be felt underfoot or with a long cane. They signal the edge of a hazard, such as a street crossing or a rail platform drop-off. They are required at platform edges and at curb ramps in transit facilities and on federally funded street projects. Curb ramps remove the step for wheelchair users, but they also remove the curb that blind pedestrians used to detect the street, which is why the warning texture matters.",
+    "distractors": {
+      "0": "The domes exist to be felt, not to add traction for wheelchairs.",
+      "1": "Drainage is handled by slope and grates. The dome pattern is for tactile detection.",
+      "3": "Accessible parking is marked with signs and the International Symbol of Accessibility, not domes."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Ramps and Curb Ramps",
+        "url": "https://www.access-board.gov/ada/guides/chapter-4-ramps-and-curb-ramps/",
+        "note": "Detectable warnings and curb ramps, including where warnings are required."
+      }
+    ]
+  },
+  {
+    "id": "d2-changes-in-level",
+    "domain": 2,
+    "topic": "d2d",
+    "question": "Under the 2010 ADA Standards, how large a vertical change in level is allowed on an accessible route with no treatment at all?",
+    "options": [
+      "Up to 1/4 inch",
+      "Up to 1 inch",
+      "Up to 2 inches",
+      "Up to 1/2 inch"
+    ],
+    "answer": 0,
+    "rationale": "Changes in level up to 1/4 inch may be vertical. Between 1/4 and 1/2 inch they must be beveled at no steeper than 1:2. Anything over 1/2 inch must be treated as a ramp or curb ramp. Small lips catch wheelchair casters and walker feet and cause trips, so these limits matter for everyone. Ground openings, such as grates, also must not let a 1/2-inch sphere through.",
+    "distractors": {
+      "1": "One inch is enough to stop a wheelchair caster and must be ramped.",
+      "2": "Two inches is a step, not a small change in level.",
+      "3": "Up to 1/2 inch is allowed only if beveled. Without treatment, the limit is 1/4 inch."
+    },
+    "sources": [
+      {
+        "title": "U.S. Access Board: Guide to the ADA Standards, Floor and Ground Surfaces",
+        "url": "https://www.access-board.gov/ada/guides/chapter-3-floor-and-ground-surfaces/",
+        "note": "Firm, stable and slip-resistant surfaces, openings and changes in level."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-equitable-use",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "A building's main entrance has steps, and wheelchair users must go around to a separate entrance by the loading dock. Which universal design principle does this most clearly violate?",
+    "options": [
+      "Tolerance for Error",
+      "Equitable Use",
+      "Low Physical Effort",
+      "Simple and Intuitive Use"
+    ],
+    "answer": 1,
+    "rationale": "Equitable Use asks that a design be useful and appealing to people with diverse abilities. Its guidelines call for the same means of use for everyone, identical where possible and equivalent where not, and for avoiding segregating or stigmatizing any users. A back entrance by the loading dock technically provides access, but it separates wheelchair users from everyone else. A level main entrance that everyone shares would meet the principle.",
+    "distractors": {
+      "0": "Tolerance for Error is about reducing hazards and the effects of mistakes. The problem here is separation.",
+      "2": "Low Physical Effort is about minimizing fatigue. The separate route may also be longer, but the core issue is segregation.",
+      "3": "Simple and Intuitive Use is about being easy to understand. The issue isn't confusion but unequal treatment."
+    },
+    "tip": "If a scenario makes disabled people use a separate or second-class route, think Equitable Use.",
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Each principle with its guidelines, including 1b, avoid segregating or stigmatizing users."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-flexibility-in-use",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "Scissors designed to work equally well in the left or right hand best illustrate which universal design principle?",
+    "options": [
+      "Perceptible Information",
+      "Size and Space for Approach and Use",
+      "Flexibility in Use",
+      "Equitable Use"
+    ],
+    "answer": 2,
+    "rationale": "Flexibility in Use means the design accommodates a wide range of individual preferences and abilities. Its guidelines include offering a choice of methods, supporting both left- and right-handed use, helping users be accurate, and letting them work at their own pace. Ambidextrous scissors are the classic example. Digital examples include letting users choose between keyboard, mouse, touch and voice.",
+    "distractors": {
+      "0": "Perceptible Information is about communicating information through different senses and in different conditions.",
+      "1": "Size and Space is about room to approach, reach and use something, whatever the user's body size or mobility.",
+      "3": "Equitable Use is about the same or equivalent use for everyone without segregation. Handedness is specifically listed under Flexibility in Use."
+    },
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Principle 2 and its guidelines, including 2b, left- and right-handed use."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-simple-intuitive",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "A ticket machine removes unnecessary menu steps, uses familiar icons with short labels, and confirms each step as it happens. Which universal design principle does this apply?",
+    "options": [
+      "Simple and Intuitive Use",
+      "Low Physical Effort",
+      "Tolerance for Error",
+      "Flexibility in Use"
+    ],
+    "answer": 0,
+    "rationale": "Simple and Intuitive Use means a design is easy to understand regardless of the user's experience, knowledge, language skills or concentration. Its guidelines are to remove unnecessary complexity, match users' expectations, support a wide range of literacy and language skills, arrange information by importance, and give clear prompts and feedback. These choices help people with cognitive disabilities, tourists, first-time users and people in a hurry.",
+    "distractors": {
+      "1": "Low Physical Effort is about reducing fatigue and force, not mental effort.",
+      "2": "Feedback can help avoid errors, but removing complexity and matching expectations are the core of Simple and Intuitive Use.",
+      "3": "Flexibility in Use is about offering choices. This scenario is about making one path easy to understand."
+    },
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Principle 3 and its guidelines."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-perceptible-information",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "An elevator announces each floor aloud, shows it on a display, and has raised and braille floor buttons. Which universal design principle does this most directly apply?",
+    "options": [
+      "Equitable Use",
+      "Low Physical Effort",
+      "Size and Space for Approach and Use",
+      "Perceptible Information"
+    ],
+    "answer": 3,
+    "rationale": "Perceptible Information means the design communicates necessary information effectively, whatever the surrounding conditions or the user's sensory abilities. Its first guideline is to present essential information in more than one mode: pictorial, verbal and tactile. Others call for good contrast, maximum legibility and compatibility with devices used by people with sensory impairments. The elevator gives the same information by sound, sight and touch.",
+    "distractors": {
+      "0": "Equitable Use is about everyone using the same means without segregation. The specific feature here is multiple sensory channels.",
+      "1": "Low Physical Effort is about reducing force and fatigue.",
+      "2": "Size and Space is about reach and room to maneuver, not how information is conveyed."
+    },
+    "tip": "WCAG's Perceivable principle echoes this one: offer information through more than one sense.",
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Principle 4 and its guidelines, including 4a, multiple modes."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-low-physical-effort",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "A product team replaces a stiff twist-off cap with a push-button opening that needs little force and no wrist rotation. Which universal design principle is this?",
+    "options": [
+      "Low Physical Effort",
+      "Tolerance for Error",
+      "Simple and Intuitive Use",
+      "Perceptible Information"
+    ],
+    "answer": 0,
+    "rationale": "Low Physical Effort means the design can be used efficiently and comfortably with minimal fatigue. Its guidelines are to let users keep a neutral body position, use reasonable operating forces, minimize repetitive actions, and minimize sustained effort. A push button with low force helps people with arthritis or limited grip, older people, and anyone with their hands full. The ADA Standards apply the same idea to controls: no tight grasping or wrist twisting.",
+    "distractors": {
+      "1": "Tolerance for Error is about minimizing hazards and mistakes, not effort.",
+      "2": "The change is about physical force, not understanding.",
+      "3": "Nothing here changes how information is communicated."
+    },
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Principle 6 and its guidelines."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-size-and-space",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "A service counter has a lowered section with knee clearance so seated customers can see the clerk and reach the card reader. Which universal design principle is this?",
+    "options": [
+      "Flexibility in Use",
+      "Perceptible Information",
+      "Size and Space for Approach and Use",
+      "Simple and Intuitive Use"
+    ],
+    "answer": 2,
+    "rationale": "Size and Space for Approach and Use means providing enough size and space to approach, reach, manipulate and use a design, whatever the user's body size, posture or mobility. Its guidelines call for a clear line of sight and comfortable reach for both seated and standing users, room for different hand sizes, and space for assistive devices or a personal assistant. A lowered counter section works for wheelchair users, people of short stature and children.",
+    "distractors": {
+      "0": "A lowered section does offer an option, but sightlines and reach for seated users are named directly in Size and Space.",
+      "1": "Perceptible Information is about communicating information through different senses.",
+      "3": "The counter isn't about how easy something is to understand."
+    },
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "Principle 7 and its guidelines."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-origin",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "Who developed the seven principles of universal design, and when?",
+    "options": [
+      "Ronald Mace's working group at NC State University, in 1997",
+      "The World Wide Web Consortium, alongside WCAG 1.0 in 1999",
+      "The United Nations, as part of the CRPD adopted in 2006",
+      "CAST, as part of its Universal Design for Learning framework"
+    ],
+    "answer": 0,
+    "rationale": "The seven principles were developed in 1997 at North Carolina State University by a working group of architects, product designers, engineers and environmental design researchers, led by Ronald Mace. They apply to environments, products and communications. Later frameworks, such as UDL in education and inclusive design in technology, build on the same idea.",
+    "distractors": {
+      "1": "W3C published WCAG 1.0 in 1999. It is a web content standard, not the universal design principles.",
+      "2": "The CRPD defines universal design and promotes it, but it didn't create the seven principles.",
+      "3": "CAST created UDL, which adapts universal design to learning. The seven principles came first."
+    },
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: The 7 Principles",
+        "url": "https://universaldesign.ie/about-universal-design/the-7-principles",
+        "note": "The principles and the NCSU working group that developed them."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-definition",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "Which statement best describes universal design?",
+    "options": [
+      "Adapting a product for a specific person after they request it",
+      "A separate product line made especially for disabled people",
+      "A legal code that sets minimum dimensions for buildings",
+      "Designing so as many people as possible can use it, unadapted"
+    ],
+    "answer": 3,
+    "rationale": "Universal design aims to make environments, products and services usable by as many people as possible, without needing adaptation or specialized design. Ireland's Centre for Excellence in Universal Design describes it as a basic condition of good design, not a special requirement that benefits only a minority. The CRPD's definition adds that universal design doesn't exclude assistive devices for particular groups where they are needed.",
+    "distractors": {
+      "0": "Adapting for a specific person on request describes an accommodation.",
+      "1": "Separate products for disabled people are specialized design, the opposite of the universal approach.",
+      "2": "Codes such as the ADA Standards set minimums. Universal design is a broader approach that aims beyond compliance."
+    },
+    "sources": [
+      {
+        "title": "Centre for Excellence in Universal Design: About Universal Design",
+        "url": "https://universaldesign.ie/about-universal-design",
+        "note": "Definition of universal design and why it is good design."
+      },
+      {
+        "title": "UN CRPD Article 2: Definitions",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-2-definitions",
+        "note": "The CRPD definition of universal design."
+      }
+    ]
+  },
+  {
+    "id": "d2-inclusive-solve-for-one",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "Microsoft's inclusive design principle \"Solve for one, extend to many\" means what?",
+    "options": [
+      "Design for the average user so that most people are served",
+      "Designing with disabled people yields solutions that help many",
+      "Build one product and then sell it in as many markets as possible",
+      "Fix accessibility issues one at a time, starting with the worst"
+    ],
+    "answer": 1,
+    "rationale": "Microsoft's inclusive design toolkit names three principles: recognize exclusion, learn from diversity, and solve for one, extend to many. The third says that designing for and with people who have permanent disabilities leads to solutions that help far more people, including those with temporary or situational limitations. It is the reasoning behind the curb-cut effect. Designing for an imagined average user tends to exclude people at the edges.",
+    "distractors": {
+      "0": "Designing for the average is the approach inclusive design argues against, because it excludes people whose needs differ.",
+      "2": "The principle is about people, not markets.",
+      "3": "The principle is about where designers look for insight, not how they schedule fixes."
+    },
+    "sources": [
+      {
+        "title": "Microsoft Inclusive Design",
+        "url": "https://inclusive.microsoft.design/",
+        "note": "The three inclusive design principles."
+      }
+    ]
+  },
+  {
+    "id": "d2-inclusive-recognize-exclusion",
+    "domain": 2,
+    "topic": "d2e",
+    "question": "According to Microsoft's inclusive design principles, where does exclusion most often come from?",
+    "options": [
+      "From the impairments that people have",
+      "From strict accessibility laws and rules",
+      "From designers' own biases and assumptions",
+      "From products that have too many features"
+    ],
+    "answer": 2,
+    "rationale": "The first principle, recognize exclusion, says exclusion happens when designers solve problems using their own biases, so the experience doesn't match the people who need to use it. That places the problem in the design, not the person, which echoes the social model of disability. Recognizing exclusion is the first step: once a team sees who it is leaving out, it can learn from those people and design differently.",
+    "distractors": {
+      "0": "Locating the problem in impairments is the medical model. Inclusive design looks at mismatches the design creates.",
+      "1": "Laws aim to reduce exclusion. They are not its source.",
+      "3": "Complexity can cause problems, but the principle points to designers' assumptions as the root cause."
+    },
+    "sources": [
+      {
+        "title": "Microsoft Inclusive Design",
+        "url": "https://inclusive.microsoft.design/",
+        "note": "Recognize exclusion, learn from diversity, solve for one and extend to many."
+      }
+    ]
+  },
+  {
+    "id": "d2-accommodation-employer-choice",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "An employee with low vision asks for a specific large monitor. The employer offers a different setup that is equally effective and cheaper. Under EEOC guidance on the ADA, is that allowed?",
+    "options": [
+      "No, the employer must provide exactly what the employee asks for",
+      "Yes, if it is equally effective; the employer chooses among effective options",
+      "Only if the employee agrees to the alternative in writing first",
+      "No, because cost can never be considered for an accommodation"
+    ],
+    "answer": 1,
+    "rationale": "Under EEOC guidance, the employee's preference should get primary consideration, but the employer has the final say between accommodations that are effective. It may choose the cheaper or easier option if it works just as well. The key test is effectiveness: an option that doesn't let the person do the job, or enjoy equal benefits of employment, doesn't count. Talking it through with the employee helps find the right fit.",
+    "distractors": {
+      "0": "The employee's preference matters, but it doesn't bind the employer if another option is equally effective.",
+      "2": "Written agreement isn't a requirement for choosing among effective options.",
+      "3": "Cost can be considered when choosing among effective options, and in deciding whether something is an undue hardship."
+    },
+    "sources": [
+      {
+        "title": "EEOC: Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA",
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "note": "Choosing among effective accommodations and the role of the employee's preference."
+      }
+    ]
+  },
+  {
+    "id": "d2-accommodation-request",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "An employee tells a manager, \"I'm having trouble getting to work at 8 because of my medical treatment.\" Under EEOC guidance, does this count as a request for reasonable accommodation?",
+    "options": [
+      "No, because the employee didn't mention the ADA",
+      "No, because a request only counts if it is in writing",
+      "Yes, a request can be made in plain, everyday language",
+      "Only if the employee's doctor submits the request"
+    ],
+    "answer": 2,
+    "rationale": "EEOC guidance says people can ask for an accommodation in plain words, in conversation or any other way. They don't need to mention the ADA or use the phrase \"reasonable accommodation\". Once the employer knows the person needs a change at work for a reason related to a medical condition, it should start the interactive process. An employer may ask for a form to be completed later, but it can't ignore a spoken request.",
+    "distractors": {
+      "0": "No magic words are needed. Mentioning the ADA is not required.",
+      "1": "An employer may ask for a written follow-up, but a spoken request still counts.",
+      "3": "The employer may sometimes ask for documentation, but the request itself can come from the employee."
+    },
+    "sources": [
+      {
+        "title": "EEOC: Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA",
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "note": "How requests can be made and what happens next."
+      }
+    ]
+  },
+  {
+    "id": "d2-undue-hardship",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "How does EEOC guidance describe \"undue hardship\" under the ADA?",
+    "options": [
+      "Any accommodation that costs the employer money",
+      "Any change that coworkers or customers dislike",
+      "A fixed dollar limit written into the law itself",
+      "Significant difficulty or expense for that employer"
+    ],
+    "answer": 3,
+    "rationale": "Undue hardship means an accommodation would cause significant difficulty or expense for that particular employer. It is judged case by case, weighing the cost and impact against the employer's size, resources and operations. It also covers changes that would be unduly disruptive or would fundamentally change how the business operates. A large company will usually have a harder time showing undue hardship than a small one for the same accommodation.",
+    "distractors": {
+      "0": "Some cost is expected. Only significant difficulty or expense qualifies.",
+      "1": "Coworker or customer preferences don't make an accommodation an undue hardship.",
+      "2": "There is no fixed dollar threshold. It depends on the employer's circumstances."
+    },
+    "sources": [
+      {
+        "title": "EEOC: Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA",
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "note": "Definition and factors for undue hardship."
+      }
+    ]
+  },
+  {
+    "id": "d2-accommodation-essential-functions",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "Under EEOC guidance, which of these falls outside an employer's reasonable accommodation obligations?",
+    "options": [
+      "Removing an essential job function or lowering a standard",
+      "Changing the employee's work schedule or hours",
+      "Providing a sign language interpreter for a meeting",
+      "Modifying equipment or buying adapted equipment"
+    ],
+    "answer": 0,
+    "rationale": "Reasonable accommodation is about helping a qualified person do the job, not changing what the job is. Employers don't have to remove essential functions or lower production standards that apply to everyone, though they may choose to. They do have to consider accommodations that help the person meet those standards, such as modified schedules, adapted equipment, interpreters, job restructuring of marginal tasks, or reassignment to a vacant position.",
+    "distractors": {
+      "1": "Modified or part-time schedules are listed as possible reasonable accommodations.",
+      "2": "Qualified readers and interpreters are listed as possible reasonable accommodations.",
+      "3": "Acquiring or modifying equipment is a common reasonable accommodation."
+    },
+    "sources": [
+      {
+        "title": "EEOC: Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA",
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "note": "Types of accommodation and what employers don't have to do."
+      }
+    ]
+  },
+  {
+    "id": "d2-accommodation-application-process",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "A Deaf applicant asks for a sign language interpreter at a job interview. Which category of reasonable accommodation is this?",
+    "options": [
+      "A change to how essential job functions are performed",
+      "A change that provides equal benefits and privileges of employment",
+      "A change to the job application process",
+      "A personal-use item"
+    ],
+    "answer": 2,
+    "rationale": "EEOC guidance describes three categories of reasonable accommodation: changes to the application process so a qualified applicant can be considered; changes to the work environment or how a job is usually done, so the person can perform essential functions; and changes that give equal access to the benefits and privileges of employment, such as training or break rooms. An interpreter at an interview falls into the first category. Accommodation duties start before someone is hired.",
+    "distractors": {
+      "0": "The applicant isn't doing the job yet. This is about being able to apply and be considered.",
+      "1": "Benefits and privileges cover things like training, events and facilities for current employees.",
+      "3": "Personal-use items, such as hearing aids, are things a person needs on and off the job. Employers generally don't have to provide them."
+    },
+    "sources": [
+      {
+        "title": "EEOC: Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA",
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "note": "The three categories of reasonable accommodation."
+      }
+    ]
+  },
+  {
+    "id": "d2-accommodation-personal-items",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "An employee asks their employer to buy them a new personal wheelchair that they use everywhere, not just at work. Under EEOC guidance, is the employer generally required to provide it?",
+    "options": [
+      "Yes, all disability-related equipment is a reasonable accommodation",
+      "No, personal-use items needed both on and off the job generally aren't required",
+      "Yes, if the employer has more than 15 employees",
+      "No, because wheelchairs are covered by Title III"
+    ],
+    "answer": 1,
+    "rationale": "EEOC guidance says employers generally don't have to provide personal-use items, such as wheelchairs, prosthetic limbs, eyeglasses or hearing aids, when the person also needs them away from work. The exception is when an item is designed for or needed to meet job-related needs rather than personal ones. Employers do have to consider workplace changes, such as accessible workstations, that let the person do the job with their own equipment.",
+    "distractors": {
+      "0": "Personal-use items are a recognized exception.",
+      "2": "Fifteen employees is the threshold for Title I coverage. It doesn't change the personal-use rule.",
+      "3": "Title III covers businesses open to the public. It doesn't provide personal mobility devices."
+    },
+    "sources": [
+      {
+        "title": "EEOC: Enforcement Guidance on Reasonable Accommodation and Undue Hardship under the ADA",
+        "url": "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+        "note": "Personal-use items and when they are or aren't required."
+      }
+    ]
+  },
+  {
+    "id": "d2-ud-and-assistive-devices",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "According to the CRPD's definition, how does universal design relate to assistive devices?",
+    "options": [
+      "Universal design removes the need for all assistive devices",
+      "Universal design and assistive devices can't be used together",
+      "Universal design is itself a type of assistive device",
+      "Universal design still allows assistive devices where needed"
+    ],
+    "answer": 3,
+    "rationale": "The CRPD defines universal design as designing products, environments, programs and services to be usable by everyone to the greatest extent possible, without adaptation or specialized design. It then adds that this does not exclude assistive devices for particular groups where needed. Universal design reduces how often individual solutions are required, but some people will always need assistive technology or accommodations. The two approaches work together.",
+    "distractors": {
+      "0": "The CRPD explicitly says universal design doesn't exclude assistive devices. No design meets every need.",
+      "1": "Good universal design is compatible with assistive technology. Accessible websites work with screen readers, for example.",
+      "2": "Assistive devices are tools for individuals. Universal design is an approach to designing for everyone."
+    },
+    "sources": [
+      {
+        "title": "UN CRPD Article 2: Definitions",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-2-definitions",
+        "note": "Definitions of universal design and reasonable accommodation."
+      }
+    ]
+  },
+  {
+    "id": "d2-proactive-captioning",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "Company A captions every training video when it is produced. Company B adds captions only when a Deaf employee asks for a specific video. Which statement is most accurate?",
+    "options": [
+      "A is universal design; B is accommodation on request",
+      "Both companies are taking a universal design approach",
+      "Both companies are providing individual accommodations",
+      "B is more efficient, because it captions only what's needed"
+    ],
+    "answer": 0,
+    "rationale": "Building captions into production is a universal design approach: access is there from the start for anyone, including people who are hard of hearing, non-native speakers and people in noisy or quiet places. Captioning on request is an accommodation: it responds to one person's need after it comes up, and the person waits. W3C notes that building accessibility in from the start is more efficient than retrofitting it. Accommodations are still needed for needs that design can't anticipate.",
+    "distractors": {
+      "1": "Company B's approach depends on an individual request, which is the hallmark of an accommodation.",
+      "2": "Company A captions everything up front for all users, which is a design approach, not an individual accommodation.",
+      "3": "Reactive captioning creates delays for the person who asked and often costs more over time than building it in."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Introduction to Web Accessibility",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+        "note": "Who benefits from accessibility, and why building it in early is more efficient."
+      },
+      {
+        "title": "UN CRPD Article 2: Definitions",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-2-definitions",
+        "note": "Definitions of universal design and reasonable accommodation."
+      }
+    ]
+  },
+  {
+    "id": "d2-interactive-process",
+    "domain": 2,
+    "topic": "d2a",
+    "question": "What does the Job Accommodation Network (JAN) describe as the \"interactive process\"?",
+    "options": [
+      "A formal hearing that decides whether someone is disabled",
+      "A collaborative conversation to find an effective accommodation",
+      "An online form that automatically approves every request",
+      "A government process for reporting discrimination at work"
+    ],
+    "answer": 1,
+    "rationale": "The interactive process is a collaborative, often informal conversation between an employer and an employee with a disability. Together they identify the specific limitation and barrier, look at options, consider the employee's preference along with effectiveness and cost, choose an accommodation, and check whether it works. It is case by case because accommodations are individual. JAN is a free service that advises employers and employees on accommodations.",
+    "distractors": {
+      "0": "The interactive process is problem solving, not a hearing.",
+      "2": "Accommodations are individualized and need discussion; they can't be approved automatically.",
+      "3": "Complaints go to agencies such as the EEOC. The interactive process happens within the workplace."
+    },
+    "sources": [
+      {
+        "title": "Job Accommodation Network: The Interactive Process",
+        "url": "https://AskJAN.org/topics/interactive.cfm",
+        "note": "Steps and tips for the interactive process."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-transcripts-search",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "A W3C case study reports that after a radio show added transcripts to its whole archive, search traffic and unique visitors rose. Which benefit of accessibility does this mainly show?",
+    "options": [
+      "Reduced legal risk from regulators",
+      "Lower costs for hosting audio files",
+      "Wider market reach and discoverability",
+      "Faster page loads for every visitor"
+    ],
+    "answer": 2,
+    "rationale": "In the W3C business case, This American Life added transcripts after new FCC rules and saw search traffic rise by about 7% and unique visitors by about 4%. Search engines can index text but not audio, and transcripts also helped non-native English speakers and people in noisy places. Accessibility features often expand an audience beyond disabled users, which is part of the market reach argument.",
+    "distractors": {
+      "0": "Meeting regulations can reduce legal risk, but the case study's results are about traffic and audience.",
+      "1": "Adding transcripts doesn't reduce hosting costs.",
+      "3": "Transcripts don't make pages load faster."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: The Business Case for Digital Accessibility",
+        "url": "https://www.w3.org/WAI/business-case/",
+        "note": "Case study on transcripts, search traffic and wider audiences."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-legal-risk",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "The 2008 settlement between the National Federation of the Blind and Target over an inaccessible website is most often cited as an example of which benefit of accessibility?",
+    "options": [
+      "Minimizing legal risk",
+      "Driving innovation",
+      "Enhancing brand",
+      "Improving search rankings"
+    ],
+    "answer": 0,
+    "rationale": "The NFB sued Target because blind shoppers couldn't use its website. The 2008 settlement included about $6 million in class damages, more than $3 million in the plaintiffs' legal fees, and years of court oversight of the website. W3C's business case uses it to show the cost of ignoring accessibility, alongside other legal developments such as the Winn-Dixie case and accessibility laws in Europe. Avoiding that cost is one of the four business benefits.",
+    "distractors": {
+      "1": "Innovation refers to accessibility features becoming useful to everyone, such as voice control.",
+      "2": "Brand benefits come from being seen as inclusive and socially responsible. A lawsuit tends to hurt a brand.",
+      "3": "Accessible markup can help search, but the Target case is about legal exposure."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: The Business Case for Digital Accessibility",
+        "url": "https://www.w3.org/WAI/business-case/",
+        "note": "Minimize Legal Risk section, including the Target settlement."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-situational",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "Strong text contrast helps people with low vision. Which other group does W3C give as benefiting from it?",
+    "options": [
+      "People using a screen reader",
+      "People using a phone in bright sunlight",
+      "People who are Deaf",
+      "People using voice control"
+    ],
+    "answer": 1,
+    "rationale": "W3C points out that accessibility often helps people in situational limitations. High contrast helps anyone reading a screen in glare. Captions help people in noisy places or where they can't play sound. These overlaps are why accessibility and usability are closely connected, and why accessible design improves the experience for a much larger group than people with disabilities alone.",
+    "distractors": {
+      "0": "Screen reader users hear the content, so visual contrast doesn't affect them.",
+      "2": "Contrast is a visual feature. Deaf users benefit from captions and transcripts.",
+      "3": "Voice control is an input method. Contrast affects reading."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Introduction to Web Accessibility",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+        "note": "Accessibility benefits for people with situational limitations and others."
+      },
+      {
+        "title": "W3C WAI: Accessibility, Usability, and Inclusion",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/",
+        "note": "Examples of accessibility features that help everyone in limiting situations."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-older-users",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "Why does designing to WCAG also benefit older people, according to W3C?",
+    "options": [
+      "WCAG has a special section for people over 65",
+      "Most older people use screen readers to browse",
+      "Age-related changes overlap with needs WCAG covers",
+      "It doesn't; older people need separate guidelines"
+    ],
+    "answer": 2,
+    "rationale": "As people age, many experience reduced contrast sensitivity, difficulty hearing high frequencies, less fine motor control and changes in short-term memory and concentration. These overlap with the needs of people with disabilities, so W3C says its existing standards, including WCAG, address most of them. With populations ageing, accessibility serves a large and growing group, many of whom wouldn't describe themselves as disabled.",
+    "distractors": {
+      "0": "WCAG has no age-specific section. Its criteria address functional needs, whatever the cause.",
+      "1": "Most older people with vision changes have low vision rather than blindness. They benefit more from contrast, text size and simple navigation.",
+      "3": "W3C says the existing standards already cover most older users' needs."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Older Users and Web Accessibility",
+        "url": "https://www.w3.org/WAI/older-users/",
+        "note": "Age-related changes and how WCAG addresses them."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-build-in-early",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "According to W3C, why is it better to include accessibility from the start of a project?",
+    "options": [
+      "Because laws only apply to new projects",
+      "Because it is more efficient than retrofitting accessibility later",
+      "Because accessibility can't be added once a site is live",
+      "Because users with disabilities only visit new sites"
+    ],
+    "answer": 1,
+    "rationale": "W3C says that building accessibility into a project from the beginning is more efficient than going back to fix it later. Retrofitting often means redesigning components, rewriting code and retesting. The CRPD makes the same point for ICT, calling for accessible design at an early stage so accessibility costs as little as possible. Early involvement of users with disabilities also catches problems when they are cheapest to fix.",
+    "distractors": {
+      "0": "Accessibility laws generally apply to existing sites and services too.",
+      "2": "Accessibility can be added later; it is just usually more costly and disruptive.",
+      "3": "People with disabilities use all kinds of sites, old and new."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Introduction to Web Accessibility",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+        "note": "Why building accessibility in from the start is more efficient."
+      },
+      {
+        "title": "UN CRPD Article 9: Accessibility",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-9-accessibility",
+        "note": "Promotes accessible ICT design at an early stage so costs stay low."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-purple-pound",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "In the UK, what is the spending power of disabled people and their households often called?",
+    "options": [
+      "The Silver Economy",
+      "The Pink Pound",
+      "The Green Dollar",
+      "The Purple Pound"
+    ],
+    "answer": 3,
+    "rationale": "The Purple Pound refers to the spending power of disabled people and their households in the UK. W3C's business case cites estimates of at least £249 billion a year. The point for businesses is that inaccessible products and services turn away a large market, and that people who can't use a service tend to take their money elsewhere. Similar figures are cited globally, where the disability market is estimated in the trillions of dollars.",
+    "distractors": {
+      "0": "The Silver Economy refers to the spending of older people. It overlaps with disability but isn't the same term.",
+      "1": "The Pink Pound refers to the spending power of LGBTQ+ consumers.",
+      "2": "The Green Dollar isn't a term for disabled consumers' spending."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: The Business Case for Digital Accessibility",
+        "url": "https://www.w3.org/WAI/business-case/",
+        "note": "Increase Market Reach section, including the Purple Pound estimate."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-brand",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "A bank makes accessibility an organization-wide strategy, aiming to be the most inclusive company in its index, and reports benefits to culture and customer loyalty. Which business benefit does this best illustrate?",
+    "options": [
+      "Enhancing the brand",
+      "Minimizing legal risk",
+      "Driving innovation",
+      "Reducing hosting costs"
+    ],
+    "answer": 0,
+    "rationale": "W3C's business case includes Barclays as an example of accessibility as part of corporate social responsibility. Going beyond compliance can strengthen brand image, customer loyalty and workforce diversity, and show that an organization's values are real. Brand is one of four benefit areas in W3C's business case, along with innovation, market reach and legal risk.",
+    "distractors": {
+      "1": "Going beyond compliance also lowers legal risk, but the scenario is about reputation and culture.",
+      "2": "Innovation is about accessibility features becoming mainstream features. The scenario is about strategy and reputation.",
+      "3": "Hosting costs aren't part of the case."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: The Business Case for Digital Accessibility",
+        "url": "https://www.w3.org/WAI/business-case/",
+        "note": "Enhance Your Brand section and the Barclays case study."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-slow-connections",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "Beyond people with disabilities, which of these groups does W3C name as benefiting from web accessibility?",
+    "options": [
+      "Advertisers buying placements on search engines",
+      "People with slow or expensive internet connections",
+      "Developers who prefer one particular coding framework",
+      "Companies that host websites on their own servers"
+    ],
+    "answer": 1,
+    "rationale": "W3C lists several groups who benefit from accessibility beyond people with disabilities: people using phones and other small devices, older people, people with temporary disabilities such as a broken arm, people in situational limitations such as bright sunlight, and people with slow or costly internet. Text alternatives and well-structured pages, for example, still work when images or media don't load. This broad benefit is a key argument for accessibility.",
+    "distractors": {
+      "0": "Advertisers aren't among the groups W3C lists. Its list is about people using the web in different conditions.",
+      "2": "Choice of framework has nothing to do with who benefits from accessible content.",
+      "3": "Where a site is hosted doesn't make a group of users benefit from accessibility."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Introduction to Web Accessibility",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+        "note": "Groups who benefit from accessibility."
+      }
+    ]
+  },
+  {
+    "id": "d2-benefit-mobile-overlap",
+    "domain": 2,
+    "topic": "d2b",
+    "question": "Making a page reflow to a single column for people who zoom in also helps which other group most directly?",
+    "options": [
+      "Screen reader users",
+      "Phone and other small-screen users",
+      "Users of braille displays",
+      "People who are Deaf"
+    ],
+    "answer": 1,
+    "rationale": "Reflow lets content fit a narrow width without scrolling in two directions. That supports people with low vision who zoom in, and the same responsive layout serves phone users. W3C names mobile users among the groups who benefit from accessible design. Many accessibility requirements overlap with good mobile design, so an accessible site often works better on all devices.",
+    "distractors": {
+      "0": "Screen readers read content in sequence, so layout width matters much less to their users.",
+      "2": "Braille display users read text in sequence; page width doesn't affect them.",
+      "3": "Reflow is a visual layout feature; it doesn't involve audio."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Introduction to Web Accessibility",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+        "note": "Mobile users among the groups who benefit."
+      },
+      {
+        "title": "Understanding SC 1.4.10 Reflow",
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+        "note": "Who benefits from reflow, including small-screen users."
+      }
+    ]
+  },
+  {
+    "id": "d2-udl-engagement",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "A teacher lets students choose their own project topic and connects lessons to issues in their community. Which UDL principle does this apply?",
+    "options": [
+      "Representation",
+      "Action & Expression",
+      "Engagement",
+      "Perceptible Information"
+    ],
+    "answer": 2,
+    "rationale": "Engagement addresses the why of learning: what motivates learners and keeps them going. Its guidelines in UDL 3.0 cover welcoming interests and identities (including choice and autonomy, and relevance), sustaining effort and persistence, and emotional capacity. Offering choice and connecting learning to students' lives are typical Engagement strategies. Learners differ in what motivates them, so several options work better than one.",
+    "distractors": {
+      "0": "Representation is about presenting content in several forms, such as text, audio and diagrams.",
+      "1": "Action & Expression is about how learners show what they know and how they plan.",
+      "3": "Perceptible Information is a principle of universal design, not UDL."
+    },
+    "sources": [
+      {
+        "title": "CAST: Engagement",
+        "url": "https://udlguidelines.cast.org/engagement/",
+        "note": "Guidelines 7, 8 and 9 of the UDL Guidelines 3.0."
+      }
+    ]
+  },
+  {
+    "id": "d2-udl-action-expression",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "A course lets students show what they learned through an essay, a recorded presentation or a diagram, and allows speech-to-text. Which UDL principle is this?",
+    "options": [
+      "Action & Expression",
+      "Engagement",
+      "Representation",
+      "Tolerance for Error"
+    ],
+    "answer": 0,
+    "rationale": "Action & Expression addresses the how of learning: how learners move through the environment, use tools, and show what they know. Its guidelines cover interaction (including access to assistive technologies), expression and communication (multiple media and tools), and strategy development, which supports executive functions such as setting goals and monitoring progress. Letting students choose how to show their learning, and supporting assistive tools, are core examples.",
+    "distractors": {
+      "1": "Engagement is about motivation and interest, not how learners demonstrate understanding.",
+      "2": "Representation varies how content is presented to learners. Here, learners vary how they respond.",
+      "3": "Tolerance for Error is a universal design principle about reducing hazards and mistakes."
+    },
+    "sources": [
+      {
+        "title": "CAST: Action & Expression",
+        "url": "https://udlguidelines.cast.org/action-expression/",
+        "note": "Guidelines 4, 5 and 6 of the UDL Guidelines 3.0."
+      }
+    ]
+  },
+  {
+    "id": "d2-udl-executive-function",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "A college course provides checklists, goal-setting templates and progress check-ins to help students plan long assignments. Under UDL 3.0, which guideline does this support?",
+    "options": [
+      "Design Options for Perception",
+      "Design Options for Strategy Development",
+      "Design Options for Language & Symbols",
+      "Design Options for Emotional Capacity"
+    ],
+    "answer": 1,
+    "rationale": "Guideline 6, Strategy Development, falls under Action & Expression and supports executive functions. Its considerations include setting meaningful goals, anticipating and planning for challenges, organizing information and resources, and monitoring progress. Checklists, templates and check-ins scaffold these skills, which helps students with ADHD and other learning disabilities and many others.",
+    "distractors": {
+      "0": "Perception (Guideline 1) is about offering information in ways learners can perceive, such as captions or adjustable text.",
+      "2": "Language & Symbols (Guideline 2) is about clarifying vocabulary, notation and language.",
+      "3": "Emotional Capacity (Guideline 9) is about managing emotions, self-awareness and reflection."
+    },
+    "sources": [
+      {
+        "title": "CAST: Action & Expression",
+        "url": "https://udlguidelines.cast.org/action-expression/",
+        "note": "Guideline 6, Strategy Development, and its considerations."
+      }
+    ]
+  },
+  {
+    "id": "d2-usability-iso-definition",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "ISO 9241-11 defines usability as the extent to which specified users can achieve specified goals in a specified context of use with which three qualities?",
+    "options": [
+      "Speed, accuracy and appearance",
+      "Perceivable, operable and understandable",
+      "Learnability, memorability and errors",
+      "Effectiveness, efficiency and satisfaction"
+    ],
+    "answer": 3,
+    "rationale": "ISO 9241-11 defines usability by effectiveness, efficiency and satisfaction for specified users, goals and contexts. W3C notes that this definition covers accessibility only when the specified users include people with disabilities and the context includes assistive technologies. In practice, usability work often leaves disabled people out, which is why accessibility needs its own attention.",
+    "distractors": {
+      "0": "These aren't the terms of the ISO definition.",
+      "1": "These are three of WCAG's four principles, not the ISO usability definition.",
+      "2": "These are components of usability popularized by Jakob Nielsen, not the ISO 9241-11 definition."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Accessibility, Usability, and Inclusion",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/",
+        "note": "How accessibility, usability and inclusion relate, including the ISO 9241-11 definition."
+      }
+    ]
+  },
+  {
+    "id": "d2-accessibility-vs-usability",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "According to W3C, how do accessibility and usability relate?",
+    "options": [
+      "They overlap, but accessibility adds technical requirements",
+      "They are two names for exactly the same thing",
+      "They are separate fields with nothing in common",
+      "Usability is a smaller subset of accessibility"
+    ],
+    "answer": 0,
+    "rationale": "W3C describes accessibility as making sure people with disabilities can perceive, understand, navigate and interact equally, and usability as designing products that work well for users. Much good accessibility practice, such as clear instructions and good contrast, is also good usability. But accessibility includes technical requirements, such as working with assistive technology, and usability research often doesn't include disabled people. Inclusion, sometimes called universal design, is the broadest of the three.",
+    "distractors": {
+      "1": "W3C treats them as related but distinct.",
+      "2": "W3C stresses how much they overlap.",
+      "3": "Neither is a subset of the other. Each covers things the other doesn't."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Accessibility, Usability, and Inclusion",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/",
+        "note": "Definitions and how the three relate."
+      }
+    ]
+  },
+  {
+    "id": "d2-user-testing-with-conformance",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "A team's site passes a full WCAG conformance review. According to W3C, why should they still test with users with disabilities?",
+    "options": [
+      "Because conformance reviews are usually inaccurate",
+      "Because user testing can replace the conformance review",
+      "Because users reveal problems conformance checks miss",
+      "Because WCAG requires user testing for conformance"
+    ],
+    "answer": 2,
+    "rationale": "W3C says that conformance checks are important but don't show how a site actually works for people. Testing with disabled and older users uncovers usability issues that a conformance review misses. The reverse also holds: user testing alone can't determine whether a site is accessible. The two should be combined, ideally with informal checks throughout development rather than one formal test at the end.",
+    "distractors": {
+      "0": "Conformance reviews are valuable; they just don't cover everything.",
+      "1": "W3C says user testing can't replace conformance evaluation.",
+      "3": "WCAG conformance is judged against the success criteria. User testing is recommended practice, not a conformance requirement."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Involving Users in Evaluating Web Accessibility",
+        "url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+        "note": "Why to involve users, and how it complements conformance evaluation."
+      }
+    ]
+  },
+  {
+    "id": "d2-user-testing-recruiting",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "A team is recruiting screen reader users to test a public benefits website that many first-time users will visit. Whom should they recruit, according to W3C?",
+    "options": [
+      "Only expert screen reader users, to get the most efficient feedback",
+      "Only colleagues, to keep it confidential",
+      "Only people without disabilities using a screen reader for the first time",
+      "Participants who match the site's audience, including novice assistive technology users"
+    ],
+    "answer": 3,
+    "rationale": "W3C recommends matching participants to the people who will actually use the product. A public benefits site serves many inexperienced users, so novice assistive technology users should be included; an internal tool for experienced staff calls for advanced users. Include a few people with different disabilities and, where relevant, older users, and don't assume one person's experience represents everyone with the same disability.",
+    "distractors": {
+      "0": "Experts can work around problems that would stop novices, so they may miss real barriers on a public site.",
+      "2": "People simulating a disability don't use assistive technology the way regular users do, so their results can be misleading.",
+      "1": "Colleagues rarely match the real audience or its range of skills."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Involving Users in Evaluating Web Accessibility",
+        "url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+        "note": "Recruiting participants who match the audience."
+      }
+    ]
+  },
+  {
+    "id": "d2-user-testing-reporting",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "After testing with three participants with disabilities, how should a team report its findings, according to W3C?",
+    "options": [
+      "As statistically proven results for all disabled users",
+      "As evidence that the site conforms to WCAG 2.2 AA",
+      "With scope, methods and participants, and its limits stated",
+      "As time-on-task and satisfaction scores only"
+    ],
+    "answer": 2,
+    "rationale": "W3C warns against generalizing from a small number of participants. Small studies are valuable but not statistically robust. Reports should explain the scope, methods and who took part, and say clearly that results don't represent all people with disabilities. For accessibility-focused sessions, W3C suggests a think-aloud approach and focusing on errors caused by barriers, rather than time-on-task or satisfaction scores.",
+    "distractors": {
+      "0": "Three participants can't support statistical claims about everyone.",
+      "1": "User testing doesn't establish WCAG conformance; that needs a conformance evaluation.",
+      "3": "W3C suggests focusing on barrier-related errors rather than time-on-task or satisfaction in accessibility sessions."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Involving Users in Evaluating Web Accessibility",
+        "url": "https://www.w3.org/WAI/test-evaluate/involving-users/",
+        "note": "Tips for running studies and reporting results."
+      }
+    ]
+  },
+  {
+    "id": "d2-coga-supplemental",
+    "domain": 2,
+    "topic": "d2f",
+    "question": "W3C publishes supplemental guidance for people with cognitive and learning disabilities, such as helping users focus and designing processes that don't rely on memory. How does it relate to WCAG conformance?",
+    "options": [
+      "It replaces WCAG for content aimed at cognitive disabilities",
+      "It goes beyond WCAG and isn't required for conformance",
+      "It becomes required once a site claims Level AA",
+      "It applies only to government and public sector sites"
+    ],
+    "answer": 1,
+    "rationale": "Many needs of people with cognitive and learning disabilities are hard to express as testable success criteria, so WCAG covers only some of them. W3C's supplemental guidance, based on the Cognitive and Learning Disabilities Accessibility Task Force's \"Making Content Usable\" work, gives objectives and design patterns such as clear content, helping users find what they need, avoiding mistakes and supporting personalization. It isn't required for WCAG conformance, but following it makes content more usable for many people.",
+    "distractors": {
+      "0": "It supplements WCAG; it doesn't replace it.",
+      "2": "W3C describes it as additional guidance not required for conformance at any level.",
+      "3": "It applies to any content, not only government sites."
+    },
+    "tip": "Meeting WCAG doesn't guarantee content works well for everyone, especially people with cognitive disabilities. Supplemental guidance and user testing fill the gap.",
+    "sources": [
+      {
+        "title": "W3C WAI: Supplemental Guidance to WCAG 2",
+        "url": "https://www.w3.org/WAI/WCAG2/supplemental/",
+        "note": "Cognitive accessibility objectives and design patterns beyond WCAG."
       }
     ]
   }
