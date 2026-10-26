@@ -10,15 +10,33 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<!-- SHELL:START — keep in sync with the preview shell (see CLAUDE.md) -->
 <a class="skip" href="#main">Skip to content</a>
-<div class="wrap">
-  <header class="bar">
-    <button class="brand" id="home" type="button">CPACC <span>Practice Sheets</span></button>
-    <span class="meta" id="meta">Loading…</span>
-  </header>
-  <main id="main" tabindex="-1"></main>
-  <p class="foot">Practice questions written for study. They are not official IAAP exam items. Check the current IAAP Body of Knowledge before you sit the exam.</p>
-</div>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#start">CPACC <span>Practice Sheets</span></a>
+    <nav class="topnav" id="topnav" aria-label="Study by domain">
+      <ul>
+        <li><a href="#d1" data-nav="d1">Domain 1</a></li>
+        <li><a href="#d2" data-nav="d2">Domain 2</a></li>
+        <li><a href="#d3" data-nav="d3">Domain 3</a></li>
+        <li><a href="#all" data-nav="all">All</a></li>
+      </ul>
+    </nav>
+    <a class="mocklink" href="#mock" data-nav="mock">Mock exam</a>
+  </div>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer class="foot"><p>Practice questions written for study. They are not official IAAP exam items. Check the current IAAP Body of Knowledge before you sit the exam.</p></footer>
+<dialog id="sheet" class="sheet" aria-labelledby="sheet-title">
+  <div class="sheet-head">
+    <h2 id="sheet-title">Questions</h2>
+    <button type="button" id="sheet-close" class="btn ghost small">Close</button>
+  </div>
+  <div id="sheet-body" class="qlist compact"></div>
+</dialog>
+<div id="announcer" class="vh" aria-live="polite"></div>
 <script src="js/app.js"></script>
+<!-- SHELL:END -->
 </body>
 </html>
