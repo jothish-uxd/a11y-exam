@@ -234,7 +234,7 @@
     main.innerHTML = `
     <div class="split">
       <aside class="side" aria-labelledby="side-h">
-        <h2 id="side-h" class="side-h">${scopeLabel(scope)}</h2>
+        <h2 id="side-h" class="side-h"><span class="chip">${scope === "all" ? "All domains" : `Domain ${d.id} · ${d.weight}%`}</span></h2>
         <nav aria-labelledby="side-h" class="qlist compact">${questionList(scope, q.id)}</nav>
       </aside>
       <div class="col">
@@ -243,9 +243,8 @@
           <li><a href="#${t.id}">${topicNumber(t)} ${esc(t.name)}</a></li>
         </ol></nav>
         <div class="qhead">
-          <span class="chip">Domain ${d.id} · ${d.weight}%</span>
           <button type="button" class="counter" id="open-list" aria-haspopup="dialog">Question ${i + 1} of ${list.length}<span class="counter-more"> · All questions</span></button>
-          <span class="counter-static">Question ${i + 1} of ${list.length} in ${scopeLabel(scope)}</span>
+          <span class="counter-static">Question ${i + 1} of ${list.length}</span>
         </div>
         <form id="qform" class="${checked ? "locked" : ""}">
           <fieldset>
