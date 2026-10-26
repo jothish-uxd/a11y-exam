@@ -6,7 +6,7 @@
 <title>CPACC Practice Sheets</title>
 <meta name="description" content="Practice questions for the IAAP CPACC exam, with rationales for every answer and links to primary sources.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -23,7 +23,10 @@
         <li><a href="#all" data-nav="all">All</a></li>
       </ul>
     </nav>
-    <a class="mocklink" href="#mock" data-nav="mock">Mock exam</a>
+    <div class="tools">
+      <button type="button" class="clearbtn" id="clear-open">Clear study progress</button>
+      <a class="mocklink" href="#mock" data-nav="mock">Mock exam</a>
+    </div>
   </div>
 </header>
 <main id="main" tabindex="-1"></main>
@@ -34,6 +37,16 @@
     <button type="button" id="sheet-close" class="btn ghost small">Close</button>
   </div>
   <div id="sheet-body" class="qlist compact"></div>
+</dialog>
+<dialog id="clear-dlg" class="dlg" aria-labelledby="clear-title" aria-describedby="clear-desc">
+  <form method="dialog">
+    <h2 id="clear-title">Clear study progress?</h2>
+    <p id="clear-desc"></p>
+    <div class="actions">
+      <button type="submit" class="btn ghost" value="cancel" id="clear-cancel">Cancel</button>
+      <button type="submit" class="btn danger" value="clear" id="clear-yes">Clear progress</button>
+    </div>
+  </form>
 </dialog>
 <div id="announcer" class="vh" aria-live="polite"></div>
 <script src="js/app.js"></script>
