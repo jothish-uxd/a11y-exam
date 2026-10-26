@@ -1,0 +1,11 @@
+{
+  "name": "cpacc-practice",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Practice questions for the IAAP CPACC exam, with rationales and primary sources.",
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "validate": "node scripts/validate.mjs"
+  }
+}
