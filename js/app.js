@@ -85,9 +85,10 @@
   }
 
   // ---------- question list (overview page, side panel, mobile sheet) ----------
-  function questionList(s, currentId) {
+  // head: optional markup shown with the status key in one box (the side panel puts the domain pill there)
+  function questionList(s, currentId, head = "") {
     const ds = s === "all" ? DOMAINS : [DOMAIN[+s.slice(1)]];
-    const legend = `<p class="mlegend" aria-hidden="true">${["good", "bad", "none"].map((st) => `<span>${mark(st)}${STATUS_TEXT[st]}</span>`).join("")}</p>`;
+    const legend = `<div class="ql-key">${head}<p class="mlegend" aria-hidden="true">${["good", "bad", "none"].map((st) => `<span>${mark(st)}${STATUS_TEXT[st]}</span>`).join("")}</p></div>`;
     return legend + ds.map((d) => `
       <div class="ql-domain">
         ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
@@ -219,6 +220,7 @@
       </label>`;
     }).join("");
 
+    const pill = `<span class="chip">${scope === "all" ? "All domains" : `Domain ${d.id} · ${d.weight}%`}</span>`;
     const rationale = checked ? `
       <section class="rationale" aria-labelledby="verdict">
         <p class="verdict ${isRight(q) ? "good" : "bad"}" id="verdict" tabindex="-1">${isRight(q) ? "Correct." : "Not quite."} The answer is ${LETTERS[q.answer]}, ${esc(q.options[q.answer])}.</p>
@@ -234,8 +236,7 @@
     main.innerHTML = `
     <div class="split">
       <aside class="side" aria-labelledby="side-h">
-        <h2 id="side-h" class="side-h"><span class="chip">${scope === "all" ? "All domains" : `Domain ${d.id} · ${d.weight}%`}</span></h2>
-        <nav aria-labelledby="side-h" class="qlist compact">${questionList(scope, q.id)}</nav>
+        <nav aria-labelledby="side-h" class="qlist compact">${questionList(scope, q.id, `<h2 id="side-h" class="side-h">${pill}</h2>`)}</nav>
       </aside>
       <div class="col">
         <nav class="crumbs" aria-label="Breadcrumb"><ol>
@@ -274,7 +275,7 @@
       renderQuestion(q);
       document.getElementById("verdict").focus();
     });
-    document.getElementById("open-list").onclick = () => openSheet(scopeLabel(scope), questionList(scope, q.id));
+    document.getElementById("open-list").onclick = () => openSheet("All questions", questionList(scope, q.id, `<p class="side-h">${pill}</p>`));
     finish();
   }
 
