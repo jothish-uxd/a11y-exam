@@ -87,7 +87,8 @@
   // ---------- question list (overview page, side panel, mobile sheet) ----------
   function questionList(s, currentId) {
     const ds = s === "all" ? DOMAINS : [DOMAIN[+s.slice(1)]];
-    return ds.map((d) => `
+    const legend = `<p class="mlegend" aria-hidden="true">${["good", "bad", "none"].map((st) => `<span>${mark(st)}${STATUS_TEXT[st]}</span>`).join("")}</p>`;
+    return legend + ds.map((d) => `
       <div class="ql-domain">
         ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}" style="--c:${color(d)}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
         ${d.topics.map((t) => {
@@ -109,7 +110,7 @@
     main.innerHTML = `
     <div class="page">
       <section class="hero" aria-labelledby="h1">
-        <div class="bubbles" aria-hidden="true"><i></i><i class="on"></i><i></i><i></i></div>
+        <div class="bubbles"><ol aria-hidden="true"><li>A</li><li class="on">B</li><li>C</li><li>D</li></ol><p>Every question has four options and one answer, like the bubbles on an answer sheet.</p></div>
         <p class="eyebrow">IAAP · ${esc(EXAM.name)}</p>
         <h1 id="h1">Practice for the ${esc(EXAM.code)}, one question at a time</h1>
         <p class="lede">Study by domain with a full explanation after every answer, or sit a timed mock exam that works like the real one.</p>
