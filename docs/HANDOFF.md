@@ -11,7 +11,7 @@ _Last updated October 25, 2026._
 - **Content is data.** Questions in `data/questions.json`; exam facts, domains, weights and Body of Knowledge topics in `data/domains.json`. Code never hard-codes question text.
 - **Information architecture.**
   - Header on every page: Domain 1, Domain 2, Domain 3, All, plus Mock exam as a separate mode.
-  - Domain pages group questions by Body of Knowledge topic (1A–1E, 2A–2F, 3A–3F) with a status for each question: not answered, correct, missed. Empty topics show "No questions yet" to keep coverage gaps visible.
+  - Domain pages group questions by Body of Knowledge topic (1.1–1.5, 2.1–2.6, 3.1–3.6) with a status for each question: not answered, correct, missed. Empty topics show "No questions yet" to keep coverage gaps visible.
   - Question pages: side panel list from 960px wide, bottom sheet (native `<dialog>`) below that, opened from the "Question N of M" button.
   - Previous and Next stay within the chosen scope; the last question in a domain offers the next domain.
   - Rejected: a numbered 1–40 side nav. Bare numbers give no information scent and don't fit on a phone.
@@ -22,15 +22,15 @@ _Last updated October 25, 2026._
 
 ## Corrections made along the way
 - Domain weights are **40 / 40 / 20** (Domain 2 is 40%, Domain 3 is 20%). An earlier version said 40 / 20 / 40.
-- WCAG principles are **Domain 2C**, not Domain 3. The WCAG question id changed to `d2-wcag-perceivable`.
+- WCAG principles are **Domain 2.3**, not Domain 3. The WCAG question id changed to `d2-wcag-perceivable`.
 
 ## Question bank
 | id | Topic | Answer |
 |---|---|---|
-| d1-social-model | 1A Models of disability | Social model |
-| d2-wcag-perceivable | 2C WCAG principles | Perceivable |
-| d2-situational-limitation | 2E Universal design | Situational limitation |
-| d3-marrakesh-treaty | 3A International conventions | Accessible copies of published works |
+| d1-social-model | 1.1 Models of disability | Social model |
+| d2-wcag-perceivable | 2.3 WCAG principles | Perceivable |
+| d2-situational-limitation | 2.5 Universal design | Situational limitation |
+| d3-marrakesh-treaty | 3.1 International conventions | Accessible copies of published works |
 
 ## Next steps
 1. Enable GitHub Pages from `main` once the site is merged.
