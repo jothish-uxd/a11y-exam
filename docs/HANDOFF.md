@@ -3,7 +3,7 @@
 _Last updated October 26, 2026._
 
 ## Where it stands
-- Working site with Study and Mock exam modes, 119 sourced questions (9 / 76 / 34 across the domains), validator, GitHub Actions check, and docs.
+- Working site with Study and Mock exam modes, 185 sourced questions (75 / 76 / 34 across the domains), validator, GitHub Actions check, and docs.
 - Lives in the GitHub repo jothish-uxd/a11y-exam. GitHub Pages is not turned on yet.
 - A preview is published as the Claude artifact "CPACC Practice Sheets". It is generated from `index.html` with `node scripts/build-preview.mjs <out>` and published with the `css/`, `js/` and `data/` files alongside.
 
@@ -25,7 +25,7 @@ _Last updated October 26, 2026._
 - WCAG principles are **Domain 2.3**, not Domain 3. The WCAG question id changed to `d2-wcag-perceivable`.
 
 ## Question bank
-119 questions (D1: 9, D2: 76, D3: 34). Domains 2 and 3 are built out as study pools larger than their mock shares (40 and 20). Domain 1 needs at least 31 more for a full 100-question mock.
+185 questions (D1: 75, D2: 76, D3: 34). Every domain is built out as a study pool larger than its mock share (40 / 40 / 20), so each mock attempt draws a different 100.
 
 Options are written to similar lengths so the longest answer isn't a giveaway; keep that up when adding questions.
 
@@ -33,13 +33,79 @@ Options are written to similar lengths so the longest answer isn't a giveaway; k
 |---|---|---|
 | d1-social-model | 1.1 Models of disability | Social model |
 | d1-biopsychosocial-model | 1.1 Models of disability | Biopsychosocial model |
+| d1-medical-model | 1.1 Models of disability | Medical model |
+| d1-charity-model | 1.1 Models of disability | Charity model |
+| d1-economic-model | 1.1 Models of disability | Economic model |
+| d1-functional-solutions-model | 1.1 Models of disability | Functional solutions model |
+| d1-social-identity-model | 1.1 Models of disability | Social identity model |
+| d1-medical-model-weakness | 1.1 Models of disability | It often overlooks barriers caused by inaccessible environments |
+| d1-social-model-impairment | 1.1 Models of disability | Impairment is a condition of body or mind; disability is the exclusion barriers cause |
+| d1-social-model-weakness | 1.1 Models of disability | It can downplay embodied experiences such as pain and fatigue |
+| d1-icf-contextual-factors | 1.1 Models of disability | Environmental factors and personal factors |
+| d1-crpd-disability-definition | 1.1 Models of disability | People with long-term impairments that, with barriers, may hinder equal participation |
 | d1-photosensitive-seizures | 1.2 Disability categories, barriers & solutions | People with photosensitive epilepsy |
 | d1-dyslexia-barriers | 1.2 Disability categories, barriers & solutions | Short text sections with clear headings, plus text-to-speech |
+| d1-capd | 1.2 Disability categories, barriers & solutions | Central auditory processing disorder |
+| d1-sign-language-first-language | 1.2 Disability categories, barriers & solutions | Sign language may be their first language, and written text a second one |
+| d1-deafblind-communication | 1.2 Disability categories, barriers & solutions | Tactile signing, felt through the hands of the person signing |
+| d1-aphasia | 1.2 Disability categories, barriers & solutions | Aphasia |
+| d1-voice-only-service | 1.2 Disability categories, barriers & solutions | Offer text-based contact, such as chat, email or a web form |
+| d1-dyscalculia | 1.2 Disability categories, barriers & solutions | Showing progress as a visual bar alongside the percentage |
+| d1-adhd-barrier | 1.2 Disability categories, barriers & solutions | Autoplaying animation and ads that can't be paused or hidden |
+| d1-memory-passwords | 1.2 Disability categories, barriers & solutions | Passwords and access codes that must be recalled from memory |
+| d1-cognitive-function-not-diagnosis | 1.2 Disability categories, barriers & solutions | People with one diagnosis vary widely, and many have no diagnosis |
+| d1-mental-health-disclosure | 1.2 Disability categories, barriers & solutions | Stigma leads many people not to disclose, so supports should be built in |
+| d1-color-only | 1.2 Disability categories, barriers & solutions | Add a text label or distinct shape so color isn't the only cue |
+| d1-contrast-sensitivity | 1.2 Disability categories, barriers & solutions | Light gray body text on a white background |
+| d1-tremor-targets | 1.2 Disability categories, barriers & solutions | Larger targets with more space between them |
+| d1-temporary-situational | 1.2 Disability categories, barriers & solutions | A temporary disability and a situational limitation |
+| d1-multiple-disabilities | 1.2 Disability categories, barriers & solutions | A solution for one may depend on an ability affected by another |
+| d1-older-adults | 1.2 Disability categories, barriers & solutions | Several mild age-related changes often occur together |
 | d1-refreshable-braille | 1.3 Assistive technologies & adaptive strategies | A screen reader with a braille display |
 | d1-switch-access | 1.3 Assistive technologies & adaptive strategies | Switch |
 | d1-screen-magnification | 1.3 Assistive technologies & adaptive strategies | Keeping layout and navigation consistent across pages |
+| d1-screen-reader-output | 1.3 Assistive technologies & adaptive strategies | Synthesized speech or a refreshable braille display |
+| d1-speech-recognition-user | 1.3 Assistive technologies & adaptive strategies | Speech recognition software |
+| d1-text-to-speech-dyslexia | 1.3 Assistive technologies & adaptive strategies | Text-to-speech that highlights words as it reads aloud |
+| d1-sip-and-puff | 1.3 Assistive technologies & adaptive strategies | A switch operated by inhaling or exhaling through a tube |
+| d1-eye-tracking | 1.3 Assistive technologies & adaptive strategies | An eye-tracking system that moves the pointer with gaze |
+| d1-head-pointer-mouth-stick | 1.3 Assistive technologies & adaptive strategies | Both let a person press keys or touch a screen without hands |
+| d1-on-screen-keyboard | 1.3 Assistive technologies & adaptive strategies | Someone who can use a trackball or joystick but not a keyboard |
+| d1-aac-types | 1.3 Assistive technologies & adaptive strategies | Both are forms of augmentative and alternative communication |
+| d1-aac-myth | 1.3 Assistive technologies & adaptive strategies | AAC doesn't stop speech and can help language development |
+| d1-cart | 1.3 Assistive technologies & adaptive strategies | Communication Access Realtime Translation (CART) |
+| d1-auto-captions | 1.3 Assistive technologies & adaptive strategies | Automatic captions are often too inaccurate to rely on alone |
+| d1-descriptive-transcript | 1.3 Assistive technologies & adaptive strategies | A descriptive transcript of the dialogue and key visuals |
+| d1-hearing-aid-vs-cochlear | 1.3 Assistive technologies & adaptive strategies | It bypasses damaged parts of the ear to stimulate the hearing nerve |
+| d1-visual-haptic-alerts | 1.3 Assistive technologies & adaptive strategies | Add a visual alert and vibration alongside the sound |
+| d1-adaptive-strategy | 1.3 Assistive technologies & adaptive strategies | Increasing text size using the browser's built-in zoom |
+| d1-keyboard-support | 1.3 Assistive technologies & adaptive strategies | Many use a keyboard or keyboard-like device instead of a mouse |
 | d1-who-global-prevalence | 1.4 Demographics & statistics | About 1 in 6 people (around 1.3 billion) |
+| d1-vision-impairment-prevalence | 1.4 Demographics & statistics | At least 2.2 billion |
+| d1-vision-impairment-facts | 1.4 Demographics & statistics | About 1 billion cases could have been prevented or are unaddressed |
+| d1-hearing-loss-prevalence | 1.4 Demographics & statistics | About 430 million |
+| d1-hearing-2050 | 1.4 Demographics & statistics | Nearly 2.5 billion people will have some degree of hearing loss |
+| d1-epilepsy-stats | 1.4 Demographics & statistics | Around 50 million people have it, and up to 70% could be seizure-free |
+| d1-autism-prevalence | 1.4 Demographics & statistics | About 1 in 100 people |
+| d1-at-need | 1.4 Demographics & statistics | Over 2.5 billion need it, yet access is as low as 3% in some poorer countries |
+| d1-health-inequity | 1.4 Demographics & statistics | Some people with disabilities die up to 20 years earlier than others |
+| d1-stats-limitations | 1.4 Demographics & statistics | Countries define and ask about disability in different ways |
+| d1-dyslexia-prevalence | 1.4 Demographics & statistics | About 5 to 10 percent |
+| d1-disability-growing | 1.4 Demographics & statistics | People are living longer and noncommunicable diseases are increasing |
 | d1-etiquette-interpreter | 1.5 Disability etiquette | Look at and speak directly to the guest, for example "What dates would you like?" |
+| d1-etiquette-ask-first | 1.5 Disability etiquette | Ask if they'd like help, and follow their lead if they accept |
+| d1-etiquette-wheelchair-space | 1.5 Disability etiquette | Not leaning on, pushing or touching the chair without asking |
+| d1-etiquette-guide-dog | 1.5 Disability etiquette | Leave it alone, since a working dog shouldn't be distracted |
+| d1-etiquette-guiding | 1.5 Disability etiquette | Offer your arm, and describe steps and obstacles as you approach |
+| d1-etiquette-leaving-landmark | 1.5 Disability etiquette | Next to a landmark, such as a wall, counter or chair |
+| d1-etiquette-speech-understanding | 1.5 Disability etiquette | Ask him to repeat it, or to write or show it another way |
+| d1-etiquette-deaf-attention | 1.5 Disability etiquette | Tap them lightly on the shoulder or wave within their view |
+| d1-etiquette-wheelchair-user-term | 1.5 Disability etiquette | She is a wheelchair user |
+| d1-etiquette-identity-first | 1.5 Disability etiquette | Use their preferred term when you refer to them |
+| d1-etiquette-intellectual | 1.5 Disability etiquette | Use short, concrete sentences and check understanding |
+| d1-etiquette-relay-call | 1.5 Disability etiquette | Stay on the line and speak to the caller, allowing for pauses |
+| d1-etiquette-chemical-sensitivity | 1.5 Disability etiquette | Limit fragranced products and spray cleaners onto a cloth |
+| d1-etiquette-euphemisms | 1.5 Disability etiquette | Plain terms such as 'person with a disability' |
 | d2-accommodation-vs-ud | 2.1 Accommodations vs. universal design | Reasonable accommodation |
 | d2-accommodation-employer-choice | 2.1 Accommodations vs. universal design | Yes, if it is equally effective; the employer chooses among effective options |
 | d2-accommodation-request | 2.1 Accommodations vs. universal design | Yes, a request can be made in plain, everyday language |
@@ -153,7 +219,7 @@ Options are written to similar lengths so the longest answer isn't a giveaway; k
 
 ## Next steps
 1. Enable GitHub Pages from `main` once the site is merged.
-2. Grow Domain 1 to at least 40 questions (ideally a pool of about 75, like Domain 2) so a mock reaches 100. Each domain's pool can exceed its mock share; extra questions add variety between attempts.
+2. Keep the pools fresh: review sources and figures when WHO, W3C or IAAP update them (the Body of Knowledge and WHO fact sheets change every few years), and fix any source links that stop working.
 3. Optional ideas: a "missed questions only" study filter, a per-topic progress summary, and a glossary page.
 
 ## Body of Knowledge reference
