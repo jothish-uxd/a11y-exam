@@ -16,6 +16,9 @@ scripts/validate.mjs       Schema check for the data (Node, no deps)
 scripts/build-preview.mjs  Builds the Claude artifact preview shell from index.html
 .github/workflows/         Runs the validator on every push and PR that touches data/
 CLAUDE.md                  Conventions for Claude Code sessions in this repo
+docs/HANDOFF.md            Where the work stands: decisions, corrections, next steps
+docs/PROJECT_INSTRUCTIONS.md  Goals and rules for content and the site
+.claude/skills/            cpacc-question-author skill for writing questions
 ```
 
 ## Information architecture
@@ -42,7 +45,7 @@ Every view has its own link:
 The page loads JSON with `fetch`, so open it through a local server, not by double-clicking the file.
 
 ```sh
-cd cpacc-practice
+cd a11y-exam
 python3 -m http.server 8000
 ```
 
