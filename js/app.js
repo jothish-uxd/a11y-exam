@@ -108,9 +108,8 @@
     const all = counts(QUESTIONS);
     const m = store.mock && !store.mock.submittedAt;
     main.innerHTML = `
-    <div class="page">
+    <div class="page wide">
       <section class="hero" aria-labelledby="h1">
-        <div class="bubbles"><ol aria-hidden="true"><li>A</li><li class="on">B</li><li>C</li><li>D</li></ol><p>Every question has four options and one answer, like the bubbles on an answer sheet.</p></div>
         <p class="eyebrow">IAAP · ${esc(EXAM.name)}</p>
         <h1 id="h1">Practice for the ${esc(EXAM.code)}, one question at a time</h1>
         <p class="lede">Study by domain with a full explanation after every answer, or sit a timed mock exam that works like the real one.</p>
@@ -125,8 +124,8 @@
         </div>
         <div class="weights">
           <h3>How the exam is weighted</h3>
-          <div class="wbar" aria-hidden="true">${DOMAINS.map((d) => `<span style="flex:${d.weight}"></span>`).join("")}</div>
-          <ul class="wlegend">${DOMAINS.map((d) => `<li style="flex:${d.weight}">Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
+          <div class="wbar" aria-hidden="true">${DOMAINS.map((d, k) => `<span class="tone-${k + 1}" style="flex:${d.weight}"></span>`).join("")}</div>
+          <ul class="wlegend">${DOMAINS.map((d, k) => `<li class="tone-${k + 1}" style="flex:${d.weight}">Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
         </div>
       </section>
 
@@ -136,13 +135,14 @@
         <ul class="domains">
           ${DOMAINS.map((d) => {
             const c = counts(inScope("d" + d.id));
-            return `<li><a class="drow" href="#d${d.id}">
-              <span class="drow-n">${d.id}</span>
-              <span class="drow-main"><b>${esc(d.name)}</b><span>${d.weight}% of the exam · ${d.topics.length} topics · ${c.total} question${c.total === 1 ? "" : "s"}</span></span>
-              <span class="drow-p">${c.done}/${c.total}<span class="vh"> answered</span></span>
-            </a></li>`;
+            return `<li class="dcard">
+              <div class="dcard-top"><span class="drow-n" aria-hidden="true">${d.id}</span><span class="drow-p">${c.done}/${c.total} answered</span></div>
+              <h3 class="dcard-h"><a href="#d${d.id}"><span class="vh">Domain ${d.id}: </span>${esc(d.name)}</a></h3>
+              <p class="dcard-meta">${d.weight}% of the exam · ${d.topics.length} topics · ${c.total} question${c.total === 1 ? "" : "s"}</p>
+              ${d.summary ? `<p class="dcard-sum">${esc(d.summary)}</p>` : ""}
+            </li>`;
           }).join("")}
-          <li><a class="drow drow-all" href="#all">
+          <li class="dall"><a class="drow drow-all" href="#all">
             <span class="drow-n" aria-hidden="true">∗</span>
             <span class="drow-main"><b>All domains</b><span>Every question in Body of Knowledge order</span></span>
             <span class="drow-p">${all.done}/${all.total}<span class="vh"> answered</span></span>
@@ -153,14 +153,12 @@
       <section aria-labelledby="mock-h" class="block mockcard">
         <h2 id="mock-h" class="h2">Mock exam</h2>
         <p class="sub">Up to ${EXAM.questions} questions drawn across domains by exam weight, a ${EXAM.durationMinutes / 60}-hour timer, and no feedback until you submit. Results show how you did in each domain.</p>
+        <div class="bubbles"><ol aria-hidden="true"><li>A</li><li class="on">B</li><li>C</li><li>D</li></ol><p>Every question has four options and one answer, like the bubbles on an answer sheet.</p></div>
         <div class="actions"><a class="btn" href="#mock">${m ? "Resume mock exam" : "Set up a mock exam"}</a>
         ${store.lastMock ? `<a class="btn ghost" href="#mock-results">Last results</a>` : ""}</div>
       </section>
 
-      ${all.done ? `<div class="actions"><button class="btn ghost small" id="reset" type="button">Clear study progress</button></div>` : ""}
     </div>`;
-    const r = document.getElementById("reset");
-    if (r) r.onclick = () => { store.picks = {}; store.checked = {}; save(); renderHome(); finish(); };
   }
 
   // ---------- study overview: a domain or all ----------
@@ -521,6 +519,27 @@
     if (h === "mock-results") return renderResults();
     if (initial) { renderHome(); finish(); } // unknown token on first load; otherwise ignore (e.g. #main skip link)
   }
+
+  // ---------- clear study progress (header button, confirmed in a dialog) ----------
+  const clearDlg = document.getElementById("clear-dlg");
+  const clearOpen = document.getElementById("clear-open");
+  clearOpen.onclick = () => {
+    const n = Object.keys(store.checked).length;
+    document.getElementById("clear-desc").textContent = n
+      ? `This removes your answers to ${n} study question${n === 1 ? "" : "s"}. Mock exam results are kept.`
+      : "You have no study answers to clear yet.";
+    document.getElementById("clear-yes").hidden = !n;
+    document.getElementById("clear-cancel").textContent = n ? "Cancel" : "Close";
+    clearDlg.returnValue = "";
+    clearDlg.showModal();
+  };
+  clearDlg.addEventListener("close", () => {
+    if (clearDlg.returnValue !== "clear") return;
+    store.picks = {}; store.checked = {}; save();
+    route(true);
+    clearOpen.focus();
+    announce("Study progress cleared.");
+  });
 
   // ---------- boot ----------
   async function boot() {
