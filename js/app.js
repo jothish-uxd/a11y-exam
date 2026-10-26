@@ -48,9 +48,9 @@
   const TIP_ICON = `<svg class="tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/></svg>`;
   const STATUS_TEXT = { none: "Not answered", good: "Correct", bad: "Missed", answered: "Answered", flag: "Marked for review" };
 
-  function mark(st) {
+  function mark(st, label = true) {
     const glyph = { none: "", good: "✓", bad: "✕", answered: "•", flag: "⚑" }[st];
-    return `<span class="st st-${st}" aria-hidden="true">${glyph}</span><span class="vh">${STATUS_TEXT[st]}: </span>`;
+    return `<span class="st st-${st}" aria-hidden="true">${glyph}</span>${label ? `<span class="vh">${STATUS_TEXT[st]}: </span>` : ""}`;
   }
 
   function inScope(s) {
@@ -85,9 +85,12 @@
   }
 
   // ---------- question list (overview page, side panel, mobile sheet) ----------
-  function questionList(s, currentId) {
+  // head: optional markup shown with the status key in one box (the side panel puts the domain pill there)
+  function questionList(s, currentId, head = "") {
     const ds = s === "all" ? DOMAINS : [DOMAIN[+s.slice(1)]];
-    const legend = `<p class="mlegend" aria-hidden="true">${["good", "bad", "none"].map((st) => `<span>${mark(st)}${STATUS_TEXT[st]}</span>`).join("")}</p>`;
+    const n = { good: 0, bad: 0, none: 0 };
+    QUESTIONS.forEach((q) => { if (s === "all" || q.domain === +s.slice(1)) n[status(q)]++; });
+    const legend = `<div class="ql-key">${head}<p class="mlegend">${["good", "bad", "none"].map((st) => `<span>${mark(st, false)}${STATUS_TEXT[st]} (${n[st]})</span>`).join("")}</p></div>`;
     return legend + ds.map((d) => `
       <div class="ql-domain">
         ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
@@ -108,9 +111,8 @@
     const all = counts(QUESTIONS);
     const m = store.mock && !store.mock.submittedAt;
     main.innerHTML = `
-    <div class="page">
+    <div class="page wide">
       <section class="hero" aria-labelledby="h1">
-        <div class="bubbles"><ol aria-hidden="true"><li>A</li><li class="on">B</li><li>C</li><li>D</li></ol><p>Every question has four options and one answer, like the bubbles on an answer sheet.</p></div>
         <p class="eyebrow">IAAP · ${esc(EXAM.name)}</p>
         <h1 id="h1">Practice for the ${esc(EXAM.code)}, one question at a time</h1>
         <p class="lede">Study by domain with a full explanation after every answer, or sit a timed mock exam that works like the real one.</p>
@@ -125,8 +127,8 @@
         </div>
         <div class="weights">
           <h3>How the exam is weighted</h3>
-          <div class="wbar" aria-hidden="true">${DOMAINS.map((d) => `<span style="flex:${d.weight}"></span>`).join("")}</div>
-          <ul class="wlegend">${DOMAINS.map((d) => `<li style="flex:${d.weight}">Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
+          <div class="wbar" aria-hidden="true">${DOMAINS.map((d, k) => `<span class="tone-${k + 1}" style="flex:${d.weight}"></span>`).join("")}</div>
+          <ul class="wlegend">${DOMAINS.map((d, k) => `<li class="tone-${k + 1}" style="flex:${d.weight}">Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
         </div>
       </section>
 
@@ -136,13 +138,14 @@
         <ul class="domains">
           ${DOMAINS.map((d) => {
             const c = counts(inScope("d" + d.id));
-            return `<li><a class="drow" href="#d${d.id}">
-              <span class="drow-n">${d.id}</span>
-              <span class="drow-main"><b>${esc(d.name)}</b><span>${d.weight}% of the exam · ${d.topics.length} topics · ${c.total} question${c.total === 1 ? "" : "s"}</span></span>
-              <span class="drow-p">${c.done}/${c.total}<span class="vh"> answered</span></span>
-            </a></li>`;
+            return `<li class="dcard">
+              <div class="dcard-top"><span class="drow-n" aria-hidden="true">${d.id}</span><span class="drow-p">${c.done}/${c.total} answered</span></div>
+              <h3 class="dcard-h"><a href="#d${d.id}"><span class="vh">Domain ${d.id}: </span>${esc(d.name)}</a></h3>
+              <p class="dcard-meta">${d.weight}% of the exam · ${d.topics.length} topics · ${c.total} question${c.total === 1 ? "" : "s"}</p>
+              ${d.summary ? `<p class="dcard-sum">${esc(d.summary)}</p>` : ""}
+            </li>`;
           }).join("")}
-          <li><a class="drow drow-all" href="#all">
+          <li class="dall"><a class="drow drow-all" href="#all">
             <span class="drow-n" aria-hidden="true">∗</span>
             <span class="drow-main"><b>All domains</b><span>Every question in Body of Knowledge order</span></span>
             <span class="drow-p">${all.done}/${all.total}<span class="vh"> answered</span></span>
@@ -153,14 +156,12 @@
       <section aria-labelledby="mock-h" class="block mockcard">
         <h2 id="mock-h" class="h2">Mock exam</h2>
         <p class="sub">Up to ${EXAM.questions} questions drawn across domains by exam weight, a ${EXAM.durationMinutes / 60}-hour timer, and no feedback until you submit. Results show how you did in each domain.</p>
+        <div class="bubbles"><ol aria-hidden="true"><li>A</li><li class="on">B</li><li>C</li><li>D</li></ol><p>Every question has four options and one answer, like the bubbles on an answer sheet.</p></div>
         <div class="actions"><a class="btn" href="#mock">${m ? "Resume mock exam" : "Set up a mock exam"}</a>
         ${store.lastMock ? `<a class="btn ghost" href="#mock-results">Last results</a>` : ""}</div>
       </section>
 
-      ${all.done ? `<div class="actions"><button class="btn ghost small" id="reset" type="button">Clear study progress</button></div>` : ""}
     </div>`;
-    const r = document.getElementById("reset");
-    if (r) r.onclick = () => { store.picks = {}; store.checked = {}; save(); renderHome(); finish(); };
   }
 
   // ---------- study overview: a domain or all ----------
@@ -221,20 +222,23 @@
       </label>`;
     }).join("");
 
+    const pill = `<span class="chip">${scope === "all" ? "All domains" : `Domain ${d.id} · ${d.weight}%`}</span>`;
     const rationale = checked ? `
       <section class="rationale" aria-labelledby="verdict">
         <p class="verdict ${isRight(q) ? "good" : "bad"}" id="verdict" tabindex="-1">${isRight(q) ? "Correct." : "Not quite."} The answer is ${LETTERS[q.answer]}, ${esc(q.options[q.answer])}.</p>
         <div><h3>Why ${LETTERS[q.answer]} is correct</h3><p>${esc(q.rationale)}</p></div>
         <div><h3>Why the others are wrong</h3><ul class="why-not">${Object.entries(q.distractors).map(([k, txt]) => `<li><span class="l">${LETTERS[k]}</span><span><b>${esc(q.options[k])}.</b> ${esc(txt)}</span></li>`).join("")}</ul></div>
         ${q.tip ? `<div class="tip">${TIP_ICON}<h3>Exam tip</h3><p>${esc(q.tip)}</p></div>` : ""}
-        <div><h3>Sources</h3><ul class="refs">${q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul></div>
+      </section>
+      <section class="sources" aria-labelledby="sources-h">
+        <h3 id="sources-h">Sources</h3>
+        <ul class="refs">${q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul>
       </section>` : "";
 
     main.innerHTML = `
     <div class="split">
       <aside class="side" aria-labelledby="side-h">
-        <h2 id="side-h" class="side-h">${scopeLabel(scope)}</h2>
-        <nav aria-labelledby="side-h" class="qlist compact">${questionList(scope, q.id)}</nav>
+        <nav aria-labelledby="side-h" class="qlist compact">${questionList(scope, q.id, `<h2 id="side-h" class="side-h">${pill}</h2>`)}</nav>
       </aside>
       <div class="col">
         <nav class="crumbs" aria-label="Breadcrumb"><ol>
@@ -242,9 +246,8 @@
           <li><a href="#${t.id}">${topicNumber(t)} ${esc(t.name)}</a></li>
         </ol></nav>
         <div class="qhead">
-          <span class="chip">Domain ${d.id} · ${d.weight}%</span>
           <button type="button" class="counter" id="open-list" aria-haspopup="dialog">Question ${i + 1} of ${list.length}<span class="counter-more"> · All questions</span></button>
-          <span class="counter-static">Question ${i + 1} of ${list.length} in ${scopeLabel(scope)}</span>
+          <span class="counter-static">Question ${i + 1} of ${list.length}</span>
         </div>
         <form id="qform" class="${checked ? "locked" : ""}">
           <fieldset>
@@ -274,7 +277,7 @@
       renderQuestion(q);
       document.getElementById("verdict").focus();
     });
-    document.getElementById("open-list").onclick = () => openSheet(scopeLabel(scope), questionList(scope, q.id));
+    document.getElementById("open-list").onclick = () => openSheet("All questions", questionList(scope, q.id, `<p class="side-h">${pill}</p>`));
     finish();
   }
 
@@ -367,11 +370,24 @@
     return m.flags[id] ? "flag" : m.answers[id] !== undefined ? "answered" : "none";
   }
 
+  // status key with live counts, above the number grid so it stays in view as the exam grows
+  function mockCounts() {
+    const c = { answered: 0, flag: 0, none: 0 };
+    store.mock.order.forEach((id) => c[mockStatus(id)]++);
+    return c;
+  }
   function mockGrid(currentIndex) {
-    const m = store.mock;
-    return `<ol class="mgrid">${m.order.map((id, k) => `<li><button type="button" data-goto="${k}" class="mg mg-${mockStatus(id)}" ${k === currentIndex ? 'aria-current="step"' : ""}>
-      <span aria-hidden="true">${k + 1}</span><span class="vh">Question ${k + 1}, ${STATUS_TEXT[mockStatus(id)]}</span></button></li>`).join("")}</ol>
-      <p class="mlegend" aria-hidden="true"><span><span class="st st-answered">•</span>Answered</span><span><span class="st st-flag">⚑</span>Marked</span><span><span class="st st-none"></span>Not answered</span></p>`;
+    const m = store.mock, c = mockCounts();
+    const key = [["answered", '<span class="st st-answered" aria-hidden="true">•</span>', "Answered"], ["flag", '<span class="st st-flag" aria-hidden="true">⚑</span>', "Marked"], ["none", '<span class="st st-none" aria-hidden="true"></span>', "Not answered"]];
+    return `<p class="mlegend mkey">${key.map(([k, icon, label]) => `<span>${icon}<span>${label} (<span data-count="${k}">${c[k]}</span>)</span></span>`).join("")}</p>
+      <ol class="mgrid">${m.order.map((id, k) => `<li><button type="button" data-goto="${k}" class="mg mg-${mockStatus(id)}" ${k === currentIndex ? 'aria-current="step"' : ""}>
+      <span aria-hidden="true">${k + 1}</span><span class="vh">Question ${k + 1}, ${STATUS_TEXT[mockStatus(id)]}</span></button></li>`).join("")}</ol>`;
+  }
+  // refresh one question's grid cell and the key's counts in place (side panel and open sheet)
+  function updateMockStatus(i, id) {
+    const st = mockStatus(id), c = mockCounts();
+    document.querySelectorAll(`[data-goto="${i}"]`).forEach((g) => { g.className = `mg mg-${st}`; g.querySelector(".vh").textContent = `Question ${i + 1}, ${STATUS_TEXT[st]}`; });
+    document.querySelectorAll("[data-count]").forEach((b) => (b.textContent = c[b.dataset.count]));
   }
 
   function mockBar(extra) {
@@ -409,13 +425,13 @@
         </nav>
       </div>
     </div>`;
-    document.getElementById("qform").addEventListener("change", (e) => { m.answers[q.id] = +e.target.value; save(); });
+    document.getElementById("qform").addEventListener("change", (e) => { m.answers[q.id] = +e.target.value; save(); updateMockStatus(i, q.id); });
     document.getElementById("flag").onclick = (e) => {
       m.flags[q.id] = !m.flags[q.id]; if (!m.flags[q.id]) delete m.flags[q.id]; save();
       const on = !!m.flags[q.id];
       e.currentTarget.setAttribute("aria-pressed", on);
       e.currentTarget.textContent = on ? "⚑ Marked for review" : "⚐ Mark for review";
-      const g = main.querySelector(`[data-goto="${i}"]`); if (g) { g.className = `mg mg-${mockStatus(q.id)}`; g.querySelector(".vh").textContent = `Question ${i + 1}, ${STATUS_TEXT[mockStatus(q.id)]}`; }
+      updateMockStatus(i, q.id);
     };
     const p = document.getElementById("m-prev"); if (p) p.onclick = () => gotoMock(i - 1);
     document.getElementById("m-next").onclick = () => (last ? (m.view = "review", save(), renderMock(), finish()) : gotoMock(i + 1));
@@ -518,6 +534,27 @@
     if (h === "mock-results") return renderResults();
     if (initial) { renderHome(); finish(); } // unknown token on first load; otherwise ignore (e.g. #main skip link)
   }
+
+  // ---------- clear study progress (header button, confirmed in a dialog) ----------
+  const clearDlg = document.getElementById("clear-dlg");
+  const clearOpen = document.getElementById("clear-open");
+  clearOpen.onclick = () => {
+    const n = Object.keys(store.checked).length;
+    document.getElementById("clear-desc").textContent = n
+      ? `This removes your answers to ${n} study question${n === 1 ? "" : "s"}. Mock exam results are kept.`
+      : "You have no study answers to clear yet.";
+    document.getElementById("clear-yes").hidden = !n;
+    document.getElementById("clear-cancel").textContent = n ? "Cancel" : "Close";
+    clearDlg.returnValue = "";
+    clearDlg.showModal();
+  };
+  clearDlg.addEventListener("close", () => {
+    if (clearDlg.returnValue !== "clear") return;
+    store.picks = {}; store.checked = {}; save();
+    route(true);
+    clearOpen.focus();
+    announce("Study progress cleared.");
+  });
 
   // ---------- boot ----------
   async function boot() {

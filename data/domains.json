@@ -11,6 +11,7 @@
   "domains": [
     {
       "id": 1,
+      "summary": "How disability is defined and modeled, the barriers people meet across disability types, the assistive technologies and strategies they use, demographics, and etiquette.",
       "name": "Disabilities, challenges & assistive technologies",
       "weight": 40,
       "topics": [
@@ -23,6 +24,7 @@
     },
     {
       "id": 2,
+      "summary": "Accommodation versus universal design, the case for accessibility, WCAG's four principles, the built environment, the seven principles of universal design, and UDL, usability and UX.",
       "name": "Accessibility & universal design",
       "weight": 40,
       "topics": [
@@ -36,6 +38,7 @@
     },
     {
       "id": 3,
+      "summary": "The UN Convention and regional instruments, national laws such as the ADA and AODA, procurement rules, applying standards to ICT, and making accessibility part of how an organization works.",
       "name": "Standards, laws & management strategies",
       "weight": 20,
       "topics": [
