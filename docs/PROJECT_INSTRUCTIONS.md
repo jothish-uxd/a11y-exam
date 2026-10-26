@@ -7,7 +7,7 @@ Build CPACC Practice Sheets, a free, accessible study site for the IAAP CPACC ex
 I'm a staff product designer with deep accessibility experience. Skip beginner explanations of accessibility concepts. I use a MacBook with keyboard and trackpad, so give Mac commands and shortcuts.
 
 ## Source of truth
-- Exam structure, domain weights and topics: the IAAP CPACC Body of Knowledge (October 2023), captured in `data/domains.json`. Weights are 40 / 40 / 20. WCAG is Domain 2C.
+- Exam structure, domain weights and topics: the IAAP CPACC Body of Knowledge (October 2023), captured in `data/domains.json`. Weights are 40 / 40 / 20. WCAG is Domain 2.3.
 - Question bank: `data/questions.json`. Follow the schema in the repo README exactly.
 - Current status and decisions: `docs/HANDOFF.md`.
 
