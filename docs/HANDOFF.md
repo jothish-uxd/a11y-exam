@@ -17,7 +17,7 @@ _Last updated October 26, 2026._
   - Rejected: a numbered 1–40 side nav. Bare numbers give no information scent and don't fit on a phone.
 - **Mock exam.** Up to 100 questions drawn by weight, 2-hour timer, live-region reminders at 30, 10, 5 and 1 minutes, auto-submit at zero, mark for review, review screen before submit, results by domain with links back into Study.
 - **Links.** Every view has a bare hash token: `#start`, `#d1`/`#d2`/`#d3`/`#all`, topic ids like `#d2c`, question ids like `#d1-social-model`, `#mock`, `#mock-results`. Question ids are permanent.
-- **Visual design.** Answer-sheet motif. Bricolage Grotesque (display), Atkinson Hyperlegible (body, chosen because it was designed for low-vision readers), IBM Plex Mono (labels). One accent, violet (`--accent`), for eyebrows, the exam tip callout and data bars; cobalt stays for links, focus and selection. Domains are not color-coded. Full light and dark themes via CSS custom properties.
+- **Visual design.** Answer-sheet motif. Bricolage Grotesque (display), Atkinson Hyperlegible (body, chosen because it was designed for low-vision readers), IBM Plex Mono (labels). One accent, violet (`--accent`), for eyebrows, the exam tip callout and data bars; the same violet (`--action`) also drives links, focus rings, selection and button hovers, so there is no blue left. Domains are not color-coded. Full light and dark themes via CSS custom properties.
 - **Progress** is saved in localStorage per device; the page works without it.
 
 ## Corrections made along the way
