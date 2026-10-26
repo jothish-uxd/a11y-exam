@@ -1,0 +1,14 @@
+{
+  "exam": {
+    "name": "Certified Professional in Accessibility Core Competencies",
+    "code": "CPACC",
+    "issuer": "International Association of Accessibility Professionals (IAAP)",
+    "questions": 100,
+    "durationMinutes": 120
+  },
+  "domains": [
+    { "id": 1, "name": "Disabilities, challenges & assistive technologies", "weight": 40, "colorToken": "--d1" },
+    { "id": 2, "name": "Accessibility & universal design", "weight": 20, "colorToken": "--d2" },
+    { "id": 3, "name": "Standards, laws & management strategies", "weight": 40, "colorToken": "--d3" }
+  ]
+}
