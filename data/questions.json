@@ -54,7 +54,7 @@
       "2": "Understandable covers readable text, predictable behavior and input assistance. Captions make audio available, but whether the content is easy to understand is a separate concern.",
       "3": "Robust means content works reliably with current and future user agents, including assistive technologies. It mostly concerns valid code and correct names, roles and values."
     },
-    "tip": "A quick trick: the first digit of a WCAG success criterion tells you its principle. 1.x is Perceivable, 2.x Operable, 3.x Understandable, 4.x Robust. CPACC tests WCAG at a conceptual level (Domain 2C of the Body of Knowledge), not the code details tested on the WAS exam.",
+    "tip": "A quick trick: the first digit of a WCAG success criterion tells you its principle. 1.x is Perceivable, 2.x Operable, 3.x Understandable, 4.x Robust. CPACC tests WCAG at a conceptual level (Body of Knowledge topic 2.3), not the code details tested on the WAS exam.",
     "sources": [
       {
         "title": "Understanding WCAG 2.2: the four principles",
@@ -128,7 +128,7 @@
       "2": "Building standards come from national building codes and laws, such as the ADA Standards for Accessible Design. The Marrakesh Treaty is a copyright treaty and does not cover the built environment.",
       "3": "Employment rights for disabled people appear in instruments such as the CRPD (Article 27) and national laws like the ADA (Title I). The Marrakesh Treaty does not address employment."
     },
-    "tip": "Remember the treaty by its owner: WIPO is the intellectual property agency of the UN, so the Marrakesh Treaty is about copyright and access to books. The CRPD is the broad human rights convention. Both appear in Domain 3A.",
+    "tip": "Remember the treaty by its owner: WIPO is the intellectual property agency of the UN, so the Marrakesh Treaty is about copyright and access to books. The CRPD is the broad human rights convention. Both appear in Domain 3.1.",
     "sources": [
       {
         "title": "WIPO: Marrakesh Treaty",
@@ -138,7 +138,7 @@
       {
         "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
         "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
-        "note": "Domain 3A, International declarations and conventions."
+        "note": "Domain 3.1, International declarations and conventions."
       }
     ]
   }

@@ -25,7 +25,7 @@ docs/PROJECT_INSTRUCTIONS.md  Goals and rules for content and the site
 
 Two modes, both reachable from the header on every page.
 
-**Study** — pick Domain 1, 2, 3 or All. Each domain page lists the Body of Knowledge topics (1A, 1B, …) with every question and its status: not answered, correct or missed. On a question page the same list sits in a side panel on wide screens and in a bottom sheet on phones (open it from the "Question 2 of 4" button). Previous and Next stay inside the chosen domain; the last question offers the next domain. Feedback appears after each answer.
+**Study** — pick Domain 1, 2, 3 or All. Each domain page lists the Body of Knowledge topics (1.1, 1.2, …) with every question and its status: not answered, correct or missed. On a question page the same list sits in a side panel on wide screens and in a bottom sheet on phones (open it from the "Question 2 of 4" button). Previous and Next stay inside the chosen domain; the last question offers the next domain. Feedback appears after each answer.
 
 **Mock exam** — up to 100 questions drawn by exam weight (40 / 40 / 20), a 2-hour timer with spoken reminders at 30, 10, 5 and 1 minutes, mark for review, and a review screen before submitting. Results break down by domain and link each missed question back into Study.
 
@@ -59,7 +59,7 @@ Append an object to `data/questions.json`, then run `node scripts/validate.mjs`.
 |---------------|---------------------|-------|
 | `id`          | string              | Stable, lowercase, hyphenated, prefixed with domain: `d1-social-model`. Used for deep links (`#d1-social-model`) and saved progress. Never rename a published id. |
 | `domain`      | 1 \| 2 \| 3         | Must match an id in `data/domains.json`. |
-| `topic`       | string              | Topic id from `data/domains.json`, e.g. `d1a` (Body of Knowledge section 1A). Must belong to the same domain. |
+| `topic`       | string              | Topic id from `data/domains.json`, e.g. `d1a` (Body of Knowledge section 1.1). Must belong to the same domain. |
 | `question`    | string              | The stem. |
 | `options`     | string[]            | Usually 4 (the CPACC format). |
 | `answer`      | number              | Zero-based index into `options`. |

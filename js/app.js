@@ -42,7 +42,7 @@
   // ---------- helpers ----------
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const color = (d) => `var(${d.colorToken})`;
-  const topicLetter = (t) => t.id.slice(-1).toUpperCase();
+  const topicNumber = (t) => `${t.id[1]}.${t.id.charCodeAt(2) - 96}`;
   const scopeLabel = (s) => (s === "all" ? "All domains" : `Domain ${s.slice(1)}`);
   const isRight = (q) => store.picks[q.id] === q.answer;
   const status = (q) => (!store.checked[q.id] ? "none" : isRight(q) ? "good" : "bad");
@@ -94,7 +94,7 @@
         ${d.topics.map((t) => {
           const qs = QUESTIONS.filter((q) => q.topic === t.id);
           return `<div class="ql-topic">
-            <h4 class="ql-th" id="list-${t.id}"><span class="ql-letter">${d.id}${topicLetter(t)}</span>${esc(t.name)}</h4>
+            <h4 class="ql-th" id="list-${t.id}"><span class="ql-letter">${topicNumber(t)}</span>${esc(t.name)}</h4>
             ${qs.length ? `<ol class="ql">${qs.map((q) => `<li><a href="#${q.id}" ${q.id === currentId ? 'aria-current="page"' : ""}>${mark(status(q))}<span class="ql-q">${esc(q.question)}</span></a></li>`).join("")}</ol>`
               : `<p class="ql-empty">No questions yet</p>`}
           </div>`;
@@ -239,7 +239,7 @@
       <div class="col">
         <nav class="crumbs" aria-label="Breadcrumb"><ol>
           <li><a href="#d${d.id}">Domain ${d.id}</a></li>
-          <li><a href="#${t.id}">${d.id}${topicLetter(t)}. ${esc(t.name)}</a></li>
+          <li><a href="#${t.id}">${topicNumber(t)} ${esc(t.name)}</a></li>
         </ol></nav>
         <div class="qhead">
           <span class="chip" style="color:${color(d)}">Domain ${d.id} · ${d.weight}%</span>
