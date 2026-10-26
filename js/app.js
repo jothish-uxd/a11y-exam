@@ -297,16 +297,19 @@
   });
 
   // ---------- mock exam ----------
-  function drawMock() {
-    const total = Math.min(EXAM.questions, QUESTIONS.length);
-    const picked = [];
-    DOMAINS.forEach((d) => {
-      const want = Math.round((total * d.weight) / 100);
-      picked.push(...shuffle(inScope("d" + d.id).slice()).slice(0, want));
+  // Each domain's share of EXAM.questions, drawn at random from its pool. A short pool is used whole, never topped up from other domains.
+  function mockPlan() {
+    return DOMAINS.map((d) => {
+      const pool = inScope("d" + d.id).length;
+      const share = Math.round((EXAM.questions * d.weight) / 100);
+      return { d, pool, share, take: Math.min(share, pool) };
     });
-    const rest = shuffle(QUESTIONS.filter((q) => !picked.includes(q)));
-    while (picked.length < total && rest.length) picked.push(rest.pop());
-    return shuffle(picked.slice(0, total)).map((q) => q.id);
+  }
+
+  function drawMock() {
+    const picked = [];
+    mockPlan().forEach((p) => picked.push(...shuffle(inScope("d" + p.d.id).slice()).slice(0, p.take)));
+    return shuffle(picked).map((q) => q.id);
   }
 
   function stopTimer() { if (timerId) { clearInterval(timerId); timerId = null; } }
@@ -340,19 +343,21 @@
 
   function renderMockIntro() {
     stopTimer();
-    const total = Math.min(EXAM.questions, QUESTIONS.length);
+    const plan = mockPlan();
+    const total = plan.reduce((n, p) => n + p.take, 0);
+    const short = plan.filter((p) => p.take < p.share);
     main.innerHTML = `
     <div class="page">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#start">Home</a></li><li aria-current="page">Mock exam</li></ol></nav>
       <h1 id="h1" class="h1s">Mock exam</h1>
       <p class="lede">Practice under exam conditions. You won't see whether an answer is right until you submit.</p>
       <ul class="how">
-        <li>${total} question${total === 1 ? "" : "s"}, drawn by exam weight: ${DOMAINS.map((d) => `Domain ${d.id} ${d.weight}%`).join(", ")}.</li>
+        <li>${total} question${total === 1 ? "" : "s"}, drawn at random from each domain by exam weight: ${plan.map((p) => `${p.take} from Domain ${p.d.id}`).join(", ")}. Each attempt draws a new set.</li>
         <li>A ${EXAM.durationMinutes / 60}-hour timer. You'll hear a reminder at 30, 10, 5 and 1 minutes left. The exam submits itself when time runs out.</li>
         <li>Mark any question for review and come back to it before you submit.</li>
         <li>Your progress is saved on this device, so you can leave and resume.</li>
       </ul>
-      ${QUESTIONS.length < EXAM.questions ? `<p class="note">The question bank has ${QUESTIONS.length} question${QUESTIONS.length === 1 ? "" : "s"} so far. A full mock needs ${EXAM.questions}. Until then, the mock uses every question available.</p>` : ""}
+      ${short.length ? `<p class="note">The question bank is still growing. ${short.map((p) => `Domain ${p.d.id} has ${p.pool} of the ${p.share} questions it needs`).join("; ")}, so this mock uses all of them. Other domains don't fill the gap, which makes the mock shorter than the real exam and its domain mix uneven until those pools are full.</p>` : ""}
       <div class="actions">
         <button class="btn" id="mock-start" type="button">Start the timer</button>
         ${store.lastMock ? `<a class="btn ghost" href="#mock-results">Last results</a>` : ""}
