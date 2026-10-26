@@ -14,6 +14,7 @@
   --accent:#7a3fb8; --accent-tint:#f2ebfb;
   --control:#7b859d;
   --foot-bg:#e6eaf0;
+  --tone-1:#5c2a94; --tone-2:#7a3fb8; --tone-3:#9e74d4;
   --f-display:"Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
   --f-body:"Atkinson Hyperlegible", "Helvetica Neue", Arial, sans-serif;
   --f-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -23,14 +24,16 @@
   --cobalt:#8ea2ff; --cobalt-tint:#1f2a52;
   --good:#6fd39a; --good-tint:#13301f; --bad:#ff8a90; --bad-tint:#3a1619;
   --flag:#f2c46b; --flag-tint:#33270f;
-  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; --foot-bg:#1a2236; color-scheme:dark;
+  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; --foot-bg:#1a2236;
+  --tone-1:#c3a0f0; --tone-2:#9b78d9; --tone-3:#755aa8; color-scheme:dark;
 }}
 :root[data-theme="dark"]{
   --paper:#0e1322; --sheet:#161d31; --ink:#e8ecf6; --ink-soft:#a5aec6; --rule:#2c3652;
   --cobalt:#8ea2ff; --cobalt-tint:#1f2a52;
   --good:#6fd39a; --good-tint:#13301f; --bad:#ff8a90; --bad-tint:#3a1619;
   --flag:#f2c46b; --flag-tint:#33270f;
-  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; --foot-bg:#1a2236; color-scheme:dark;
+  --accent:#c3a0f0; --accent-tint:#2a1f45; --control:#66739a; --foot-bg:#1a2236;
+  --tone-1:#c3a0f0; --tone-2:#9b78d9; --tone-3:#755aa8; color-scheme:dark;
 }
 *{box-sizing:border-box}
 body{background:var(--paper);color:var(--ink);font-family:var(--f-body);font-size:1.0625rem;line-height:1.6;margin:0;
@@ -44,25 +47,28 @@ h1:focus,h4:focus{outline:none}
 
 /* Header */
 .bar{border-bottom:1px solid var(--rule)}
-.bar-in{max-width:72rem;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"brand mock" "nav nav";align-items:center;gap:.25rem 1rem;padding-block:.75rem .25rem}
-.brand{grid-area:brand}.topnav{grid-area:nav}.mocklink{grid-area:mock}
-@media (min-width:760px){.bar-in{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"brand nav mock";padding-block:.6rem}.topnav ul{justify-content:flex-end}}
+/* Brand, then nav beside it; tools sit flush right. Everything wraps instead of scrolling, so it reflows at 400% zoom. */
+.bar-in{max-width:72rem;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;gap:.25rem 1.5rem;padding-block:.6rem}
+.tools{margin-left:auto;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.clearbtn{font:inherit;font-weight:700;font-size:.95rem;color:var(--ink-soft);background:transparent;border:1.5px solid var(--control);border-radius:6px;padding:.45rem .8rem;min-height:44px;cursor:pointer}
+.clearbtn:hover{color:var(--ink);border-color:var(--ink);background:var(--sheet)}
 .mocklink{white-space:nowrap;padding:.45rem .8rem;border-radius:6px;border:1.5px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem;min-height:44px;display:flex;align-items:center}
 .mocklink:hover{background:var(--cobalt-tint);border-color:var(--cobalt)}
 .mocklink[aria-current="page"]{background:var(--ink);color:var(--sheet)}
 .brand{font-family:var(--f-display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
-.brand span{color:var(--cobalt)}
-.topnav{min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:none}
-.topnav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:2px}
+.brand span{color:var(--accent)}
+.topnav{min-width:0;max-width:100%}
+.topnav ul{display:flex;flex-wrap:wrap;gap:.25rem;list-style:none;margin:0;padding:2px}
 .topnav a{white-space:nowrap;padding:.45rem .7rem;color:var(--ink-soft);text-decoration:none;font-weight:700;font-size:.95rem;min-height:44px;display:flex;align-items:center;border-bottom:3px solid transparent}
 .topnav a:hover{color:var(--ink);border-bottom-color:var(--rule)}
 .topnav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--ink)}
 /* Legend items share the bar's flex weights, so each label sits under its own segment. */
 .wlegend{display:flex;gap:3px;list-style:none;margin:.5rem 0 0;padding:0;font-size:.9rem;line-height:1.35;color:var(--ink-soft)}
-.wlegend li{min-width:0;border-left:2px solid var(--accent);padding-left:.45rem}
+.wlegend li{min-width:0;border-left:3px solid var(--tone,var(--accent));padding-left:.45rem}
 .wlegend b{display:block;color:var(--ink);font-variant-numeric:tabular-nums}
 
 .page{max-width:46rem;margin:0 auto}
+.page.wide{max-width:72rem}
 /* Footer bleeds past the body's side padding to span the viewport. */
 .foot{margin:4rem calc(-1 * max(16px,env(safe-area-inset-right,0px))) 0 calc(-1 * max(16px,env(safe-area-inset-left,0px)));background:var(--foot-bg);border-top:1px solid var(--rule);font-size:.9rem;color:var(--ink-soft);
   padding:1.5rem max(16px,env(safe-area-inset-right,0px)) max(2rem,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
@@ -95,7 +101,8 @@ h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.4re
 .fact span{font-family:var(--f-mono);font-size:.8125rem;letter-spacing:.01em;color:var(--ink-soft)}
 .weights h3{font-family:var(--f-mono);font-size:.8125rem;font-weight:500;letter-spacing:.01em;color:var(--ink-soft);margin:0 0 .6rem}
 .wbar{display:flex;height:.7rem;border-radius:99px;overflow:hidden;gap:3px}
-.wbar span{display:block;background:var(--accent)}
+.wbar span{display:block;background:var(--tone,var(--accent))}
+.tone-1{--tone:var(--tone-1)}.tone-2{--tone:var(--tone-2)}.tone-3{--tone:var(--tone-3)}
 
 .domains{list-style:none;margin:1rem 0 0;padding:0;display:grid;gap:.5rem}
 .drow{display:grid;grid-template-columns:2.6rem minmax(0,1fr) auto;gap:1rem;align-items:center;padding:.9rem 1rem;background:var(--sheet);border:1.5px solid var(--rule);border-radius:10px;color:var(--ink);text-decoration:none}
@@ -107,6 +114,20 @@ h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.4re
 .drow-main span{font-size:.9rem;color:var(--ink-soft)}
 .drow-p{font-family:var(--f-mono);font-size:.85rem;color:var(--ink-soft);font-variant-numeric:tabular-nums}
 .mockcard{background:var(--sheet);border:1px solid var(--rule);border-radius:10px;padding:1.25rem 1.4rem}
+.mockcard .bubbles{margin:1rem 0 0}
+
+/* Domain cards: one column by default, three across once there is room (em, so zoom reflows them). The heading link stretches over the card. */
+@media (min-width:60em){.domains{grid-template-columns:repeat(3,minmax(0,1fr))}.dall{grid-column:1/-1}}
+.dcard{position:relative;display:flex;flex-direction:column;gap:.35rem;padding:1rem 1.1rem 1.1rem;background:var(--sheet);border:1.5px solid var(--rule);border-radius:10px}
+.dcard:hover{border-color:var(--cobalt)}
+.dcard:has(a:focus-visible){outline:3px solid var(--cobalt);outline-offset:3px}
+.dcard-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:.35rem}
+.dcard-h{margin:0;font-size:1.05rem;line-height:1.3}
+.dcard-h a{color:var(--ink);text-decoration:none}
+.dcard-h a::after{content:"";position:absolute;inset:0;border-radius:10px}
+.dcard-h a:focus-visible{outline:none}
+.dcard-meta{margin:0;font-size:.9rem;color:var(--ink-soft)}
+.dcard-sum{margin:.25rem 0 0;font-size:.95rem;line-height:1.5;color:var(--ink-soft)}
 
 .how{display:grid;gap:.45rem;margin:1.25rem 0;padding:0;list-style:none}
 .how li{padding-left:1.4rem;position:relative;color:var(--ink-soft)}
@@ -169,7 +190,7 @@ h1{font-family:var(--f-display);font-weight:800;font-size:clamp(2.1rem,6vw,3.4re
 
 fieldset{border:0;margin:0;padding:0;min-width:0}
 legend{padding:0;margin-bottom:1.2rem;width:100%}
-.qtext{font-family:var(--f-display);font-weight:700;font-size:clamp(1.3rem,3.6vw,1.65rem);line-height:1.25;letter-spacing:-.015em;text-wrap:balance}
+.qtext{font-family:var(--f-display);font-weight:400;font-size:clamp(1.3rem,3.6vw,1.65rem);line-height:1.25;letter-spacing:-.015em;text-wrap:balance}
 .opts{display:grid;gap:.6rem}
 .opt{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.9rem;align-items:start;background:var(--sheet);border:1.5px solid var(--rule);border-radius:10px;padding:.9rem 1rem;cursor:pointer;position:relative}
 .opt:hover{border-color:var(--cobalt)}
@@ -242,7 +263,12 @@ legend{padding:0;margin-bottom:1.2rem;width:100%}
 /* Bottom sheet (phones, tablets) */
 .sheet{border:0;padding:0;margin:auto 0 0;width:100%;max-width:100%;max-height:85vh;border-radius:16px 16px 0 0;background:var(--paper);color:var(--ink);
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-bottom:max(1.5rem,env(safe-area-inset-bottom,0px))}
-.sheet::backdrop{background:rgba(10,14,28,.55)}
+.sheet::backdrop,.dlg::backdrop{background:rgba(10,14,28,.55)}
+.dlg{border:1px solid var(--rule);border-radius:12px;background:var(--sheet);color:var(--ink);padding:1.4rem;width:min(28rem,calc(100% - 32px))}
+.dlg h2{font-family:var(--f-display);font-size:1.3rem;margin:0}
+.dlg p{margin:.6rem 0 0}
+.btn.danger{background:var(--bad);border-color:var(--bad);color:var(--sheet)}
+.btn.danger:hover{background:var(--ink);border-color:var(--ink)}
 .sheet-head{position:sticky;top:0;background:var(--paper);display:flex;justify-content:space-between;align-items:center;padding-block:1rem .75rem;border-bottom:1px solid var(--rule);z-index:1}
 .sheet-head h2{font-family:var(--f-display);font-size:1.2rem;margin:0}
 
