@@ -381,6 +381,1827 @@
     ]
   },
   {
+    "id": "d1-medical-model",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "A rehabilitation clinic describes a client's disability as a health condition located in the person, to be diagnosed and treated by professionals so the client can function in existing settings. Which model of disability does this reflect?",
+    "options": [
+      "Social model",
+      "Functional solutions model",
+      "Social identity model",
+      "Medical model"
+    ],
+    "answer": 3,
+    "rationale": "The medical model views disability as a problem of the person, directly caused by disease, trauma or another health condition, and looks to professionals for diagnosis, treatment or cure. The Body of Knowledge credits it with being able to address the biological sources of disability, and medical care genuinely matters to many disabled people. Its weakness is that it often overlooks problems caused by unwelcoming or inaccessible environments. Words like patient, diagnosis, treatment and cure are the clue in a scenario question.",
+    "distractors": {
+      "0": "The social model places disability in the barriers society creates, not in the person. The clinic's framing, a condition inside the client to be treated, is the opposite.",
+      "1": "The functional solutions model identifies the practical limitations a disability brings and builds products or services to work around them. It is not about diagnosis and treatment.",
+      "2": "The social identity (cultural affiliation) model treats disability as a source of group identity and pride, as many Deaf people do. It does not frame disability as a condition to treat."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Medical model: description, strengths and weaknesses."
+      }
+    ]
+  },
+  {
+    "id": "d1-charity-model",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "A fundraising campaign shows disabled children as sad and helpless and urges viewers to donate so the children can be helped. Which model of disability does the campaign reflect?",
+    "options": [
+      "Economic model",
+      "Charity model",
+      "Medical model",
+      "Biopsychosocial model"
+    ],
+    "answer": 1,
+    "rationale": "The charity model regards people with disabilities as unfortunate and in need of outside help. The Body of Knowledge credits it with inspiring people to give time and resources when help is genuinely needed, but notes that it can be condescending. Pity-based imagery casts disabled people as recipients rather than as people with their own voices and choices. Compare the CRPD, whose stated purpose is to promote, protect and ensure the full and equal enjoyment of human rights by persons with disabilities.",
+    "distractors": {
+      "0": "The economic model defines disability by a person's ability to work and its cost to employers and the state. The campaign is about pity and giving, not work.",
+      "2": "The medical model focuses on diagnosis and treatment by professionals. The campaign's framing is sympathy and donations, not treatment.",
+      "3": "The biopsychosocial model combines medical, personal and environmental factors to describe a person's functioning. It is an analytical framework, not a fundraising message."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Charity model: strengths and weaknesses."
+      },
+      {
+        "title": "UN DESA: CRPD Article 1, Purpose",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-1-purpose",
+        "note": "States the Convention's rights-based purpose, a contrast with the charity framing."
+      }
+    ]
+  },
+  {
+    "id": "d1-economic-model",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "A government benefits program decides who counts as disabled by asking whether a person's condition limits the amount or kind of paid work they can do. Which model of disability does this reflect?",
+    "options": [
+      "Economic model",
+      "Charity model",
+      "Social model",
+      "Medical model"
+    ],
+    "answer": 0,
+    "rationale": "The economic model defines disability by a person's inability to take part in work, which is why it shows up in benefits, insurance and pension systems. Its strength, per the Body of Knowledge, is that it recognizes how bodily limitations can affect a person's ability to earn a living. Its weakness is that it creates a legally defined category of people seen as needy, which can be stigmatizing. It also tends to value people by their productivity.",
+    "distractors": {
+      "1": "The charity model frames disabled people as unfortunate and in need of help. The test here is work capacity, not pity.",
+      "2": "The social model would ask which workplace barriers to remove, not measure the person's capacity to work.",
+      "3": "The medical model defines disability by diagnosis and treatment. A benefits program may use medical evidence, but the deciding test here is ability to work, which is the economic model's defining feature."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Economic model: description, strengths and weaknesses."
+      }
+    ]
+  },
+  {
+    "id": "d1-functional-solutions-model",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "A startup studies the specific tasks people can't do because of an impairment, such as gripping small objects or reading small print, and builds products to work around each one. Which model of disability does this approach reflect?",
+    "options": [
+      "Functional solutions model",
+      "Medical model",
+      "Social identity model",
+      "Charity model"
+    ],
+    "answer": 0,
+    "rationale": "The functional solutions model identifies the limitations, or functional impairments, that come with a disability and looks for practical ways to remove or reduce them, often through technology and products. The Body of Knowledge describes it as results-oriented, focused on meeting people's real circumstances. Its weakness is that a narrow focus on technology can lead to miscalculations or missed opportunities, for example overlooking attitudes, policy or the social side of exclusion.",
+    "distractors": {
+      "1": "The medical model looks to diagnose, treat or cure the person. The startup isn't treating anyone; it's building practical workarounds.",
+      "2": "The social identity model is about disability as a shared identity and source of pride, not about designing products.",
+      "3": "The charity model frames disabled people as recipients of help. The startup is solving practical problems, not appealing for sympathy."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Functional solutions model: strengths and weaknesses."
+      }
+    ]
+  },
+  {
+    "id": "d1-social-identity-model",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "Many Deaf people describe themselves as members of a linguistic and cultural minority, with a shared sign language, history and community, and see deafness as a source of pride. Which model of disability does this reflect?",
+    "options": [
+      "Social model",
+      "Social identity model",
+      "Biopsychosocial model",
+      "Functional solutions model"
+    ],
+    "answer": 1,
+    "rationale": "The social identity model, also called the cultural affiliation model, describes people deriving their identity from membership of a group with shared experiences. The Body of Knowledge notes this is most evident among people who are deaf. Its strength is that it accepts the person's disability completely and treats it as a point of pride. Its weakness is that people who don't fit the group's expectations can feel excluded.",
+    "distractors": {
+      "0": "The social model explains disability as the result of barriers in society. It is related, but the defining feature here is identity and pride in group membership.",
+      "2": "The biopsychosocial model combines medical, personal and environmental factors to describe functioning, as in the WHO ICF. It says nothing about group identity or pride.",
+      "3": "The functional solutions model is about building practical solutions for specific limitations, not about culture or identity."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Social identity or cultural affiliation model."
+      }
+    ]
+  },
+  {
+    "id": "d1-medical-model-weakness",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "According to the CPACC Body of Knowledge, what is the main weakness of the medical model of disability?",
+    "options": [
+      "It often overlooks barriers caused by inaccessible environments",
+      "It cannot address the biological sources of a disability",
+      "It defines disability only by a person's capacity to do paid work",
+      "It treats disability as a group identity rather than a condition"
+    ],
+    "answer": 0,
+    "rationale": "The medical model locates disability in the person and looks for diagnosis and treatment, which can genuinely help. Because it focuses on the body, it often overlooks issues caused by unwelcoming or inaccessible environments, such as stairs, uncaptioned video or rigid policies. Accessibility work leans on the social model for that reason. Knowing each model's strength and weakness is a common exam angle.",
+    "distractors": {
+      "1": "This is backwards. Addressing the biological sources of disability is the strength the Body of Knowledge gives the medical model.",
+      "2": "That describes the economic model, which defines disability by inability to participate in work.",
+      "3": "That describes the social identity model, which treats disability as a source of shared identity and pride."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Medical model: strengths and weaknesses."
+      }
+    ]
+  },
+  {
+    "id": "d1-social-model-impairment",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "In the social model, how is impairment distinguished from disability?",
+    "options": [
+      "Impairment is temporary, while disability is a permanent and lifelong condition",
+      "Impairment is a medical diagnosis; disability is the treatment prescribed for it",
+      "Impairment is a condition of body or mind; disability is the exclusion barriers cause",
+      "Impairment affects the senses, while disability affects movement and cognition"
+    ],
+    "answer": 2,
+    "rationale": "The social model separates two ideas. An impairment is a physical, sensory, intellectual or mental condition. Disability is what happens when society isn't designed for that person: steps with no ramp, video with no captions, forms that time out. The CRPD reflects this, describing impairments that, in interaction with various barriers, may hinder full and equal participation. Because the barriers are made by people, they can be removed.",
+    "distractors": {
+      "0": "Duration isn't the distinction. Impairments can be permanent or temporary, and the social model's point is about where exclusion comes from.",
+      "1": "Neither term means treatment. This mixes in medical model thinking that the social model rejects.",
+      "3": "Both terms cover every kind of condition. The split is between the condition and the barriers, not between types of condition."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Social model."
+      },
+      {
+        "title": "UN DESA: CRPD Article 1, Purpose",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-1-purpose",
+        "note": "Describes disability as impairments interacting with barriers."
+      }
+    ]
+  },
+  {
+    "id": "d1-social-model-weakness",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "Which criticism does the CPACC Body of Knowledge make of the social model of disability?",
+    "options": [
+      "It places the cause of disability inside the individual person",
+      "It can downplay embodied experiences such as pain and fatigue",
+      "It presents disabled people mainly as objects of pity or charity",
+      "It defines disability by a person's inability to take part in work"
+    ],
+    "answer": 1,
+    "rationale": "The Body of Knowledge notes that the social model can downplay the embodied aspects of disability. Removing barriers doesn't take away chronic pain, fatigue or the effects of a progressive condition, and some disabled people feel the model leaves those experiences out. Its strength is showing that barriers are not inevitable, which makes them fixable. The biopsychosocial model tries to hold both the body and the environment in view.",
+    "distractors": {
+      "0": "That is the medical model. The social model places the cause in barriers around the person.",
+      "2": "That is the charity model's weakness, not the social model's.",
+      "3": "That is the economic model's definition."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1A, Social model: strengths and weaknesses."
+      }
+    ]
+  },
+  {
+    "id": "d1-icf-contextual-factors",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "The WHO's International Classification of Functioning, Disability and Health (ICF) describes functioning at the level of the body, activities and participation. Which contextual factors does it say interact with a health condition?",
+    "options": [
+      "Genetic factors and family medical history",
+      "Environmental factors and personal factors",
+      "Income level and employment status only",
+      "Diagnosis codes and severity ratings only"
+    ],
+    "answer": 1,
+    "rationale": "The ICF is the best known example of the biopsychosocial model. It treats functioning and disability as the result of interaction between a health condition and contextual factors: environmental factors, such as the physical environment, attitudes, services and policies, and personal factors, such as age, gender and background. Because the environment is part of the picture, the same impairment can lead to very different levels of participation in different settings. This is how the ICF brings the medical and social models together.",
+    "distractors": {
+      "0": "Genetics are part of the health condition itself, not one of the ICF's contextual factors.",
+      "2": "Income and work can feature in the ICF, but its contextual factors are much broader than these two items.",
+      "3": "Diagnoses are classified separately, in the ICD. The ICF exists precisely to describe functioning beyond the diagnosis."
+    },
+    "sources": [
+      {
+        "title": "The ICF: An Overview (WHO, hosted by CDC)",
+        "url": "https://cdc.gov/nchs/media/pdfs/2024/06/icfoverview_finalforwho10sept.pdf",
+        "note": "Describes the ICF components and the role of environmental and personal factors."
+      },
+      {
+        "title": "WHO International Classification of Functioning, Disability and Health (ICF)",
+        "url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+        "note": "WHO's overview of the ICF."
+      }
+    ]
+  },
+  {
+    "id": "d1-crpd-disability-definition",
+    "domain": 1,
+    "topic": "d1a",
+    "question": "How does Article 1 of the UN Convention on the Rights of Persons with Disabilities describe persons with disabilities?",
+    "options": [
+      "People who have a medical diagnosis certified by a licensed physician in their country",
+      "People who are unable to work full-time because of a physical or mental condition",
+      "People with long-term impairments that, with barriers, may hinder equal participation",
+      "People who are registered with a national disability agency and receive benefits"
+    ],
+    "answer": 2,
+    "rationale": "Article 1 says persons with disabilities include those with long-term physical, mental, intellectual or sensory impairments which, in interaction with various barriers, may hinder their full and effective participation in society on an equal basis with others. The word include leaves room for wider national definitions. The interaction with barriers reflects the social model. Nothing in it requires a diagnosis, registration or a test of work capacity.",
+    "distractors": {
+      "0": "The CRPD doesn't require a diagnosis or certification. That would be a medical model test.",
+      "1": "Work capacity is the economic model's test. The CRPD's description is about participation in society generally.",
+      "3": "Registration and benefits are national administrative matters. The CRPD's description doesn't depend on them."
+    },
+    "sources": [
+      {
+        "title": "UN DESA: CRPD Article 1, Purpose",
+        "url": "https://social.desa.un.org/issues/disability/crpd/article-1-purpose",
+        "note": "Article 1 text describing persons with disabilities."
+      }
+    ]
+  },
+  {
+    "id": "d1-capd",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A student passes a standard hearing test but struggles to follow spoken instructions in a noisy classroom or in fast audio. Which condition best fits this description?",
+    "options": [
+      "Central auditory processing disorder",
+      "Conductive hearing loss in one ear",
+      "Receptive aphasia after a brain injury",
+      "Apraxia affecting speech production"
+    ],
+    "answer": 0,
+    "rationale": "Central auditory processing disorder (CAPD) affects how the brain processes sound, especially speech, even when the ears detect it normally. People with CAPD may struggle with background noise, rapid speech and multi-step spoken instructions. The Body of Knowledge lists it under auditory disabilities. Captions, transcripts, written instructions and less background noise all help, which is one reason captions benefit far more people than those who are deaf.",
+    "distractors": {
+      "1": "Conductive loss is a problem carrying sound through the outer or middle ear. It would normally show up on a standard hearing test.",
+      "2": "Aphasia is a language disorder that affects understanding and producing language in any form, including reading and writing, usually after a stroke or brain injury.",
+      "3": "Apraxia of speech affects planning the movements needed to speak. It is about producing speech, not understanding it."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Auditory disabilities, including auditory processing disorders."
+      },
+      {
+        "title": "W3C WAI: Auditory (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/auditory/",
+        "note": "Notes some people hear sounds but not well enough to understand speech, especially with background noise."
+      }
+    ]
+  },
+  {
+    "id": "d1-sign-language-first-language",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Why might captions alone not give full access to a video for some Deaf people?",
+    "options": [
+      "Captions can't show who is speaking or describe important sound effects",
+      "Deaf people generally prefer audio description over captions for video",
+      "Most Deaf people use cochlear implants and so do not need captions at all",
+      "Sign language may be their first language, and written text a second one"
+    ],
+    "answer": 3,
+    "rationale": "W3C WAI notes that for some people with auditory disabilities, sign language is their primary language and they may not read the written language as fluently. Sign languages differ from the spoken and written languages around them, so reading captions can mean reading in a second language. Sign language interpretation can supplement captions for important content. Equally, not all deaf people know sign language, so captions stay essential.",
+    "distractors": {
+      "0": "Good captions can identify speakers and describe meaningful sounds. That isn't a built-in limit of captions.",
+      "1": "Audio description narrates visual content for people who are blind or have low vision. It doesn't help someone who can't hear.",
+      "2": "Many Deaf people don't use implants, and implants don't restore typical hearing. Captions remain essential."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Auditory (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/auditory/",
+        "note": "Sign language as primary language; not all deaf people sign."
+      }
+    ]
+  },
+  {
+    "id": "d1-deafblind-communication",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Which communication method is most closely associated with people who are deaf-blind?",
+    "options": [
+      "Speechreading by watching the speaker's lips and face closely",
+      "Tactile signing, felt through the hands of the person signing",
+      "Reading real-time captions displayed on a large video screen",
+      "Listening to audio description through a pair of headphones"
+    ],
+    "answer": 1,
+    "rationale": "People who are deaf-blind have both vision and hearing loss, so methods that rely on either sense alone may not work. The Body of Knowledge describes communication through touch, such as tactile signing, where the person feels the signer's hands, as well as braille. W3C WAI notes many deaf-blind people use tactile communication such as braille, and rely on descriptive transcripts for video. The degree of loss varies a lot, and some people use their residual vision or hearing.",
+    "distractors": {
+      "0": "Speechreading depends on sight, which many deaf-blind people can't rely on.",
+      "2": "Captions on a screen depend on sight. They may work for someone with enough residual vision, but they aren't the defining method.",
+      "3": "Audio description depends on hearing, which many deaf-blind people can't rely on."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Deaf-blindness: barriers and solutions."
+      },
+      {
+        "title": "W3C WAI: Auditory (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/auditory/",
+        "note": "Deaf-blind users, tactile communication and descriptive transcripts."
+      }
+    ]
+  },
+  {
+    "id": "d1-aphasia",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "After a stroke, a man knows what he wants to say but has trouble finding words, and reading and writing have become harder too. Which condition is most likely?",
+    "options": [
+      "Dysarthria",
+      "Aphasia",
+      "Stuttering",
+      "Selective mutism"
+    ],
+    "answer": 1,
+    "rationale": "Aphasia is a language disorder caused by damage to the parts of the brain that handle language, and stroke is its leading cause. Because it affects language itself, not just the mechanics of speech, it can impair reading and writing as well as speaking and understanding. The Body of Knowledge lists it under speech and language disabilities. Plain language, short sentences, extra time and pictures alongside text all help.",
+    "distractors": {
+      "0": "Dysarthria is weakness or paralysis of the muscles used for speech. It affects how clearly someone speaks, not reading or writing.",
+      "2": "Stuttering involves repeating sounds, words or phrases. It affects the flow of speech, not reading and writing.",
+      "3": "Selective mutism is an anxiety-related inability to speak in certain situations. It doesn't cause word-finding or reading problems."
+    },
+    "sources": [
+      {
+        "title": "NIDCD: Aphasia",
+        "url": "https://www.nidcd.nih.gov/health/aphasia",
+        "note": "Definition, causes, and effects on reading and writing."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Speech and language disabilities."
+      }
+    ]
+  },
+  {
+    "id": "d1-voice-only-service",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A bank's customer line can only be used by speaking to an automated voice system. Which change best removes the barrier for customers with speech disabilities?",
+    "options": [
+      "Slow down the recorded prompts and repeat each option twice",
+      "Offer text-based contact, such as chat, email or a web form",
+      "Add a callback option that phones the customer at a later time",
+      "Improve the speech recognition model with more training data"
+    ],
+    "answer": 1,
+    "rationale": "W3C WAI lists services that rely on voice only, and phone numbers offered as the only way to make contact, as barriers for people with speech disabilities. Automatic speech recognition often fails to understand speech from people with conditions such as dysarthria, stuttering or apraxia, and people who are mute can't use it at all. The fix is an alternative of equal quality that doesn't need speech, such as chat, email or a feedback form. Deaf customers and people in noisy places benefit too.",
+    "distractors": {
+      "0": "Slower prompts may help some listeners, but the customer still has to speak to use the system.",
+      "2": "A callback is still a voice call, so the same barrier remains.",
+      "3": "Better recognition might help a little, but WAI notes these systems often fail with speech others can understand, and people who don't speak at all still can't use it."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Speech (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/speech/",
+        "note": "Voice-only services as a barrier; alternatives such as chat, email and forms."
+      }
+    ]
+  },
+  {
+    "id": "d1-dyscalculia",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Which design choice best supports users with dyscalculia?",
+    "options": [
+      "Using a dyslexia-friendly font for every block of body text",
+      "Adding background music to keep users engaged with lessons",
+      "Showing progress as a visual bar alongside the percentage",
+      "Requiring users to calculate totals before they can submit"
+    ],
+    "answer": 2,
+    "rationale": "Dyscalculia is a learning disability that affects a person's ability to understand number-based information, including math. Showing information visually as well as numerically, such as a progress bar next to a percentage, means people don't have to interpret numbers alone. Calculating totals for the user and avoiding tasks that need mental arithmetic also help. The Body of Knowledge lists dyscalculia among cognitive and learning disabilities.",
+    "distractors": {
+      "0": "Font choices target reading. Dyscalculia affects understanding numbers, so a font change does little for it.",
+      "1": "Background audio that can't be turned off is a barrier WAI lists for people with cognitive disabilities.",
+      "3": "This creates exactly the barrier dyscalculia causes. The system should do the arithmetic."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Cognitive, Learning, and Neurological (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Defines dyscalculia and gives examples of supports."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Cognitive disabilities, including dyscalculia."
+      }
+    ]
+  },
+  {
+    "id": "d1-adhd-barrier",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Which website feature is most likely to create a barrier for a user with ADHD?",
+    "options": [
+      "Autoplaying animation and ads that can't be paused or hidden",
+      "A skip link that jumps straight to the main page content",
+      "Headings that break a long article into short sections",
+      "A summary at the top of the page listing the key points"
+    ],
+    "answer": 0,
+    "rationale": "W3C WAI describes ADHD as difficulty focusing on a single task or for long periods, or being easily distracted. It lists moving, blinking or flickering content, and background audio that can't be turned off, as barriers for people with cognitive disabilities. Animation and ads compete directly for attention. Letting users pause, stop or hide motion, which WCAG 2.2.2 requires for content that moves for more than five seconds, and keeping the main task uncluttered both help.",
+    "distractors": {
+      "1": "Skip links help people get past repeated content and reach the main task faster.",
+      "2": "Clear headings support focus by making content easier to scan and return to.",
+      "3": "A summary helps people who find long passages hard to stay focused on."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Cognitive, Learning, and Neurological (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Describes ADHD and lists moving content and background audio as barriers."
+      }
+    ]
+  },
+  {
+    "id": "d1-memory-passwords",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Which barrier from W3C WAI's list most directly affects people with memory impairments, such as after a brain injury or with dementia?",
+    "options": [
+      "Passwords and access codes that must be recalled from memory",
+      "Video content that has no captions and no transcript at all",
+      "Images of key information that have no text alternative",
+      "Small click targets that are placed very close to each other"
+    ],
+    "answer": 0,
+    "rationale": "W3C WAI lists passwords and access codes that rely on memory as a barrier for people with cognitive and learning disabilities. People with brain injury, dementia or other memory impairments may not reliably recall a password, or copy a code from another device in time. Allowing password managers and paste, offering sign-in by email link or passkey, and avoiding short time-outs all help. WCAG 2.2 added success criterion 3.3.8 Accessible Authentication (Minimum) for this reason.",
+    "distractors": {
+      "1": "This is a real barrier, but mainly for people who are deaf or hard of hearing.",
+      "2": "This is a real barrier, but mainly for people who are blind or use screen readers.",
+      "3": "This is a real barrier, but mainly for people with tremor or limited dexterity."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Cognitive, Learning, and Neurological (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Lists memory-based passwords and time-outs as barriers."
+      }
+    ]
+  },
+  {
+    "id": "d1-cognitive-function-not-diagnosis",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Why do accessibility guides often describe cognitive disabilities by the functions affected, such as memory, attention or reading, rather than by diagnosis?",
+    "options": [
+      "Medical diagnoses of cognitive disability are rarely accurate or useful",
+      "Each diagnosis already has its own assistive technology product",
+      "Functional categories are required by the ICF for all web design",
+      "People with one diagnosis vary widely, and many have no diagnosis"
+    ],
+    "answer": 3,
+    "rationale": "Two people with the same diagnosis, such as autism or a brain injury, can have very different strengths and needs, and one person may have several conditions. W3C WAI notes many users have no formal diagnosis or don't disclose a disability because of social stigma. Designing for functions such as memory, attention, problem solving, reading and math addresses the actual barrier, whatever the label. The Body of Knowledge takes the same approach, describing supports in terms of functional limitations.",
+    "distractors": {
+      "0": "Diagnoses can be accurate and useful for treatment. The issue is that a label doesn't tell a designer what a particular person needs.",
+      "1": "There isn't a matching product for each diagnosis, and many supports come from design rather than AT.",
+      "2": "The ICF is a health classification, not a web design rule."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Cognitive, Learning, and Neurological (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Notes many users have no formal diagnosis or don't disclose."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Cognitive disabilities: barriers and solutions."
+      }
+    ]
+  },
+  {
+    "id": "d1-mental-health-disclosure",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "An employer plans to add supports for staff with mental health conditions once people disclose them. What is the main weakness of this plan?",
+    "options": [
+      "Mental health conditions cannot be accommodated in a typical workplace",
+      "Disclosure is required by law before an employer can offer any support",
+      "Most mental health conditions are temporary, so supports aren't needed",
+      "Stigma leads many people not to disclose, so supports should be built in"
+    ],
+    "answer": 3,
+    "rationale": "W3C WAI describes mental health disabilities as conditions that interfere with daily functioning through challenges with regulating emotions and thoughts, and notes that many people don't have a diagnosis or don't disclose because of social stigma. Supports that wait for disclosure miss those people. Building flexibility into everyday practice, such as clear instructions, predictable processes and adjustable time limits, helps without anyone having to identify themselves. Individual accommodations still matter for people who do ask.",
+    "distractors": {
+      "0": "Many supports, such as flexible schedules, clear expectations and quiet space, are simple to provide.",
+      "1": "Laws such as the ADA usually tie individual accommodations to a request, but nothing stops an employer offering supports to everyone.",
+      "2": "Many conditions are long-term or recurring, and even temporary conditions can need support while they last."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Cognitive, Learning, and Neurological (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Describes mental health disabilities and non-disclosure due to stigma."
+      }
+    ]
+  },
+  {
+    "id": "d1-color-only",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A dashboard shows healthy systems as green dots and failing systems as red dots, with no other difference. Which fix best removes the barrier for people with color vision deficiency?",
+    "options": [
+      "Switch the palette to a brighter green and a more saturated red",
+      "Add a text label or distinct shape so color isn't the only cue",
+      "Add a legend at the bottom explaining what each color means",
+      "Enlarge the dots so the colors are easier to see on small screens"
+    ],
+    "answer": 1,
+    "rationale": "Color vision deficiency, most often difficulty telling red from green, means two colors that look clearly different to most people can look nearly the same. W3C WAI lists it under visual disabilities. If color is the only way information is shown, those users lose it. A second cue such as text, an icon shape or a pattern fixes this, which is what WCAG 1.4.1 Use of Color requires.",
+    "distractors": {
+      "0": "Brighter colors don't help if the person can't tell those two hues apart.",
+      "2": "A legend still depends on telling the colors apart.",
+      "3": "Bigger dots are still distinguished only by color."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Visual (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/visual/",
+        "note": "Color vision deficiency and related barriers."
+      }
+    ]
+  },
+  {
+    "id": "d1-contrast-sensitivity",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Which design choice is most likely to be a barrier for people with reduced contrast sensitivity?",
+    "options": [
+      "Black body text on an off-white background",
+      "Light gray body text on a white background",
+      "Headings set slightly larger than body text",
+      "Underlined links in the same color as text"
+    ],
+    "answer": 1,
+    "rationale": "Low vision includes reduced contrast sensitivity, where text that isn't clearly darker or lighter than its background fades or blurs. W3C WAI lists contrast sensitivity under visual disabilities, and its older users page notes contrast sensitivity also declines with age. Pale gray text on white is a common style that fails these users. WCAG 1.4.3 sets a minimum contrast ratio of 4.5:1 for normal-size text.",
+    "distractors": {
+      "0": "This has strong contrast, which is what people with reduced contrast sensitivity need.",
+      "2": "Larger headings help structure and don't reduce contrast.",
+      "3": "The underline gives links a cue that doesn't depend on color, and the text keeps its contrast."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Visual (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/visual/",
+        "note": "Low vision, including contrast sensitivity."
+      },
+      {
+        "title": "W3C WAI: Older Users and Web Accessibility",
+        "url": "https://www.w3.org/WAI/older-users/",
+        "note": "Lists reduced contrast sensitivity among age-related changes."
+      }
+    ]
+  },
+  {
+    "id": "d1-tremor-targets",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A user with a hand tremor keeps selecting the wrong item in a dense toolbar of small icons. Which change helps most?",
+    "options": [
+      "Icons with brighter colors and thicker outlines",
+      "A faster double-click speed setting for the mouse",
+      "Larger targets with more space between them",
+      "Tooltips that appear when the pointer pauses"
+    ],
+    "answer": 2,
+    "rationale": "W3C WAI notes that tremors, non-typical joints, pain or fatigue can prevent people from selecting small targets, and recommends large clickable areas. Space between targets reduces accidental activation of neighbors. Keyboard access and the ability to undo or confirm also help. WCAG 2.2 added 2.5.8 Target Size (Minimum), which sets a baseline of 24 by 24 CSS pixels or enough spacing.",
+    "distractors": {
+      "0": "Easier to see, but no easier to hit with an unsteady hand.",
+      "1": "A faster double-click makes things harder for someone with tremor. Slower settings are the usual adaptive strategy.",
+      "3": "Tooltips add information but don't make targets easier to hit, and can pop up unexpectedly."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Tremor and small targets; recommends large clickable areas."
+      }
+    ]
+  },
+  {
+    "id": "d1-temporary-situational",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "A person with a broken arm and a person reading a phone in bright sunlight both run into barriers that accessible design removes. How does W3C WAI describe these two situations?",
+    "options": [
+      "A permanent disability and a temporary limitation",
+      "A temporary disability and a situational limitation",
+      "Two examples of permanent sensory disabilities",
+      "A mobility impairment and a cognitive impairment"
+    ],
+    "answer": 1,
+    "rationale": "W3C WAI points out that accessibility also benefits people without disabilities, including people with temporary disabilities such as a broken arm or lost glasses, and people with situational limitations such as bright sunlight or a place where they can't listen to audio. The same design choices, like good contrast, captions and keyboard access, remove barriers for all of them. This widens the case for accessibility well beyond people with permanent disabilities.",
+    "distractors": {
+      "0": "A broken arm heals, so it isn't permanent, and bright sunlight is about the situation, not the person.",
+      "2": "Neither is permanent, and a broken arm is physical rather than sensory.",
+      "3": "Bright sunlight affects seeing the screen, not cognition."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Introduction to Web Accessibility",
+        "url": "https://www.w3.org/WAI/fundamentals/accessibility-intro/",
+        "note": "Temporary disabilities and situational limitations."
+      }
+    ]
+  },
+  {
+    "id": "d1-multiple-disabilities",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "Why is designing for people with multiple disabilities more than adding up the solutions for each one?",
+    "options": [
+      "A solution for one may depend on an ability affected by another",
+      "People with multiple disabilities are not covered by most AT",
+      "Laws require a separate product for each type of disability",
+      "Multiple disabilities are rare enough to be handled case by case"
+    ],
+    "answer": 0,
+    "rationale": "The Body of Knowledge treats multiple disabilities as a category of its own. Captions help a deaf person, but not someone who is deaf and has low vision unless the captions can be enlarged or sent to braille. A screen reader's speech helps a blind person, but not one who is also deaf. The Body of Knowledge also notes that people with more than one disability often fall between the groups statistics use.",
+    "distractors": {
+      "1": "Many assistive technologies are used by people with multiple disabilities. The issue is how solutions interact.",
+      "2": "No law requires a separate product per disability.",
+      "3": "They aren't rare, especially as people age, so they need planning rather than exceptions."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Multiple disabilities; Domain 1D on statistics and multiple disabilities."
+      }
+    ]
+  },
+  {
+    "id": "d1-older-adults",
+    "domain": 1,
+    "topic": "d1b",
+    "question": "W3C WAI describes an older user, Elias, as a retiree with low vision, a hand tremor and mild short-term memory loss. What does his profile illustrate about older users?",
+    "options": [
+      "Older users mostly need specialist assistive technology",
+      "Age-related changes usually affect only one ability",
+      "Older users are rarely online, so their needs are minor",
+      "Several mild age-related changes often occur together"
+    ],
+    "answer": 3,
+    "rationale": "W3C WAI lists common age-related changes: reduced contrast sensitivity, color perception and near focus; reduced dexterity and fine motor control; difficulty hearing higher-pitched sounds; and reduced short-term memory or concentration. Each change may be mild, but together they create real barriers, which is why the Body of Knowledge's multiple disabilities category matters. WAI says these needs overlap heavily with the needs of people with disabilities, so accessible design serves both.",
+    "distractors": {
+      "0": "WAI says many older users' needs should be met through browsers and good design rather than extra assistive technology.",
+      "1": "Elias's profile shows the opposite: vision, dexterity and memory are all affected.",
+      "2": "Older people are a large and growing group of web users, which is why WAI addresses them directly."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Older Users and Web Accessibility",
+        "url": "https://www.w3.org/WAI/older-users/",
+        "note": "Age-related changes and the Elias persona."
+      }
+    ]
+  },
+  {
+    "id": "d1-screen-reader-output",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "In what forms can a screen reader present content to its user?",
+    "options": [
+      "Enlarged text and high-contrast colors on the screen",
+      "Synthesized speech or a refreshable braille display",
+      "Vibration patterns that encode each character in turn",
+      "Real-time captions of the audio playing on the device"
+    ],
+    "answer": 1,
+    "rationale": "A screen reader converts on-screen text and interface information into synthesized speech, braille on a refreshable display, or both. W3C WAI describes screen readers as software for people who can't read the text on screen. Users move by headings, links, landmarks and form controls using keyboard commands or touch gestures, so meaningful structure and labels matter. Deaf-blind users often rely on the braille output.",
+    "distractors": {
+      "0": "That describes screen magnification and display settings, not a screen reader.",
+      "2": "Screen readers don't encode text as vibration. Haptics may signal events, but speech and braille carry the content.",
+      "3": "Live captions turn audio into text for deaf and hard of hearing users. Screen readers turn on-screen content into speech or braille."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Tools and Techniques",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/",
+        "note": "Describes screen readers."
+      },
+      {
+        "title": "W3C WAI: Visual (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/visual/",
+        "note": "Notes screen readers can output speech or braille."
+      }
+    ]
+  },
+  {
+    "id": "d1-speech-recognition-user",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A person with quadriplegia wants to dictate emails and click links without using their hands. Which assistive technology fits best?",
+    "options": [
+      "Speech recognition software",
+      "Screen reader software",
+      "Screen magnification software",
+      "Text-to-speech reading tool"
+    ],
+    "answer": 0,
+    "rationale": "Speech recognition lets people dictate text and control the computer by voice, for example by saying the name of a link or button. W3C WAI lists it among tools for people who can't use a keyboard or mouse, alongside eye tracking and switches. It works best when a control's visible label matches its programmatic name, so the user knows what to say. WCAG 2.5.3 Label in Name addresses exactly this.",
+    "distractors": {
+      "1": "A screen reader reads content aloud for people who can't see it. It doesn't take voice commands as input.",
+      "2": "Magnification enlarges what's on screen for people with low vision. It doesn't help someone who can't use their hands.",
+      "3": "Text-to-speech reads text aloud. It's output, not a way to control the computer."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Tools and Techniques",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/",
+        "note": "Describes speech recognition software."
+      },
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Speech recognition for hands-free interaction and labels that match code names."
+      }
+    ]
+  },
+  {
+    "id": "d1-text-to-speech-dyslexia",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A student with dyslexia can see the page clearly but reads slowly and loses their place. Which tool is the best fit?",
+    "options": [
+      "A screen reader that is operated from the keyboard alone",
+      "A refreshable braille display connected to the computer",
+      "Text-to-speech that highlights words as it reads aloud",
+      "A screen magnifier set to enlarge the screen four times"
+    ],
+    "answer": 2,
+    "rationale": "Text-to-speech reading tools read selected text aloud, and many highlight each word as it's read, so the reader can listen and follow along. They suit people with dyslexia or other reading difficulties who can see the screen but benefit from hearing the text. A screen reader serves a different need: full access without seeing the screen. W3C WAI lists text-to-speech among the tools people use, and dyslexia among cognitive and learning disabilities.",
+    "distractors": {
+      "0": "A screen reader gives full non-visual access, which is more than this student needs and much harder to learn.",
+      "1": "Braille displays serve people who read braille, mostly blind or deaf-blind users.",
+      "3": "The student can see the text clearly. Magnification would mean more scrolling, not easier reading."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Tools and Techniques",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/",
+        "note": "Lists text-to-speech among assistive tools."
+      },
+      {
+        "title": "W3C WAI: Cognitive, Learning, and Neurological (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/cognitive/",
+        "note": "Describes dyslexia and reading difficulties."
+      }
+    ]
+  },
+  {
+    "id": "d1-sip-and-puff",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "What is a sip-and-puff device?",
+    "options": [
+      "A braille keyboard with keys operated by the fingertips",
+      "An eye-tracking camera that follows where a person looks",
+      "A head-worn pointer used for pressing keys on a keyboard",
+      "A switch operated by inhaling or exhaling through a tube"
+    ],
+    "answer": 3,
+    "rationale": "Sip-and-puff is a type of switch: the user sips (inhales) or puffs (exhales) into a tube to send signals, which software turns into selections or clicks. W3C WAI lists switches operated by foot, shoulder, sip-and-puff or other movements among the tools people with physical disabilities use. Like other switches, it is often paired with scanning, where options are highlighted in turn until the user selects one. It suits people with very limited movement of their limbs.",
+    "distractors": {
+      "0": "Braille keyboards are typed with the fingers. Sip-and-puff is for people who can't use their hands.",
+      "1": "Eye tracking uses gaze. Sip-and-puff uses breath.",
+      "2": "That's a head pointer, a different typing aid."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Lists switches operated by sip-and-puff and other movements."
+      }
+    ]
+  },
+  {
+    "id": "d1-eye-tracking",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A person with advanced ALS can no longer move their hands or head but has reliable control of their eyes. Which input method fits best?",
+    "options": [
+      "An eye-tracking system that moves the pointer with gaze",
+      "A head pointer worn to press keys on a standard keyboard",
+      "A mouth stick used to tap keys on a touchscreen keyboard",
+      "A trackball positioned so it can be rolled with the palm"
+    ],
+    "answer": 0,
+    "rationale": "Eye tracking, or eye gaze, uses a camera to follow where a person is looking and moves the pointer there. The user selects by dwelling on a target or with another signal, such as a blink or a switch. W3C WAI lists eye tracking among hands-free approaches. Paired with an on-screen keyboard or communication software, it lets people with very limited movement write, browse and speak through a device.",
+    "distractors": {
+      "1": "A head pointer needs head movement, which this person no longer has.",
+      "2": "A mouth stick needs head and neck control to aim it.",
+      "3": "A trackball still needs hand movement."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Lists eye tracking among hands-free approaches."
+      }
+    ]
+  },
+  {
+    "id": "d1-head-pointer-mouth-stick",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "What do a head pointer and a mouth stick have in common?",
+    "options": [
+      "Both let a person press keys or touch a screen without hands",
+      "Both convert spoken commands into keystrokes and mouse clicks",
+      "Both track eye movement to position the pointer on the screen",
+      "Both are switches that activate when the user breathes out hard"
+    ],
+    "answer": 0,
+    "rationale": "W3C WAI lists head pointers, mouth sticks and other aids that help with typing. A head pointer is a stick worn on the head, and a mouth stick is held in the mouth; the user aims it by moving their head to press keys or touch a screen. Typing this way is slow and tiring. Features that avoid pressing several keys at once, and generous time limits, make a real difference.",
+    "distractors": {
+      "1": "That describes speech recognition software.",
+      "2": "That describes eye tracking.",
+      "3": "That describes a sip-and-puff switch."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Lists head pointers and mouth sticks as typing aids."
+      }
+    ]
+  },
+  {
+    "id": "d1-on-screen-keyboard",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "Which user is most likely to type with an on-screen keyboard?",
+    "options": [
+      "Someone who is blind and navigates the web with a screen reader",
+      "Someone who is hard of hearing and relies on captions",
+      "Someone with dyscalculia who struggles with numbers",
+      "Someone who can use a trackball or joystick but not a keyboard"
+    ],
+    "answer": 3,
+    "rationale": "An on-screen keyboard shows a keyboard on the display, and the user picks keys with a pointing device. W3C WAI lists on-screen keyboards used with trackballs, joysticks or other pointing devices. That suits people who can control a pointer but can't use a physical keyboard. It can also be driven by eye tracking or switch scanning.",
+    "distractors": {
+      "0": "Screen reader users usually type on a physical keyboard or with touch gestures. An on-screen keyboard is a visual pointing tool.",
+      "1": "Hearing loss doesn't affect the ability to use a physical keyboard.",
+      "2": "Dyscalculia affects working with numbers, not the physical act of typing."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Lists on-screen keyboards with trackballs, joysticks and other pointing devices."
+      }
+    ]
+  },
+  {
+    "id": "d1-aac-types",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A child points to pictures on a laminated board, and an adult types messages that a tablet speaks aloud. What do these two have in common?",
+    "options": [
+      "Both are speech recognition tools for people with dysarthria",
+      "Both are hearing technologies for people who are hard of hearing",
+      "Both are reading supports designed for people who have dyslexia",
+      "Both are forms of augmentative and alternative communication"
+    ],
+    "answer": 3,
+    "rationale": "ASHA defines augmentative and alternative communication (AAC) as all the ways people communicate other than talking. Augmentative means adding to speech, and alternative means using something instead of it. Low-tech options include picture boards, writing and drawing; high-tech options include apps and speech-generating devices. The Body of Knowledge lists AAC as a solution for speech and language disabilities.",
+    "distractors": {
+      "0": "Speech recognition turns speech into text. These tools replace or support speech instead.",
+      "1": "These tools help people express themselves, not hear.",
+      "2": "These tools are for communicating, not reading."
+    },
+    "sources": [
+      {
+        "title": "ASHA: Augmentative and Alternative Communication",
+        "url": "https://www.asha.org/public/speech/disorders/aac/",
+        "note": "Definition of AAC, low-tech and high-tech options."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Speech and language disabilities: AAC."
+      }
+    ]
+  },
+  {
+    "id": "d1-aac-myth",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A parent worries that giving their young child an AAC device will stop the child from learning to talk. What does research indicate?",
+    "options": [
+      "AAC should wait until speech therapy has fully failed",
+      "AAC slows speech, so it is only suitable for adults",
+      "AAC replaces speech, so the child will stop trying to talk",
+      "AAC doesn't stop speech and can help language development"
+    ],
+    "answer": 3,
+    "rationale": "According to ASHA, research shows AAC doesn't stop people from talking or slow language development, and it can help. AAC is used by people of all ages with severe speech or language difficulties, some for life and some for a short time, such as after surgery. Children can start early, even before age 3, and AAC users can also learn to read and write.",
+    "distractors": {
+      "0": "Waiting delays communication during a key period. ASHA notes children can start AAC early, even before age 3.",
+      "1": "Research doesn't show AAC slows speech, and it is used by people of all ages.",
+      "2": "This is the myth the question describes. AAC can support speech as well as replace it."
+    },
+    "sources": [
+      {
+        "title": "ASHA: Augmentative and Alternative Communication",
+        "url": "https://www.asha.org/public/speech/disorders/aac/",
+        "note": "Addresses the myth that AAC stops speech development."
+      }
+    ]
+  },
+  {
+    "id": "d1-cart",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "At a live conference, a trained captioner types everything that is said into text that appears on a screen in real time. What is this service called?",
+    "options": [
+      "Automatic speech recognition captioning (ASR)",
+      "Video relay service with a sign language interpreter",
+      "Audio description of the slides and the stage action",
+      "Communication Access Realtime Translation (CART)"
+    ],
+    "answer": 3,
+    "rationale": "CART is real-time captioning produced by a trained human, often a stenographer, who turns speech into text at speaking speed. The Body of Knowledge lists CART, also called speech-to-text reporting (STTR), as a solution for auditory disabilities. Human captioners handle names, jargon and multiple speakers far better than automatic systems. It can be provided in person or remotely.",
+    "distractors": {
+      "0": "ASR captions are produced by software, not a trained human captioner.",
+      "1": "Video relay connects a sign language user to a phone call through an interpreter. It doesn't put text on a screen.",
+      "2": "Audio description narrates visual content for blind and low vision audiences."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1B, Auditory disabilities: CART and STTR."
+      }
+    ]
+  },
+  {
+    "id": "d1-auto-captions",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A training team plans to rely only on auto-generated captions for all its videos. What is the main accessibility concern?",
+    "options": [
+      "Automatic captions can't be turned off by users who don't want them",
+      "Caption files make videos load too slowly on mobile connections",
+      "Automatic captions are often too inaccurate to rely on alone",
+      "Captions are only required for videos that are longer than an hour"
+    ],
+    "answer": 2,
+    "rationale": "W3C WAI says automatic captions are usually too inaccurate to rely on as an alternative: they miss specialized terms and names and can run sentences together. For deaf and hard of hearing users, wrong captions can change the meaning entirely. Auto-captions are a reasonable first draft if a person reviews and corrects them. WCAG 1.2.2 requires captions for prerecorded audio in synchronized media.",
+    "distractors": {
+      "0": "Captions can usually be turned on or off in the player. That isn't the concern.",
+      "1": "Caption files are small text files and have little effect on load time.",
+      "3": "Length doesn't matter. WCAG requires captions for prerecorded audio in synchronized media."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Auditory (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/auditory/",
+        "note": "Automatic captions are usually too inaccurate to rely on."
+      }
+    ]
+  },
+  {
+    "id": "d1-descriptive-transcript",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "A deaf-blind student reads using a refreshable braille display. Which alternative gives them access to an instructional video?",
+    "options": [
+      "Open captions burned into the video at a larger size",
+      "An audio description track mixed into the soundtrack",
+      "A sign language interpreter shown in a corner window",
+      "A descriptive transcript of the dialogue and key visuals"
+    ],
+    "answer": 3,
+    "rationale": "W3C WAI explains that deaf-blind people rely on descriptive transcripts, which contain all the audio and visual information so the video can be understood without watching or listening. Because it's text, a transcript can be read on a braille display. Captions, audio description and on-screen interpreters each depend on sight or hearing. Transcripts also help people who want to skim or search content.",
+    "distractors": {
+      "0": "Captions on the video still need to be seen.",
+      "1": "Audio description still needs to be heard.",
+      "2": "A video interpreter still needs to be seen."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Auditory (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/auditory/",
+        "note": "Descriptive transcripts for deaf-blind users."
+      }
+    ]
+  },
+  {
+    "id": "d1-hearing-aid-vs-cochlear",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "How does a cochlear implant differ from a hearing aid?",
+    "options": [
+      "It bypasses damaged parts of the ear to stimulate the hearing nerve",
+      "It amplifies sound so a damaged ear can still detect it more easily",
+      "It restores normal hearing once the surgery and healing are complete",
+      "It converts speech to on-screen text in real time for the wearer"
+    ],
+    "answer": 0,
+    "rationale": "A hearing aid amplifies sound so a damaged ear can detect it. A cochlear implant bypasses damaged parts of the ear and directly stimulates the auditory nerve, and the brain learns to interpret those signals as sound. NIDCD says implants can help people who are profoundly deaf or severely hard of hearing, but they don't restore normal hearing. Implant users may still need captions, especially in noisy settings.",
+    "distractors": {
+      "1": "That describes a hearing aid.",
+      "2": "NIDCD states plainly that an implant doesn't restore normal hearing. Hearing through one takes time to learn.",
+      "3": "That describes live captioning, not an implant."
+    },
+    "sources": [
+      {
+        "title": "NIDCD: Cochlear Implants",
+        "url": "https://www.nidcd.nih.gov/health/cochlear-implants",
+        "note": "How implants differ from hearing aids; implants don't restore normal hearing."
+      }
+    ]
+  },
+  {
+    "id": "d1-visual-haptic-alerts",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "An app signals new messages only with a chime. Which change follows W3C WAI guidance for users who are deaf or hard of hearing?",
+    "options": [
+      "Make the chime louder and give it a higher pitch",
+      "Repeat the chime every minute until it is noticed",
+      "Add a visual alert and vibration alongside the sound",
+      "Let users choose a different chime from a sound list"
+    ],
+    "answer": 2,
+    "rationale": "W3C WAI recommends using visual alerts and haptic feedback, such as vibration on mobile phones, in addition to audio, so apps don't rely on sound alone. Hearing loss ranges from mild to profound, and for many people no change to the sound fixes the problem. Giving the same information through more than one sense also helps people in noisy places or with their sound off.",
+    "distractors": {
+      "0": "No volume or pitch reaches someone who can't hear it, and higher pitches are often the hardest to hear.",
+      "1": "Repetition doesn't help if the sound can't be heard.",
+      "3": "Every option is still sound only."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Auditory (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/auditory/",
+        "note": "Recommends visual alerts and haptic feedback in addition to audio."
+      }
+    ]
+  },
+  {
+    "id": "d1-adaptive-strategy",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "Which of these is an adaptive strategy rather than a piece of assistive technology?",
+    "options": [
+      "Increasing text size using the browser's built-in zoom",
+      "Reading web pages with a screen reader and headphones",
+      "Typing with a sip-and-puff switch and scanning software",
+      "Reading content on a refreshable braille display"
+    ],
+    "answer": 0,
+    "rationale": "W3C WAI describes adaptive strategies as techniques people use to improve their interaction with the web, including with standard software and mainstream browsers. Its examples are increasing text size, reducing mouse speed and turning on captions. Assistive technology is specialized hardware or software, such as screen readers, switches and braille displays. The two often work together.",
+    "distractors": {
+      "1": "A screen reader is assistive technology.",
+      "2": "Switches and scanning software are assistive technology.",
+      "3": "A braille display is assistive technology."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Tools and Techniques",
+        "url": "https://www.w3.org/WAI/people-use-web/tools-techniques/",
+        "note": "Defines adaptive strategies with examples."
+      }
+    ]
+  },
+  {
+    "id": "d1-keyboard-support",
+    "domain": 1,
+    "topic": "d1c",
+    "question": "Why is full keyboard support so important for many people with physical disabilities?",
+    "options": [
+      "Keyboards reduce screen glare for users who have light sensitivity",
+      "Keyboard use is required for screen magnifiers to enlarge the page",
+      "Many use a keyboard or keyboard-like device instead of a mouse",
+      "Most of them use only touchscreens, which simulate a full keyboard"
+    ],
+    "answer": 2,
+    "rationale": "W3C WAI says people with physical disabilities rely on keyboard support to activate functions, and some use only a keyboard or a keyboard-like device. A site without full keyboard support blocks them entirely, and WAI lists it first among barriers for physical disabilities. WCAG 2.1.1 Keyboard requires that all functions work from a keyboard interface.",
+    "distractors": {
+      "0": "Keyboard support has nothing to do with glare.",
+      "1": "Magnifiers work with a mouse or a keyboard. Keyboard support matters for a different reason.",
+      "3": "Touchscreens can be hard to use with limited dexterity, and they don't explain why keyboard support matters."
+    },
+    "sources": [
+      {
+        "title": "W3C WAI: Physical (Diverse Abilities and Barriers)",
+        "url": "https://www.w3.org/WAI/people-use-web/abilities-barriers/physical/",
+        "note": "Keyboard reliance and lack of keyboard support as a barrier."
+      }
+    ]
+  },
+  {
+    "id": "d1-vision-impairment-prevalence",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "According to the World Health Organization, how many people worldwide have a near or distance vision impairment?",
+    "options": [
+      "About 430 million",
+      "About 50 million",
+      "At least 2.2 billion",
+      "About 1.3 billion"
+    ],
+    "answer": 2,
+    "rationale": "WHO estimates at least 2.2 billion people have a near or distance vision impairment, and in about 1 billion of those cases it could have been prevented or has yet to be addressed. The figure is larger than the 1.3 billion with significant disability overall because many vision impairments are mild or correctable, for example with glasses. Matching each headline figure to its condition is a common exam task.",
+    "distractors": {
+      "0": "That's WHO's figure for people who need rehabilitation for disabling hearing loss.",
+      "1": "That's WHO's figure for people with epilepsy.",
+      "3": "That's WHO's figure for people with significant disability overall."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Blindness and vision impairment",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment",
+        "note": "Global prevalence figures."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Demographics and statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-vision-impairment-facts",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "Which statement about vision impairment matches WHO's fact sheet?",
+    "options": [
+      "About 1 billion cases could have been prevented or are unaddressed",
+      "Most people with vision impairment are under the age of 20",
+      "Vision impairment affects only about 50 million people worldwide",
+      "Most cases are caused by eye injuries rather than eye conditions"
+    ],
+    "answer": 0,
+    "rationale": "WHO reports that at least 2.2 billion people have a near or distance vision impairment, and in about 1 billion of these cases it could have been prevented or has yet to be addressed. Leading causes include refractive errors, cataract, diabetic retinopathy, glaucoma and age-related macular degeneration. Most people with vision impairment are over 50. The Body of Knowledge adds that most people with vision impairment live in low-income settings.",
+    "distractors": {
+      "1": "WHO says most people with vision impairment and blindness are over 50.",
+      "2": "The WHO figure is at least 2.2 billion. 50 million is closer to WHO's epilepsy figure.",
+      "3": "WHO lists conditions such as refractive error and cataract as leading causes."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Blindness and vision impairment",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/blindness-and-visual-impairment",
+        "note": "Prevalence, causes and age profile."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Visual disabilities statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-hearing-loss-prevalence",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "WHO estimates how many people worldwide need rehabilitation for disabling hearing loss?",
+    "options": [
+      "About 34 million",
+      "About 430 million",
+      "About 2.2 billion",
+      "About 1 billion"
+    ],
+    "answer": 1,
+    "rationale": "WHO estimates about 430 million people, including 34 million children, need rehabilitation for disabling hearing loss. WHO also warns that over 1 billion young adults are at risk of avoidable hearing loss from unsafe listening. The Body of Knowledge uses the 430 million figure.",
+    "distractors": {
+      "0": "34 million is the number of children among the 430 million.",
+      "2": "That's WHO's figure for vision impairment.",
+      "3": "Over 1 billion is WHO's figure for young adults at risk from unsafe listening, not people who already need rehabilitation."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Deafness and hearing loss",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss",
+        "note": "Prevalence and risk figures."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Auditory disabilities statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-hearing-2050",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "What does WHO project for hearing loss by 2050?",
+    "options": [
+      "Nearly 2.5 billion people will have some degree of hearing loss",
+      "Hearing loss will fall sharply as hearing aids become cheaper",
+      "About 50 million people will need hearing rehabilitation services",
+      "Hearing loss will stay level, since it mainly affects older adults"
+    ],
+    "answer": 0,
+    "rationale": "WHO projects that by 2050 nearly 2.5 billion people will have some degree of hearing loss, and over 700 million, about 1 in 10 people, will need hearing rehabilitation. The growth comes from ageing populations and avoidable causes such as unsafe listening. For accessibility, it means captions, transcripts and visual alerts will matter to more and more users.",
+    "distractors": {
+      "1": "WHO projects a large rise, not a fall.",
+      "2": "WHO projects more than 700 million people will need rehabilitation.",
+      "3": "Populations are ageing, which pushes numbers up, and unsafe listening puts young people at risk too."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Deafness and hearing loss",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss",
+        "note": "2050 projections."
+      }
+    ]
+  },
+  {
+    "id": "d1-epilepsy-stats",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "Which statement about epilepsy matches WHO's figures?",
+    "options": [
+      "Around 5 million people have it, mostly in high-income countries",
+      "Around 50 million people have it, and up to 70% could be seizure-free",
+      "Around 50 million people have it, but few respond to any treatment",
+      "Around 500 million people have it, with most cases in older adults"
+    ],
+    "answer": 1,
+    "rationale": "WHO estimates around 50 million people worldwide have epilepsy, and nearly 80% of them live in low- and middle-income countries. Up to 70% could live seizure-free if properly diagnosed and treated. People with epilepsy also face stigma and discrimination. For digital accessibility, photosensitive seizures are the reason for WCAG's limits on flashing content.",
+    "distractors": {
+      "0": "Both parts are wrong: about 50 million, and nearly 80% live in low- and middle-income countries.",
+      "2": "WHO says up to 70% could live seizure-free with proper diagnosis and treatment.",
+      "3": "WHO's figure is about 50 million, and epilepsy affects people of all ages."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Epilepsy",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/epilepsy",
+        "note": "Prevalence, distribution and treatment figures."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Seizure disorders statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-autism-prevalence",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "Roughly how common is autism worldwide, according to WHO and CPACC figures?",
+    "options": [
+      "About 1 in 10 people",
+      "About 1 in 1,000 people",
+      "About 1 in 100 people",
+      "About 1 in 10,000 people"
+    ],
+    "answer": 2,
+    "rationale": "The Body of Knowledge cites about 1 in 100 people. WHO's more recent estimate, for 2021, is about 1 in 127 people, so both put autism at around one percent. Estimates vary between studies and countries. WHO stresses that the abilities and needs of autistic people vary widely, which is why designing for functions rather than labels matters.",
+    "distractors": {
+      "0": "That's far too high for autism.",
+      "1": "That's ten times too low.",
+      "3": "That's a hundred times too low."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Autism",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/autism-spectrum-disorders",
+        "note": "Prevalence estimate and diversity of abilities."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Cognitive disabilities statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-at-need",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "What does WHO report about global need for and access to assistive technology?",
+    "options": [
+      "About 50 million need it, and most of them already have the products they need",
+      "Over 2.5 billion need it, yet access is as low as 3% in some poorer countries",
+      "Over 2.5 billion need it, and access is now above 90% in nearly every country",
+      "Need is falling, because mainstream devices have replaced specialist products"
+    ],
+    "answer": 1,
+    "rationale": "WHO reports that more than 2.5 billion people need one or more assistive products, such as glasses, hearing aids, wheelchairs or communication software, and expects this to reach 3.5 billion by 2050. Access is deeply unequal: as low as 3% in some low-income countries against 90% in some high-income countries. That gap is why affordability and availability are part of accessibility, not just design.",
+    "distractors": {
+      "0": "Need is far higher, over 2.5 billion, and many people go without.",
+      "2": "Access reaches 90% only in some high-income countries. It is as low as 3% in some low-income ones.",
+      "3": "WHO projects need rising to 3.5 billion by 2050."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Assistive technology",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/assistive-technology",
+        "note": "Global need and access figures."
+      }
+    ]
+  },
+  {
+    "id": "d1-health-inequity",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "Which finding about health inequities appears in WHO's fact sheet on disability?",
+    "options": [
+      "People with disabilities have the same life expectancy as others",
+      "Some people with disabilities die up to 20 years earlier than others",
+      "Health gaps disappear once a country ratifies the CRPD",
+      "Health inequities affect only people with intellectual disabilities"
+    ],
+    "answer": 1,
+    "rationale": "WHO reports that some persons with disabilities die up to 20 years earlier than people without disabilities, and that they have twice the risk of conditions such as depression, asthma, diabetes, stroke and obesity. WHO says these inequities arise from unfair conditions, including barriers in the health system itself, rather than from the impairment alone. Inaccessible transport is one example: WHO says it is 15 times more difficult for persons with disabilities.",
+    "distractors": {
+      "0": "WHO reports some die up to 20 years earlier.",
+      "2": "Ratification creates obligations, but WHO describes gaps that persist.",
+      "3": "WHO describes inequities across persons with disabilities generally."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Disability (March 2023)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/disability-and-health",
+        "note": "Health inequity findings."
+      }
+    ]
+  },
+  {
+    "id": "d1-stats-limitations",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "According to the CPACC Body of Knowledge, why are disability statistics hard to compare between countries?",
+    "options": [
+      "Disability rates are nearly identical, so comparison adds little",
+      "International law forbids countries from collecting disability data",
+      "Census surveys always ask detailed questions on every disability",
+      "Countries define and ask about disability in different ways"
+    ],
+    "answer": 3,
+    "rationale": "The Body of Knowledge lists several limits on disability statistics. Census surveys usually don't include details on different disabilities, terminology varies between countries, and many people have more than one disability and fall between defined groups. Statistics are still useful for context and scale, but should be read in the context of the original study.",
+    "distractors": {
+      "0": "Reported rates vary widely, partly because of how they're measured.",
+      "1": "No such ban exists. Governments collect data to plan services.",
+      "2": "The Body of Knowledge notes the opposite: censuses usually leave out details about different disabilities."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Limitations of disability statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-dyslexia-prevalence",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "The CPACC Body of Knowledge estimates roughly what share of people have dyslexia?",
+    "options": [
+      "About 5 to 10 percent",
+      "Less than 1 percent",
+      "About 30 to 40 percent",
+      "More than 50 percent"
+    ],
+    "answer": 0,
+    "rationale": "The Body of Knowledge gives about 5 to 10 percent, with some estimates as high as 17 percent, depending on the definition used. For dyscalculia it gives about 3 to 6 percent. Many people are never formally diagnosed. Either way, reading supports such as plain language, clear layout and text-to-speech matter to a large group of users.",
+    "distractors": {
+      "1": "Dyslexia is far more common than that.",
+      "2": "That's several times higher than the estimates.",
+      "3": "That would make dyslexia the majority experience, which it isn't."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1D, Cognitive disabilities statistics."
+      }
+    ]
+  },
+  {
+    "id": "d1-disability-growing",
+    "domain": 1,
+    "topic": "d1d",
+    "question": "Why does WHO expect the number of people with significant disability to keep rising?",
+    "options": [
+      "Diagnostic criteria for disability are getting much broader each year",
+      "Accessibility laws require people to register as disabled more often",
+      "People are living longer and noncommunicable diseases are increasing",
+      "Infectious diseases are now the main cause of new disabilities"
+    ],
+    "answer": 2,
+    "rationale": "WHO estimates 1.3 billion people, about 16% of the world's population, have significant disability, and says the number is growing because of an increase in noncommunicable diseases and people living longer. Because disability becomes more common with age, ageing populations mean more users with disabilities every year. This is a strong argument for building accessibility in from the start.",
+    "distractors": {
+      "0": "WHO points to demographic and health trends, not changing definitions.",
+      "1": "Registration rules don't drive WHO's estimate.",
+      "3": "WHO names noncommunicable diseases, such as diabetes and heart disease, not infections."
+    },
+    "sources": [
+      {
+        "title": "WHO fact sheet: Disability (March 2023)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/disability-and-health",
+        "note": "Prevalence and reasons for growth."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-ask-first",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "You see a blind person with a white cane pausing at a busy street corner. What is the most appropriate thing to do?",
+    "options": [
+      "Take their arm and guide them across once the signal changes",
+      "Ask if they'd like help, and follow their lead if they accept",
+      "Call out loudly to warn them that the street is busy ahead",
+      "Move their cane to point at the crosswalk so they find it faster"
+    ],
+    "answer": 1,
+    "rationale": "Etiquette guides advise offering help only when someone appears to need it, and asking before acting. If the person accepts, ask how you can help and follow their instructions; if they decline, respect that. The Body of Knowledge stresses not assuming what someone can or can't do, and respecting their autonomy. The person is the expert on what works for them.",
+    "distractors": {
+      "0": "Grabbing someone's arm takes control away and can throw them off balance. Ask first.",
+      "2": "They are likely already listening to the traffic. Shouting adds noise without offering real help.",
+      "3": "A cane is part of the person's personal space. Never move it without permission."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Ask before you help."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Domain 1E, Disability etiquette."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-wheelchair-space",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "Which behavior respects the personal space of someone who uses a wheelchair?",
+    "options": [
+      "Resting your coffee on their chair's tray so it's within reach",
+      "Patting them on the shoulder each time you greet or say goodbye",
+      "Not leaning on, pushing or touching the chair without asking",
+      "Pushing the chair up a ramp to save them time and effort"
+    ],
+    "answer": 2,
+    "rationale": "Etiquette guides treat a wheelchair as part of the user's personal space. Don't lean on it, push it or put things on it unless asked. In a longer conversation, sit down to be at eye level if you can, or stand a little back so the person doesn't have to strain to look up. Say wheelchair user rather than wheelchair-bound.",
+    "distractors": {
+      "0": "Etiquette guides say not to put drinks or other items on a wheelchair user's tray.",
+      "1": "Unwanted touch is no more acceptable for a wheelchair user than for anyone else.",
+      "3": "Don't push a chair without being asked. Offer help and let them decide."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Wheelchair etiquette: personal space, eye level, pushing."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-guide-dog",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "A guide dog is lying quietly beside its handler in a meeting. What should you do?",
+    "options": [
+      "Leave it alone, since a working dog shouldn't be distracted",
+      "Pet the dog briefly so it stays calm during the meeting",
+      "Offer the dog a treat or water as a friendly gesture",
+      "Call the dog's name so it gets used to the other people"
+    ],
+    "answer": 0,
+    "rationale": "A guide dog is working even when it's lying still, and distracting it can put its handler at risk. Etiquette guides say not to touch a guide dog. When walking with someone who uses a guide dog, walk on the side opposite the dog. Talk to the handler, not the dog.",
+    "distractors": {
+      "1": "Touching a guide dog distracts it from its work.",
+      "2": "Feeding a working dog distracts it and can undo its training.",
+      "3": "Calling the dog pulls its attention away from its handler."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Guide dogs: don't touch; walk on the opposite side."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-guiding",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "A blind visitor accepts your offer to guide them to a meeting room. How should you guide them?",
+    "options": [
+      "Hold their arm or elbow firmly and steer them in front of you",
+      "Walk a step behind them and call out turns as they come up",
+      "Take their cane and lead them by it so they don't trip on anything",
+      "Offer your arm, and describe steps and obstacles as you approach"
+    ],
+    "answer": 3,
+    "rationale": "Etiquette guides advise offering your arm rather than taking theirs, so the person follows your movement half a step behind. Describe obstacles specifically, such as steps up or down and doorways, and give precise directions that don't depend on sight. You can guide their hand to a banister or the back of a chair. Identify yourself before making contact.",
+    "distractors": {
+      "0": "Pushing someone ahead of you puts them first into any obstacle. Let them take your arm instead.",
+      "1": "Calling out from behind gives directions too late and gives no physical cue.",
+      "2": "A cane is the person's own mobility tool. Never take it."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Guiding blind people: offer your arm, describe obstacles."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-leaving-landmark",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "You have finished guiding a blind person into a large, open lobby. Where should you leave them?",
+    "options": [
+      "In the middle of the room, where there is the most space",
+      "Wherever you stopped, as long as you tell them the room is big",
+      "Facing the exit, so they can walk straight out on their own",
+      "Next to a landmark, such as a wall, counter or chair"
+    ],
+    "answer": 3,
+    "rationale": "Etiquette guides advise leaving a blind person near a landmark rather than in the middle of a room. A wall, counter or chair gives a fixed reference to orient from. Describing the surroundings helps too. It's also courteous to say when you're leaving, so they aren't left talking to empty space.",
+    "distractors": {
+      "0": "Open space gives no reference point for orientation.",
+      "1": "Telling them the room is big doesn't give them anything to orient by.",
+      "2": "They may not want the exit, and a direction alone isn't a reference point."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Leave blind people near a landmark."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-speech-understanding",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "You're talking with a man who has a speech disability, and you didn't understand what he just said. What should you do?",
+    "options": [
+      "Nod and smile so the conversation can keep moving along",
+      "Guess at his meaning and finish the sentence for him",
+      "Ask him to repeat it, or to write or show it another way",
+      "Ask the person he came with to explain what he meant"
+    ],
+    "answer": 2,
+    "rationale": "Etiquette guides advise giving full attention, without interrupting or finishing the person's sentences. If you don't understand, don't pretend. Ask him to repeat; if that doesn't work, ask him to write it down or suggest another way to communicate. He may use AAC, and patience is part of the conversation.",
+    "distractors": {
+      "0": "Pretending to understand risks mistakes and is disrespectful.",
+      "1": "Etiquette guides advise not interrupting or finishing sentences.",
+      "3": "Talk to him directly, not through a companion."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Speech disabilities: don't pretend to understand; ask to repeat or write."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-deaf-attention",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "You need to get the attention of a Deaf colleague who is facing away from you. What is appropriate?",
+    "options": [
+      "Shout their name loudly until they eventually notice you",
+      "Ask a hearing coworker to pass the message on for you later",
+      "Turn their chair around so that they face toward you",
+      "Tap them lightly on the shoulder or wave within their view"
+    ],
+    "answer": 3,
+    "rationale": "Etiquette guides suggest getting a deaf person's attention by waving, tapping their shoulder or flicking the lights. Then face them in good light, speak clearly and don't cover your mouth, since many people lip-read. Don't shout, because hearing aids are set for normal volume. For complex conversations, use a qualified interpreter and speak to the person, not the interpreter.",
+    "distractors": {
+      "0": "Shouting doesn't reach someone who can't hear it, and it distorts speech for people who use hearing aids.",
+      "1": "Going through someone else leaves your colleague out. Communicate with them directly.",
+      "2": "Moving someone's chair without permission is intrusive."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Deaf and hard of hearing: getting attention, lip reading, interpreters."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-wheelchair-user-term",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "Which phrase follows widely recommended disability-inclusive language?",
+    "options": [
+      "She is wheelchair-bound",
+      "She is confined to a wheelchair",
+      "She is a wheelchair user",
+      "She is handicapped"
+    ],
+    "answer": 2,
+    "rationale": "Etiquette guides recommend wheelchair user rather than confined to a wheelchair or wheelchair-bound, and advise against outdated terms such as handicapped and crippled. A wheelchair gives freedom of movement; it doesn't confine anyone. The Body of Knowledge notes person-first language is the most commonly recommended, and that the CRPD and G3ict use it. When in doubt, ask the person.",
+    "distractors": {
+      "0": "Wheelchair-bound suggests confinement. A wheelchair gives mobility.",
+      "1": "Confined suggests a prison. Etiquette guides recommend wheelchair user.",
+      "3": "Handicapped is an outdated term that etiquette guides advise avoiding."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Language guidance: wheelchair user, outdated terms."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Front matter and Domain 1E on person-first language."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-identity-first",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "An autistic colleague tells you they prefer 'autistic person' to 'person with autism'. What should you do?",
+    "options": [
+      "Keep using person-first language, since it's the standard",
+      "Use their preferred term when you refer to them",
+      "Avoid mentioning autism in any form, even if it is relevant",
+      "Ask your manager which term the company has decided to use"
+    ],
+    "answer": 1,
+    "rationale": "The Body of Knowledge notes that person-first language is the most commonly recommended, and the CRPD and G3ict use it, but other organizations and advocacy groups use identity-first language. Best practice is to ask and follow the person's own preference. Respecting how someone describes themselves is part of respecting their autonomy.",
+    "distractors": {
+      "0": "Person-first is the most common recommendation, but it isn't a rule to impose over someone's stated preference.",
+      "2": "Avoiding the topic entirely can suggest it's shameful. Use their term when it's relevant.",
+      "3": "The person has already told you. A style guide doesn't override how someone describes themselves."
+    },
+    "sources": [
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Front matter on person-first and identity-first language; Domain 1E."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-intellectual",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "When explaining a process to an adult with an intellectual disability, which approach is most respectful and effective?",
+    "options": [
+      "Speak slowly in a sing-song voice, as you would to a child",
+      "Explain it only to their support worker to save time",
+      "Use short, concrete sentences and check understanding",
+      "Skip the details, since they won't make decisions on it"
+    ],
+    "answer": 2,
+    "rationale": "Etiquette guides advise short, clear sentences, concrete ideas and breaking complex steps into parts. Avoid baby talk and condescension, and assume the person can make their own decisions. Check understanding by rephrasing questions, and give them time. Plain language like this helps many other people too.",
+    "distractors": {
+      "0": "Etiquette guides specifically warn against baby talk. Treat adults as adults.",
+      "1": "Talk to the person directly. They have the right to the information.",
+      "3": "Etiquette guides say to assume people can make their own decisions."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Intellectual disabilities: clear language, no baby talk, assume decision-making ability."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-relay-call",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "You answer the phone and hear an operator say they are relaying a call from a Deaf caller. What should you do?",
+    "options": [
+      "Hang up, since it's likely a telemarketing or scam call",
+      "Ask the operator to give you the caller's message briefly",
+      "Ask them to call back on a regular phone line instead",
+      "Stay on the line and speak to the caller, allowing for pauses"
+    ],
+    "answer": 3,
+    "rationale": "Relay services let people who are deaf, hard of hearing or have speech disabilities make phone calls through an operator who converts text or sign language to speech and back. There are natural pauses while the operator relays each turn. Etiquette guides say not to hang up on relay calls. Speak to the caller as you would on any call.",
+    "distractors": {
+      "0": "Etiquette guides specifically say not to hang up on relay calls.",
+      "1": "The operator relays the conversation word for word. Talk with the caller, not the operator.",
+      "2": "Relay may be the only way they can make a phone call."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Don't hang up on relay calls."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-chemical-sensitivity",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "An employee with multiple chemical sensitivity has joined your team. Which change follows common etiquette guidance?",
+    "options": [
+      "Limit fragranced products and spray cleaners onto a cloth",
+      "Spray air freshener more often to keep the office fresh",
+      "Close the windows to keep outdoor pollutants out entirely",
+      "Seat the employee in a windowless room away from others"
+    ],
+    "answer": 0,
+    "rationale": "Etiquette guides advise avoiding spraying cleaners while people are present, or spraying onto a cloth instead of into the air. Ask staff to limit fragranced products such as cologne and hair spray, keep good ventilation, and enforce no-smoking rules near entrances. Chemical sensitivity isn't visible, so it's easy to overlook. Removing triggers at the source is better than separating the person.",
+    "distractors": {
+      "1": "Air fresheners are themselves a common trigger.",
+      "2": "Guides recommend good ventilation, not less.",
+      "3": "Isolating the person excludes them instead of removing the trigger."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Chemical sensitivity: fragrance, cleaning sprays, ventilation."
+      }
+    ]
+  },
+  {
+    "id": "d1-etiquette-euphemisms",
+    "domain": 1,
+    "topic": "d1e",
+    "question": "Which approach to describing disability do etiquette guides most often recommend?",
+    "options": [
+      "Upbeat euphemisms such as 'differently abled'",
+      "Older terms such as 'handicapped' or 'crippled'",
+      "Plain terms such as 'person with a disability'",
+      "Group labels such as 'the disabled'"
+    ],
+    "answer": 2,
+    "rationale": "Etiquette guides recommend plain, respectful language that puts the person first, such as person with a disability. They advise avoiding outdated terms like handicapped and crippled, and being cautious with euphemisms like physically challenged and differently abled, which can imply disability is something to hide. The Body of Knowledge notes person-first language is the most commonly recommended, while some people prefer identity-first language. Ask when you're unsure.",
+    "distractors": {
+      "0": "Etiquette guides advise caution with euphemisms like differently abled and physically challenged, which many find condescending.",
+      "1": "Etiquette guides advise avoiding handicapped and crippled.",
+      "3": "Labels like the disabled define people by disability. Person-first phrasing is more widely recommended."
+    },
+    "sources": [
+      {
+        "title": "Disability Etiquette: Tips on Interacting with People with Disabilities (EPVA, hosted by Oregon Department of Human Services)",
+        "url": "https://www.oregon.gov/odhs/vr/Documents/disability-etiquette.pdf",
+        "note": "Language guidance: person-first, outdated terms, euphemisms."
+      },
+      {
+        "title": "CPACC Body of Knowledge (IAAP, Oct 2023)",
+        "url": "https://funka.com/globalassets/funka-academy-fr%C3%A5n-2023/iaap/cpacc_bok_oct2023.pdf",
+        "note": "Front matter on person-first language."
+      }
+    ]
+  },
+  {
     "id": "d2-accommodation-vs-ud",
     "domain": 2,
     "topic": "d2a",
