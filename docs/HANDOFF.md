@@ -3,7 +3,7 @@
 _Last updated October 26, 2026._
 
 ## Where it stands
-- Working site with Study and Mock exam modes, 52 sourced questions (9 / 9 / 34 across the domains), validator, GitHub Actions check, and docs.
+- Working site with Study and Mock exam modes, 119 sourced questions (9 / 76 / 34 across the domains), validator, GitHub Actions check, and docs.
 - Lives in the GitHub repo jothish-uxd/a11y-exam. GitHub Pages is not turned on yet.
 - A preview is published as the Claude artifact "CPACC Practice Sheets". It is generated from `index.html` with `node scripts/build-preview.mjs <out>` and published with the `css/`, `js/` and `data/` files alongside.
 
@@ -25,7 +25,9 @@ _Last updated October 26, 2026._
 - WCAG principles are **Domain 2.3**, not Domain 3. The WCAG question id changed to `d2-wcag-perceivable`.
 
 ## Question bank
-52 questions (D1: 9, D2: 9, D3: 34). Domain 3 is fully built out as a study pool (every topic covered, more than its 20 mock questions). Domains 1 and 2 need about 31 more each for a full mock.
+119 questions (D1: 9, D2: 76, D3: 34). Domains 2 and 3 are built out as study pools larger than their mock shares (40 and 20). Domain 1 needs at least 31 more for a full 100-question mock.
+
+Options are written to similar lengths so the longest answer isn't a giveaway; keep that up when adding questions.
 
 | id | Topic | Answer |
 |---|---|---|
@@ -33,37 +35,104 @@ _Last updated October 26, 2026._
 | d1-biopsychosocial-model | 1.1 Models of disability | Biopsychosocial model |
 | d1-photosensitive-seizures | 1.2 Disability categories, barriers & solutions | People with photosensitive epilepsy |
 | d1-dyslexia-barriers | 1.2 Disability categories, barriers & solutions | Short text sections with clear headings, plus text-to-speech |
-| d1-refreshable-braille | 1.3 Assistive technologies & adaptive strategies | A screen reader sending output to a refreshable braille display |
+| d1-refreshable-braille | 1.3 Assistive technologies & adaptive strategies | A screen reader with a braille display |
 | d1-switch-access | 1.3 Assistive technologies & adaptive strategies | Switch |
-| d1-screen-magnification | 1.3 Assistive technologies & adaptive strategies | Keeping layout, navigation and visual cues consistent from page to page |
+| d1-screen-magnification | 1.3 Assistive technologies & adaptive strategies | Keeping layout and navigation consistent across pages |
 | d1-who-global-prevalence | 1.4 Demographics & statistics | About 1 in 6 people (around 1.3 billion) |
 | d1-etiquette-interpreter | 1.5 Disability etiquette | Look at and speak directly to the guest, for example "What dates would you like?" |
 | d2-accommodation-vs-ud | 2.1 Accommodations vs. universal design | Reasonable accommodation |
+| d2-accommodation-employer-choice | 2.1 Accommodations vs. universal design | Yes, if it is equally effective; the employer chooses among effective options |
+| d2-accommodation-request | 2.1 Accommodations vs. universal design | Yes, a request can be made in plain, everyday language |
+| d2-undue-hardship | 2.1 Accommodations vs. universal design | Significant difficulty or expense for that employer |
+| d2-accommodation-essential-functions | 2.1 Accommodations vs. universal design | Removing an essential job function or lowering a standard |
+| d2-accommodation-application-process | 2.1 Accommodations vs. universal design | A change to the job application process |
+| d2-accommodation-personal-items | 2.1 Accommodations vs. universal design | No, personal-use items needed both on and off the job generally aren't required |
+| d2-ud-and-assistive-devices | 2.1 Accommodations vs. universal design | Universal design still allows assistive devices where needed |
+| d2-proactive-captioning | 2.1 Accommodations vs. universal design | A is universal design; B is accommodation on request |
+| d2-interactive-process | 2.1 Accommodations vs. universal design | A collaborative conversation to find an effective accommodation |
 | d2-business-case-innovation | 2.2 Benefits of accessibility | Driving innovation |
+| d2-benefit-transcripts-search | 2.2 Benefits of accessibility | Wider market reach and discoverability |
+| d2-benefit-legal-risk | 2.2 Benefits of accessibility | Minimizing legal risk |
+| d2-benefit-situational | 2.2 Benefits of accessibility | People using a phone in bright sunlight |
+| d2-benefit-older-users | 2.2 Benefits of accessibility | Age-related changes overlap with needs WCAG covers |
+| d2-benefit-build-in-early | 2.2 Benefits of accessibility | Because it is more efficient than retrofitting accessibility later |
+| d2-benefit-purple-pound | 2.2 Benefits of accessibility | The Purple Pound |
+| d2-benefit-brand | 2.2 Benefits of accessibility | Enhancing the brand |
+| d2-benefit-slow-connections | 2.2 Benefits of accessibility | People with slow or expensive internet connections |
+| d2-benefit-mobile-overlap | 2.2 Benefits of accessibility | Phone and other small-screen users |
 | d2-wcag-perceivable | 2.3 Web accessibility principles (WCAG) | Perceivable |
 | d2-wcag-keyboard-trap | 2.3 Web accessibility principles (WCAG) | Operable |
 | d2-wcag-conformance-levels | 2.3 Web accessibility principles (WCAG) | Meeting all Level A and Level AA success criteria |
+| d2-wcag-decorative-images | 2.3 Web accessibility principles (WCAG) | Hide it from assistive technology, for example with an empty alt attribute |
+| d2-wcag-info-relationships | 2.3 Web accessibility principles (WCAG) | 1.3.1 Info and Relationships |
+| d2-wcag-use-of-color | 2.3 Web accessibility principles (WCAG) | Add a visible asterisk, explained in the form instructions |
+| d2-wcag-contrast-ratios | 2.3 Web accessibility principles (WCAG) | At least 4.5:1 |
+| d2-wcag-resize-text | 2.3 Web accessibility principles (WCAG) | 200% |
+| d2-wcag-reflow | 2.3 Web accessibility principles (WCAG) | 1.4.10 Reflow |
+| d2-wcag-audio-description | 2.3 Web accessibility principles (WCAG) | Audio description (1.2.5) |
+| d2-wcag-timing-adjustable | 2.3 Web accessibility principles (WCAG) | Warn users before time runs out and let them extend it simply |
+| d2-wcag-bypass-blocks | 2.3 Web accessibility principles (WCAG) | Adding a "Skip to main content" link at the top of each page |
+| d2-wcag-focus-visible | 2.3 Web accessibility principles (WCAG) | Sighted people who navigate by keyboard |
+| d2-wcag-focus-not-obscured | 2.3 Web accessibility principles (WCAG) | 2.4.11 Focus Not Obscured (Minimum) |
+| d2-wcag-target-size | 2.3 Web accessibility principles (WCAG) | 24 by 24 CSS pixels |
+| d2-wcag-language-of-page | 2.3 Web accessibility principles (WCAG) | 3.1.1 Language of Page |
+| d2-wcag-on-input | 2.3 Web accessibility principles (WCAG) | 3.2.2 On Input |
+| d2-wcag-error-identification | 2.3 Web accessibility principles (WCAG) | Identify the field in error and describe the error in text |
+| d2-wcag-accessible-authentication | 2.3 Web accessibility principles (WCAG) | 3.3.8 Accessible Authentication (Minimum) |
+| d2-wcag-name-role-value | 2.3 Web accessibility principles (WCAG) | 4.1.2 Name, Role, Value |
+| d2-wcag-techniques-informative | 2.3 Web accessibility principles (WCAG) | Yes, because techniques are informative, not required |
 | d2-ramp-slope | 2.4 Built environment | 1:12 |
+| d2-clear-floor-space | 2.4 Built environment | 30 by 48 inches |
+| d2-turning-space | 2.4 Built environment | A 60-inch circle, or a T-shaped space |
+| d2-reach-range | 2.4 Built environment | 15 to 48 inches above the floor |
+| d2-door-hardware | 2.4 Built environment | A lever handle that works with one hand and no twisting |
+| d2-door-clear-width | 2.4 Built environment | 32 inches |
+| d2-protruding-objects | 2.4 Built environment | Blind people who use a long cane, which sweeps below it |
+| d2-van-accessible-parking | 2.4 Built environment | At least 1 in every 6 |
+| d2-parking-access-aisle | 2.4 Built environment | To give room to transfer to a wheelchair or deploy a van lift |
+| d2-tactile-signs | 2.4 Built environment | On the latch side wall, 48 to 60 inches above the floor |
+| d2-accessible-route | 2.4 Built environment | 36 inches wide, running slope no steeper than 1:20 |
+| d2-detectable-warnings | 2.4 Built environment | To warn blind pedestrians, by touch, of a street or drop-off |
+| d2-changes-in-level | 2.4 Built environment | Up to 1/4 inch |
 | d2-situational-limitation | 2.5 Principles of universal design | Situational limitation |
 | d2-ud-tolerance-for-error | 2.5 Principles of universal design | Tolerance for Error |
+| d2-ud-equitable-use | 2.5 Principles of universal design | Equitable Use |
+| d2-ud-flexibility-in-use | 2.5 Principles of universal design | Flexibility in Use |
+| d2-ud-simple-intuitive | 2.5 Principles of universal design | Simple and Intuitive Use |
+| d2-ud-perceptible-information | 2.5 Principles of universal design | Perceptible Information |
+| d2-ud-low-physical-effort | 2.5 Principles of universal design | Low Physical Effort |
+| d2-ud-size-and-space | 2.5 Principles of universal design | Size and Space for Approach and Use |
+| d2-ud-origin | 2.5 Principles of universal design | Ronald Mace's working group at NC State University, in 1997 |
+| d2-ud-definition | 2.5 Principles of universal design | Designing so as many people as possible can use it, unadapted |
+| d2-inclusive-solve-for-one | 2.5 Principles of universal design | Designing with disabled people yields solutions that help many |
+| d2-inclusive-recognize-exclusion | 2.5 Principles of universal design | From designers' own biases and assumptions |
 | d2-udl-representation | 2.6 Universal Design for Learning, usability & UX | Representation |
-| d3-marrakesh-treaty | 3.1 International declarations & conventions | To make published works easier to get in accessible formats for people who are blind, visually impaired or otherwise print disabled |
-| d3-udhr-disability | 3.1 International declarations & conventions | It applies to everyone and mentions disability once, as a circumstance in which people are entitled to security |
+| d2-udl-engagement | 2.6 Universal Design for Learning, usability & UX | Engagement |
+| d2-udl-action-expression | 2.6 Universal Design for Learning, usability & UX | Action & Expression |
+| d2-udl-executive-function | 2.6 Universal Design for Learning, usability & UX | Design Options for Strategy Development |
+| d2-usability-iso-definition | 2.6 Universal Design for Learning, usability & UX | Effectiveness, efficiency and satisfaction |
+| d2-accessibility-vs-usability | 2.6 Universal Design for Learning, usability & UX | They overlap, but accessibility adds technical requirements |
+| d2-user-testing-with-conformance | 2.6 Universal Design for Learning, usability & UX | Because users reveal problems conformance checks miss |
+| d2-user-testing-recruiting | 2.6 Universal Design for Learning, usability & UX | Participants who match the site's audience, including novice assistive technology users |
+| d2-user-testing-reporting | 2.6 Universal Design for Learning, usability & UX | With scope, methods and participants, and its limits stated |
+| d2-coga-supplemental | 2.6 Universal Design for Learning, usability & UX | It goes beyond WCAG and isn't required for conformance |
+| d3-marrakesh-treaty | 3.1 International declarations & conventions | To ease access to books in accessible formats for print-disabled people |
+| d3-udhr-disability | 3.1 International declarations & conventions | It applies to everyone and names disability only once |
 | d3-crpd-article-9 | 3.1 International declarations & conventions | Article 9, Accessibility |
-| d3-crpd-general-principles | 3.1 International declarations & conventions | Respect for difference and acceptance of persons with disabilities as part of human diversity |
-| d3-crpd-optional-protocol | 3.1 International declarations & conventions | Individuals and groups to bring complaints of violations to the Committee on the Rights of Persons with Disabilities |
-| d3-crpd-consultation | 3.1 International declarations & conventions | Closely consult and actively involve them, including through their representative organizations |
-| d3-crpd-purpose-definition | 3.1 International declarations & conventions | People with long-term physical, mental, intellectual or sensory impairments which, in interaction with various barriers, may hinder their full and equal participation in society |
+| d3-crpd-general-principles | 3.1 International declarations & conventions | Respect for difference and human diversity |
+| d3-crpd-optional-protocol | 3.1 International declarations & conventions | Individuals to bring complaints to the CRPD Committee |
+| d3-crpd-consultation | 3.1 International declarations & conventions | Closely consult them, including via their own organizations |
+| d3-crpd-purpose-definition | 3.1 International declarations & conventions | People with long-term impairments that, with barriers, hinder participation |
 | d3-eu-charter-article-26 | 3.2 Regional instruments | Article 26, Integration of persons with disabilities |
-| d3-african-charter-article-18 | 3.2 Regional instruments | A right of the aged and disabled to special measures of protection suited to their needs |
-| d3-inter-american-convention | 3.2 Regional instruments | The Inter-American Convention on the Elimination of All Forms of Discrimination against Persons with Disabilities |
-| d3-african-disability-protocol | 3.2 Regional instruments | Harmful practices such as witchcraft accusations, abandonment and ritual killings |
+| d3-african-charter-article-18 | 3.2 Regional instruments | A right of older and disabled people to special protection |
+| d3-inter-american-convention | 3.2 Regional instruments | The Inter-American Convention on disability discrimination |
+| d3-african-disability-protocol | 3.2 Regional instruments | Harmful practices such as ritual killings and abandonment |
 | d3-european-accessibility-act | 3.2 Regional instruments | The European Accessibility Act |
 | d3-web-accessibility-directive | 3.2 Regional instruments | An accessibility statement, with a way for users to report problems |
 | d3-ada-title-iii | 3.3 National & provincial laws | Title III |
 | d3-uk-anticipatory-duty | 3.3 National & provincial laws | Providers must plan ahead for the needs of disabled people in general, not wait for an individual request |
-| d3-aoda-standards | 3.3 National & provincial laws | Through accessibility standards developed with people with disabilities and industry, which apply to public, private and non-profit organizations |
-| d3-accessible-canada-act | 3.3 National & provincial laws | Federally regulated entities, such as federal government departments, banks, telecommunications companies and interprovincial transportation |
+| d3-aoda-standards | 3.3 National & provincial laws | Through standards for public, private and non-profit bodies |
+| d3-accessible-canada-act | 3.3 National & provincial laws | Federally regulated bodies, such as banks and airlines |
 | d3-ada-definition-disability | 3.3 National & provincial laws | Being regarded as having an impairment |
 | d3-ada-title-ii-web-rule | 3.3 National & provincial laws | WCAG 2.1 Level AA |
 | d3-section-508-wcag | 3.4 Domain-specific & procurement laws | ICT used or bought by federal agencies, referencing WCAG 2.0 Level A and AA |
@@ -74,17 +143,17 @@ _Last updated October 26, 2026._
 | d3-vpat-acr | 3.5 Applying standards to ICT | An Accessibility Conformance Report (ACR) |
 | d3-wcag-iso-backwards-compatible | 3.5 Applying standards to ICT | It also conforms to WCAG 2.1 and 2.0 Level AA, because the versions are backwards compatible |
 | d3-atag | 3.5 Applying standards to ICT | ATAG (Authoring Tool Accessibility Guidelines) |
-| d3-wcag-em | 3.5 Applying standards to ICT | Explore the site, then evaluate a representative sample chosen with both structured and random selection |
+| d3-wcag-em | 3.5 Applying standards to ICT | Explore the site, then test a structured and random sample |
 | d3-maturity-model | 3.6 Integrating accessibility across the organization | Integrate |
-| d3-accessibility-statement | 3.6 Integrating accessibility across the organization | Users, with a commitment to accessibility, the standard the content aims to meet, and a contact for feedback |
-| d3-involving-users | 3.6 Integrating accessibility across the organization | One person cannot represent other disabilities or even all blind users, and feedback that comes only at the end arrives too late to shape the design |
-| d3-org-policy | 3.6 Integrating accessibility across the organization | The standard and conformance level, the scope of content covered, and a timeline with milestones |
+| d3-accessibility-statement | 3.6 Integrating accessibility across the organization | Users; it needs a commitment, the standard and a contact |
+| d3-involving-users | 3.6 Integrating accessibility across the organization | One person can't represent everyone, and launch is too late |
+| d3-org-policy | 3.6 Integrating accessibility across the organization | The standard and level, the scope, and a timeline |
 | d3-planning-initiate | 3.6 Integrating accessibility across the organization | Initiate |
 | d3-arrm-ownership | 3.6 Integrating accessibility across the organization | The author is ultimately accountable for the task being done |
 
 ## Next steps
 1. Enable GitHub Pages from `main` once the site is merged.
-2. Grow Domains 1 and 2 to at least 40 questions each so a mock reaches 100. Each domain's pool can exceed its mock share; extra questions add variety between attempts.
+2. Grow Domain 1 to at least 40 questions (ideally a pool of about 75, like Domain 2) so a mock reaches 100. Each domain's pool can exceed its mock share; extra questions add variety between attempts.
 3. Optional ideas: a "missed questions only" study filter, a per-topic progress summary, and a glossary page.
 
 ## Body of Knowledge reference
