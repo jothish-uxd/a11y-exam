@@ -41,11 +41,11 @@
 
   // ---------- helpers ----------
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const color = (d) => `var(${d.colorToken})`;
   const topicNumber = (t) => `${t.id[1]}.${t.id.charCodeAt(2) - 96}`;
   const scopeLabel = (s) => (s === "all" ? "All domains" : `Domain ${s.slice(1)}`);
   const isRight = (q) => store.picks[q.id] === q.answer;
   const status = (q) => (!store.checked[q.id] ? "none" : isRight(q) ? "good" : "bad");
+  const TIP_ICON = `<svg class="tip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.6.5 1 1.2 1.1 2V16h5v-.2c.1-.8.5-1.5 1.1-2A6 6 0 0 0 12 3z"/></svg>`;
   const STATUS_TEXT = { none: "Not answered", good: "Correct", bad: "Missed", answered: "Answered", flag: "Marked for review" };
 
   function mark(st) {
@@ -90,7 +90,7 @@
     const legend = `<p class="mlegend" aria-hidden="true">${["good", "bad", "none"].map((st) => `<span>${mark(st)}${STATUS_TEXT[st]}</span>`).join("")}</p>`;
     return legend + ds.map((d) => `
       <div class="ql-domain">
-        ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}" style="--c:${color(d)}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
+        ${s === "all" ? `<h3 class="ql-dh"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></h3>` : ""}
         ${d.topics.map((t) => {
           const qs = QUESTIONS.filter((q) => q.topic === t.id);
           return `<div class="ql-topic">
@@ -125,8 +125,8 @@
         </div>
         <div class="weights">
           <h3>How the exam is weighted</h3>
-          <div class="wbar" aria-hidden="true">${DOMAINS.map((d) => `<span style="flex:${d.weight};background:${color(d)}"></span>`).join("")}</div>
-          <ul class="wlegend">${DOMAINS.map((d) => `<li><i style="background:${color(d)}" aria-hidden="true"></i>Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
+          <div class="wbar" aria-hidden="true">${DOMAINS.map((d) => `<span style="flex:${d.weight}"></span>`).join("")}</div>
+          <ul class="wlegend">${DOMAINS.map((d) => `<li style="flex:${d.weight}">Domain ${d.id} <b>${d.weight}%</b></li>`).join("")}</ul>
         </div>
       </section>
 
@@ -136,7 +136,7 @@
         <ul class="domains">
           ${DOMAINS.map((d) => {
             const c = counts(inScope("d" + d.id));
-            return `<li><a class="drow" href="#d${d.id}" style="--c:${color(d)}">
+            return `<li><a class="drow" href="#d${d.id}">
               <span class="drow-n">${d.id}</span>
               <span class="drow-main"><b>${esc(d.name)}</b><span>${d.weight}% of the exam · ${d.topics.length} topics · ${c.total} question${c.total === 1 ? "" : "s"}</span></span>
               <span class="drow-p">${c.done}/${c.total}<span class="vh"> answered</span></span>
@@ -174,7 +174,7 @@
     main.innerHTML = `
     <div class="page">
       <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="#start">Home</a></li><li aria-current="page">${scopeLabel(s)}</li></ol></nav>
-      <header class="ohead" ${d ? `style="--c:${color(d)}"` : ""}>
+      <header class="ohead">
         <p class="eyebrow">${d ? `Domain ${d.id} · ${d.weight}% of the exam` : "Study"}</p>
         <h1 id="h1">${d ? esc(d.name) : "All domains"}</h1>
         <p class="sub">${c.total ? `${c.done} of ${c.total} answered${c.done ? `, ${c.right} correct` : ""}.` : "No questions in this domain yet."} Topics follow the IAAP Body of Knowledge.</p>
@@ -226,7 +226,7 @@
         <p class="verdict ${isRight(q) ? "good" : "bad"}" id="verdict" tabindex="-1">${isRight(q) ? "Correct." : "Not quite."} The answer is ${LETTERS[q.answer]}, ${esc(q.options[q.answer])}.</p>
         <div><h3>Why ${LETTERS[q.answer]} is correct</h3><p>${esc(q.rationale)}</p></div>
         <div><h3>Why the others are wrong</h3><ul class="why-not">${Object.entries(q.distractors).map(([k, txt]) => `<li><span class="l">${LETTERS[k]}</span><span><b>${esc(q.options[k])}.</b> ${esc(txt)}</span></li>`).join("")}</ul></div>
-        ${q.tip ? `<div class="tip"><h3>Exam tip</h3><p>${esc(q.tip)}</p></div>` : ""}
+        ${q.tip ? `<div class="tip">${TIP_ICON}<h3>Exam tip</h3><p>${esc(q.tip)}</p></div>` : ""}
         <div><h3>Sources</h3><ul class="refs">${q.sources.map((r) => `<li><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}<span class="vh"> (opens in a new tab)</span></a>${r.note ? `<small>${esc(r.note)}</small>` : ""}</li>`).join("")}</ul></div>
       </section>` : "";
 
@@ -242,7 +242,7 @@
           <li><a href="#${t.id}">${topicNumber(t)} ${esc(t.name)}</a></li>
         </ol></nav>
         <div class="qhead">
-          <span class="chip" style="color:${color(d)}">Domain ${d.id} · ${d.weight}%</span>
+          <span class="chip">Domain ${d.id} · ${d.weight}%</span>
           <button type="button" class="counter" id="open-list" aria-haspopup="dialog">Question ${i + 1} of ${list.length}<span class="counter-more"> · All questions</span></button>
           <span class="counter-static">Question ${i + 1} of ${list.length} in ${scopeLabel(scope)}</span>
         </div>
@@ -489,7 +489,7 @@
           const dq = qs.filter((q) => q.domain === d.id);
           const dr = dq.filter((q) => m.answers[q.id] === q.answer).length;
           const p = dq.length ? Math.round((dr / dq.length) * 100) : 0;
-          return `<li style="--c:${color(d)}"><div class="bar-l"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></div>
+          return `<li><div class="bar-l"><a href="#d${d.id}">Domain ${d.id}</a> <span>${esc(d.name)}</span></div>
             <div class="bar-t" aria-hidden="true"><span style="width:${p}%"></span></div>
             <div class="bar-v">${dq.length ? `${dr}/${dq.length}` : "None drawn"}</div></li>`;
         }).join("")}</ul>
